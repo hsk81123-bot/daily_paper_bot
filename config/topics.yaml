@@ -74,10 +74,16 @@ topics:
           OR abs:"state of charge" OR abs:"digital twin" OR abs:PyBaMM OR abs:"equivalent circuit")
         max_results: 60
         # API가 막히면(429) 아래 분야의 오늘자 RSS에서 키워드로 걸러 씀. 그룹끼리는 AND, 그룹 안은 OR
+        # (GitHub Actions에서는 RSS가 빈 피드를 주는 일이 잦아 아래 openalex_search로 한 번 더 대신함)
         rss_categories: [eess.SY, eess.SP, cond-mat.mtrl-sci, physics.chem-ph, physics.app-ph, cs.LG]
         rss_require:
           - [battery, batteries, lithium-ion, li-ion]
           - [model, simulation, state of health, state of charge, state-of-health, state-of-charge, digital twin, pybamm, equivalent circuit, estimation]
+        # API·RSS가 모두 막히면 OpenAlex에 색인된 arXiv 논문을 이 검색어로 찾음
+        openalex_search: >-
+          "battery model" OR "battery modeling" OR "battery modelling" OR "electrochemical model"
+          OR "equivalent circuit model" OR "single particle model" OR "state of health" OR "state of charge"
+          OR "battery degradation" OR "battery digital twin" OR PyBaMM
       - type: openalex
         search: >-
           "battery model" OR "battery modeling" OR "battery modelling" OR "electrochemical model"
@@ -123,6 +129,9 @@ topics:
         rss_categories: [cond-mat.mtrl-sci, physics.chem-ph, physics.app-ph, cond-mat.mes-hall]
         rss_require:
           - [battery, batteries, lithium-ion, li-ion, sodium-ion, lithium metal, solid electrolyte, solid-state electrolyte, cathode]
+        openalex_search: >-
+          "lithium-ion battery" OR "lithium-ion batteries" OR "solid-state battery" OR "sodium-ion battery"
+          OR "lithium metal battery" OR "solid electrolyte" OR "battery cathode" OR "battery electrolyte"
       - type: openalex
         search: >-
           "lithium-ion battery" OR "lithium-ion batteries" OR "solid-state battery" OR "solid-state batteries"
