@@ -5,7 +5,7 @@ on:
     # 텔레그램 명령(/today, /now, /topics, /history)을 1시간마다 처리
     # 비공개 저장소는 무료 사용 시간을 쓰므로 기본 1시간 간격(README 참고)
     - cron: "17 * * * *"
-  workflow_dispatch:
+  workflow_dispatch:  # Actions 탭 → Run workflow 로 수동 실행
 
 permissions:
   contents: write
