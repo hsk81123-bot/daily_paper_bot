@@ -13,6 +13,7 @@ log = logging.getLogger(__name__)
 
 API = "https://api.telegram.org/bot{token}/{method}"
 MAX_LEN = 3900  # 텔레그램 한도 4096자보다 여유 있게
+ABSTRACT_MAX = 2000  # 메시지 길이 한도 안에 들도록 초록은 이 길이에서 자름
 WEEKDAYS = "월화수목금토일"
 
 
@@ -31,8 +32,16 @@ def _date_label(day: str) -> str:
     return f"{d.isoformat()} ({WEEKDAYS[d.weekday()]})"
 
 
-def paper_block(i: int, p: Paper) -> str:
-    lines = [f'<b>{i}. <a href="{html.escape(p.url)}">{esc(p.title)}</a></b>']
+def _abstract(text: str) -> str:
+    if len(text) <= ABSTRACT_MAX:
+        return text
+    cut = text[:ABSTRACT_MAX].rsplit(" ", 1)[0]
+    return cut + " …"
+
+
+def paper_block(i: int, p: Paper, numbered: bool = True) -> str:
+    num = f"{i}. " if numbered else ""
+    lines = [f'<b>{num}<a href="{html.escape(p.url)}">{esc(p.title)}</a></b>']
     if p.title_ko:
         lines.append(f"<i>{esc(p.title_ko)}</i>")
     meta = []
@@ -42,18 +51,25 @@ def paper_block(i: int, p: Paper) -> str:
     meta.append(f"🗓 {p.published.astimezone(KST).date().isoformat()}")
     lines.append(" · ".join(meta))
     if p.summary:
-        lines.append(f"📝 {esc(p.summary)}")
+        lines += ["", f"📝 <b>요약</b>\n{esc(p.summary)}"]
+    if p.points:
+        lines += ["", "📌 <b>핵심 정리</b>"] + [f"• {esc(x)}" for x in p.points]
     if p.why:
-        lines.append(f"🔍 {esc(p.why)}")
+        lines += ["", f"🔍 {esc(p.why)}"]
+    if p.abstract:
+        lines += ["", "📄 <b>Abstract</b>", f"<blockquote expandable>{esc(_abstract(p.abstract))}</blockquote>"]
+    else:
+        lines += ["", "📄 <i>Abstract: 출처에서 초록을 제공하지 않습니다.</i>"]
     return "\n".join(lines)
 
 
-def _buttons(items: list[tuple[int, Paper]]) -> dict | None:
+def _buttons(items: list[tuple[int, Paper]], numbered: bool) -> dict | None:
     rows = []
     for i, p in items:
-        row = [{"text": f"{i}. 논문 보기", "url": p.url}]
+        num = f"{i}. " if numbered else ""
+        row = [{"text": f"{num}논문 보기", "url": p.url}]
         if p.pdf_url and p.pdf_url != p.url:
-            row.append({"text": f"{i}. PDF", "url": p.pdf_url})
+            row.append({"text": f"{num}PDF", "url": p.pdf_url})
         rows.append(row)
     return {"inline_keyboard": rows} if rows else None
 
@@ -61,10 +77,11 @@ def _buttons(items: list[tuple[int, Paper]]) -> dict | None:
 def build_messages(topic: Topic, papers: list[Paper], digest: str, day: str,
                    note: str = "") -> list[tuple[str, dict | None]]:
     """주제 하나를 (본문, 버튼) 메시지 목록으로 만든다. 길면 여러 메시지로 나눈다."""
-    header = [f"{topic.emoji} <b>{esc(topic.name)} — 오늘의 논문</b>", f"{_date_label(day)} · {len(papers)}편"]
+    count = f" · {len(papers)}편" if len(papers) > 1 else ""
+    header = [f"{topic.emoji} <b>{esc(topic.name)} — 오늘의 논문</b>", f"{_date_label(day)}{count}"]
     if note:
         header.append(f"<i>{esc(note)}</i>")
-    if digest:
+    if digest and len(papers) > 1:  # 한 편일 때는 요약과 겹치므로 생략
         header += ["", f"💡 <b>오늘의 한 줄 정리</b>\n{esc(digest)}"]
     if not papers:
         header += ["", "오늘은 새로 소개할 논문이 없습니다. 내일 다시 찾아볼게요."]
@@ -74,13 +91,13 @@ def build_messages(topic: Topic, papers: list[Paper], digest: str, day: str,
     current = "\n".join(header)
     items: list[tuple[int, Paper]] = []
     for i, p in enumerate(papers, 1):
-        block = paper_block(i, p)
+        block = paper_block(i, p, numbered=len(papers) > 1)
         if items and len(current) + len(block) + 2 > MAX_LEN:
-            messages.append((current, _buttons(items)))
+            messages.append((current, _buttons(items, len(papers) > 1)))
             current, items = "", []
         current = f"{current}\n\n{block}" if current else block
         items.append((i, p))
-    messages.append((current, _buttons(items)))
+    messages.append((current, _buttons(items, len(papers) > 1)))
     return messages
 
 

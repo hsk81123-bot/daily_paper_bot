@@ -100,3 +100,48 @@ def test_fetch_openalex_builds_filter(monkeypatch):
     assert calls["search"] == '"battery model" OR PyBaMM'
     assert f"from_publication_date:{start}" in calls["filter"]
     assert calls["api_key"] == "k"
+
+
+def test_parse_arxiv_rss_filters_groups_and_replacements():
+    require = [["battery", "lithium-ion"], ["model", "estimation"]]
+    papers = sources.parse_arxiv_rss((FIXTURES / "arxiv_rss.xml").read_bytes(), require)
+    assert [p.arxiv_id for p in papers] == ["2610.07777"]
+    p = papers[0]
+    assert p.abstract == "We estimate SOC of a battery using a reduced DFN model."
+    assert p.authors == ["Min Kim", "Ji Lee"]
+    assert p.pdf_url == "https://arxiv.org/pdf/2610.07777" and p.venue == "arXiv"
+
+
+def test_fetch_arxiv_falls_back_to_rss(monkeypatch):
+    import requests
+
+    def blocked(cfg):
+        raise requests.HTTPError("429 Too Many Requests")
+
+    class Resp:
+        content = (FIXTURES / "arxiv_rss.xml").read_bytes()
+
+        def raise_for_status(self):
+            pass
+
+    class Session:
+        url = None
+
+        def get(self, url, timeout):
+            Session.url = url
+            return Resp()
+
+    monkeypatch.setattr(sources, "fetch_arxiv_api", blocked)
+    cfg = {"query": "x", "rss_categories": ["eess.SY", "cs.LG"], "rss_require": [["battery"]]}
+    got = sources.fetch_arxiv(cfg, Session())
+    assert Session.url == "https://rss.arxiv.org/rss/eess.SY+cs.LG"
+    assert len(got) == 2
+
+
+def test_fetch_arxiv_without_rss_reraises(monkeypatch):
+    import pytest
+    import requests
+
+    monkeypatch.setattr(sources, "fetch_arxiv_api", lambda cfg: (_ for _ in ()).throw(requests.HTTPError("429")))
+    with pytest.raises(requests.HTTPError):
+        sources.fetch_arxiv({"query": "x"}, object())

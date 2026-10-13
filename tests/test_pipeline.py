@@ -52,7 +52,7 @@ class FakeClient:
 def test_curate_uses_indices_and_skips_bad_ones(topic, paper_factory):
     cands = [paper_factory(f"paper {i}") for i in range(4)]
     client = FakeClient({"selected": [
-        {"index": 2, "title_ko": "논문 2", "summary": "요약", "why": "이유"},
+        {"index": 2, "title_ko": "논문 2", "summary": "요약", "points": ["목적: x", " "], "why": "이유"},
         {"index": 99, "title_ko": "x", "summary": "x", "why": "x"},
         {"index": 2, "title_ko": "dup", "summary": "x", "why": "x"},
         {"index": 0, "title_ko": "논문 0", "summary": "요약0", "why": "이유0"},
@@ -60,6 +60,7 @@ def test_curate_uses_indices_and_skips_bad_ones(topic, paper_factory):
     papers, digest = summarize.curate(topic, cands, client=client)
     assert [p.title for p in papers] == ["paper 2", "paper 0"]
     assert papers[0].title_ko == "논문 2" and digest == "오늘의 흐름"
+    assert papers[0].points == ["목적: x"]
     call = client.calls[0]
     assert call["model"] == "claude-opus-5-5"
     assert call["fallbacks"] == "default"
@@ -82,12 +83,30 @@ def test_curate_without_key_returns_none(topic, paper_factory):
 
 
 # ------------------------------------------------------------ 메시지
-def test_build_messages_escapes_and_buttons(topic, paper_factory):
+def test_build_messages_single_paper(topic, paper_factory):
     p = paper_factory("Li <3 & model", authors=["A", "B", "C", "D"], pdf_url="https://x/pdf",
-                      summary="요약 <b>", title_ko="한국어 제목")
+                      summary="요약 <b>", title_ko="한국어 제목", points=["목적: 가", "결과: 나"],
+                      abstract="We model <things>. " * 200)
     [(text, buttons)] = build_messages(topic, [p], "정리", NOW.date().isoformat())
     assert "Li &lt;3 &amp; model" in text and "요약 &lt;b&gt;" in text
     assert "A, B, C 외 1명" in text and "2026-10-14 (수)" in text
+    assert "• 목적: 가" in text and "📌 <b>핵심 정리</b>" in text
+    assert "<blockquote expandable>We model &lt;things&gt;." in text and text.count(" …</blockquote>") == 1
+    assert "정리" not in text.split("\n")[2]  # 한 편이면 한 줄 정리·편수 생략
+    assert "편" not in text.split("\n")[1]
+    assert len(text) <= 4096
+    assert [b["text"] for b in buttons["inline_keyboard"][0]] == ["논문 보기", "PDF"]
+
+
+def test_build_messages_without_abstract(topic, paper_factory):
+    [(text, _)] = build_messages(topic, [paper_factory("t")], "", "2026-10-14")
+    assert "초록을 제공하지 않습니다" in text and "blockquote" not in text
+
+
+def test_build_messages_multiple_numbered(topic, paper_factory):
+    papers = [paper_factory("a", pdf_url="https://x/a"), paper_factory("b")]
+    [(text, buttons)] = build_messages(topic, papers, "흐름", "2026-10-14")
+    assert "· 2편" in text and "오늘의 한 줄 정리" in text and "<b>1. <a" in text
     assert [b["text"] for b in buttons["inline_keyboard"][0]] == ["1. 논문 보기", "1. PDF"]
 
 
@@ -210,3 +229,11 @@ def test_now_command_partial_name(monkeypatch, tmp_path, topic, paper_factory):
     assert any("model z" in t for _, t in tg.sent)
     main.handle_command("/today", "42", [topic], h, tg)
     assert "(다시 보기)" in tg.sent[-1][1]
+
+
+def test_prefers_papers_with_abstract(monkeypatch, tmp_path, topic, paper_factory):
+    topic.count = 1
+    _patch_collect(monkeypatch, [paper_factory("state of health model", venue="Journal of Power Sources"),
+                                 paper_factory("plain model", abstract="We do things.")])
+    papers, _, _ = main.pick_papers(topic, History(tmp_path / "h.json"), NOW)
+    assert [p.title for p in papers] == ["plain model"]

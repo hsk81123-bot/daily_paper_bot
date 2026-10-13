@@ -33,9 +33,10 @@ SCHEMA = {
                     "index": {"type": "integer"},
                     "title_ko": {"type": "string"},
                     "summary": {"type": "string"},
+                    "points": {"type": "array", "items": {"type": "string"}},
                     "why": {"type": "string"},
                 },
-                "required": ["index", "title_ko", "summary", "why"],
+                "required": ["index", "title_ko", "summary", "points", "why"],
                 "additionalProperties": False,
             },
         },
@@ -66,14 +67,17 @@ def build_prompt(topic: Topic, candidates: list[Paper]) -> str:
 선정 기준:
 1. 주제 범위와의 관련성(관련 없는 논문은 고르지 마세요. 관련 논문이 {topic.count}편보다 적으면 적게 골라도 됩니다)
 2. 새로움과 영향력(새 방법·새 발견·실용적 의미). 참고로 영향력 있는 저널 예: {venues}
-3. 같은 저널이나 arXiv에서 {topic.max_per_venue}편을 넘지 않게 섞기
+3. 초록이 있는 논문을 우선하세요(초록이 있어야 정확히 요약할 수 있습니다)
+4. 여러 편을 고를 때는 같은 저널이나 arXiv에서 {topic.max_per_venue}편을 넘지 않게 섞기
 
 고른 논문마다:
 - index: 후보 번호
 - title_ko: 자연스러운 한국어 제목
-- summary: 2~3문장 한국어 요약(무엇을, 어떻게, 무엇을 보였는지)
+- summary: 3~4문장 한국어 요약(연구 배경과 문제, 접근 방법, 주요 결과)
+- points: 핵심 정리 3~4개. 각 항목은 "목적: …", "방법: …", "결과: …", "의의: …" 형식의 한 문장.
+  초록에 없는 항목(예: 구체적 수치가 없는 결과)은 지어내지 말고 아는 만큼만 쓰거나 빼세요.
 - why: 이 논문이 왜 볼 만한지 한 문장
-그리고 digest: 오늘 고른 논문들의 흐름을 묶은 "오늘의 한 줄 정리" 한 문장.
+그리고 digest: 오늘 고른 논문들의 흐름을 묶은 "오늘의 한 줄 정리" 한 문장(한 편만 골랐다면 그 논문의 핵심을 한 문장으로).
 
 후보 목록:
 {blocks}"""
@@ -130,6 +134,7 @@ def curate(topic: Topic, candidates: list[Paper], client=None) -> tuple[list[Pap
         p = candidates[idx]
         p.title_ko = (item.get("title_ko") or "").strip()
         p.summary = (item.get("summary") or "").strip()
+        p.points = [x.strip() for x in item.get("points") or [] if isinstance(x, str) and x.strip()][:5]
         p.why = (item.get("why") or "").strip()
         picked.append(p)
         if len(picked) == topic.count:

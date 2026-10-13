@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom">
+<channel><title>eess.SY updates on arXiv.org</title>
+<item><title>Electrochemical model-based state of charge estimation for lithium-ion batteries</title>
+<link>https://arxiv.org/abs/2610.07777</link>
+<description>arXiv:2610.07777v1 Announce Type: new
+Abstract: We estimate SOC of a battery using a reduced DFN model.</description>
+<guid isPermaLink="false">oai:arXiv.org:2610.07777v1</guid>
+<category>eess.SY</category>
+<pubDate>Tue, 13 Oct 2026 00:00:00 -0400</pubDate>
+<arxiv:announce_type>new</arxiv:announce_type>
+<dc:creator>Min Kim, Ji Lee</dc:creator></item>
+<item><title>Battery recycling economics</title>
+<link>https://arxiv.org/abs/2610.08888</link>
+<description>arXiv:2610.08888v1 Announce Type: new
+Abstract: Costs of battery recycling.</description>
+<pubDate>Tue, 13 Oct 2026 00:00:00 -0400</pubDate>
+<dc:creator>A. B</dc:creator></item>
+<item><title>Old battery model revisited</title>
+<link>https://arxiv.org/abs/2501.00001</link>
+<description>arXiv:2501.00001v3 Announce Type: replace
+Abstract: Battery model update.</description>
+<pubDate>Tue, 13 Oct 2026 00:00:00 -0400</pubDate>
+<dc:creator>C. D</dc:creator></item>
+</channel></rss>
