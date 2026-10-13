@@ -73,6 +73,11 @@ topics:
           (abs:model OR abs:modeling OR abs:modelling OR abs:simulation OR abs:"state of health"
           OR abs:"state of charge" OR abs:"digital twin" OR abs:PyBaMM OR abs:"equivalent circuit")
         max_results: 60
+        # API가 막히면(429) 아래 분야의 오늘자 RSS에서 키워드로 걸러 씀. 그룹끼리는 AND, 그룹 안은 OR
+        rss_categories: [eess.SY, eess.SP, cond-mat.mtrl-sci, physics.chem-ph, physics.app-ph, cs.LG]
+        rss_require:
+          - [battery, batteries, lithium-ion, li-ion]
+          - [model, simulation, state of health, state of charge, state-of-health, state-of-charge, digital twin, pybamm, equivalent circuit, estimation]
       - type: openalex
         search: >-
           "battery model" OR "battery modeling" OR "battery modelling" OR "electrochemical model"
@@ -115,6 +120,9 @@ topics:
           ti:battery OR ti:batteries OR ti:"lithium-ion" OR ti:"Li-ion" OR ti:"sodium-ion"
           OR ti:"solid-state electrolyte" OR ti:"lithium metal" OR ti:cathode OR ti:"solid electrolyte"
         max_results: 60
+        rss_categories: [cond-mat.mtrl-sci, physics.chem-ph, physics.app-ph, cond-mat.mes-hall]
+        rss_require:
+          - [battery, batteries, lithium-ion, li-ion, sodium-ion, lithium metal, solid electrolyte, solid-state electrolyte, cathode]
       - type: openalex
         search: >-
           "lithium-ion battery" OR "lithium-ion batteries" OR "solid-state battery" OR "solid-state batteries"

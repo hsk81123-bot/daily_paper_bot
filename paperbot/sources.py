@@ -18,6 +18,7 @@ from .papers import Paper, arxiv_id_from, clean_text, normalize_doi
 log = logging.getLogger(__name__)
 
 ARXIV_API = "https://export.arxiv.org/api/query"
+ARXIV_RSS = "https://rss.arxiv.org/rss"
 OPENALEX_API = "https://api.openalex.org/works"
 USER_AGENT = "daily-paper-bot/1.0 (+https://github.com/hsk81123-bot/daily_paper_bot)"
 ARXIV_DELAY = 3.0  # arXiv 이용 규칙: 요청 사이 3초 간격
@@ -51,20 +52,83 @@ def _one_line(query: str) -> str:
 
 # ---------------------------------------------------------------- arXiv
 def fetch_arxiv(cfg: dict, session: requests.Session) -> list[Paper]:
+    """arXiv 검색 API를 쓰고, 막히면(GitHub Actions IP에 429가 잦음) 분야별 RSS로 대신한다."""
+    try:
+        return fetch_arxiv_api(cfg)
+    except requests.RequestException as exc:
+        if not cfg.get("rss_categories"):
+            raise
+        log.warning("  arXiv API 실패(%s) → arXiv RSS로 대신 수집", exc)
+        return fetch_arxiv_rss(cfg, session)
+
+
+def fetch_arxiv_api(cfg: dict, attempts: int = 2) -> list[Paper]:
+    # 공용 세션의 빠른 재시도는 arXiv 429를 악화시키므로 따로 천천히 재시도한다
     global _last_arxiv_call
-    wait = ARXIV_DELAY - (time.monotonic() - _last_arxiv_call)
-    if wait > 0:
-        time.sleep(wait)
     params = {
         "search_query": _one_line(cfg["query"]),
         "sortBy": "submittedDate",
         "sortOrder": "descending",
         "max_results": int(cfg.get("max_results", 50)),
     }
-    resp = session.get(ARXIV_API, params=params, timeout=30)
-    _last_arxiv_call = time.monotonic()
+    for attempt in range(attempts):
+        wait = ARXIV_DELAY - (time.monotonic() - _last_arxiv_call)
+        if wait > 0:
+            time.sleep(wait)
+        resp = requests.get(ARXIV_API, params=params, timeout=30, headers={"User-Agent": USER_AGENT})
+        _last_arxiv_call = time.monotonic()
+        if resp.status_code in (429, 503) and attempt + 1 < attempts:
+            time.sleep(min(int(resp.headers.get("Retry-After", "10") or 10), 30))
+            continue
+        resp.raise_for_status()
+        return parse_arxiv(resp.text)
+    return []
+
+
+def fetch_arxiv_rss(cfg: dict, session: requests.Session) -> list[Paper]:
+    cats = "+".join(cfg["rss_categories"])
+    resp = session.get(f"{ARXIV_RSS}/{cats}", timeout=30)
     resp.raise_for_status()
-    return parse_arxiv(resp.text)
+    return parse_arxiv_rss(resp.content, cfg.get("rss_require", []))
+
+
+def _matches_groups(text: str, groups: list[list[str]]) -> bool:
+    """그룹끼리는 AND, 그룹 안의 단어끼리는 OR."""
+    text = text.lower()
+    return all(any(w.lower() in text for w in group) for group in groups)
+
+
+def parse_arxiv_rss(content: bytes | str, require: list[list[str]]) -> list[Paper]:
+    feed = feedparser.parse(content)
+    papers = []
+    for e in feed.entries:
+        desc = e.get("summary") or e.get("description") or ""
+        if "announce type: replace" in desc.lower():  # 기존 논문의 새 버전은 제외
+            continue
+        title = clean_text(e.get("title"))
+        abstract = clean_text(desc.split("Abstract:", 1)[1] if "Abstract:" in desc else desc)
+        if not title or (require and not _matches_groups(f"{title} {abstract}", require)):
+            continue
+        aid = arxiv_id_from(e.get("link") or e.get("id"))
+        published = _struct_to_dt(e.get("published_parsed") or e.get("updated_parsed"))
+        if not aid or not published:
+            continue
+        creators = e.get("author") or e.get("dc_creator") or ""
+        papers.append(
+            Paper(
+                title=title,
+                url=f"https://arxiv.org/abs/{aid}",
+                published=published,
+                source="arXiv",
+                authors=[a.strip() for a in creators.split(",") if a.strip()],
+                abstract=abstract,
+                venue="arXiv",
+                arxiv_id=aid,
+                pdf_url=f"https://arxiv.org/pdf/{aid}",
+                categories=[t.get("term", "") for t in e.get("tags", [])],
+            )
+        )
+    return papers
 
 
 def parse_arxiv(xml: str) -> list[Paper]:
