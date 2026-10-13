@@ -30,22 +30,22 @@ def pick_papers(topic: Topic, history: History, now: datetime, session=None, cli
     log.info("[%s] 수집 시작", topic.name)
     raw = sources.collect(topic.sources, topic.max_lookback_days, now, session=session)
     fresh = [p for p in dedupe(raw) if not history.was_sent(p)]
-    pool = ranking.candidates_for(topic, fresh, now)
-    log.info("[%s] 수집 %d편 → 중복·기발송 제외 %d편 → 기간 내 후보 %d편", topic.name, len(raw), len(fresh), len(pool))
-    if not pool:
-        return [], "", ""
     label = ""
     if topic.alternate_sources or kind:
+        # 기간 필터보다 먼저 종류를 고른다(OpenAlex의 arXiv 색인은 며칠 늦어 3일 창에서 밀려나기 쉬움)
         kind = kind or ranking.kind_for_day(now.date())
-        same = [p for p in pool if ranking.source_kind(p) == kind]
+        same = ranking.candidates_for(topic, [p for p in fresh if ranking.source_kind(p) == kind], now)
         if not same:
             other = "arxiv" if kind == "journal" else "journal"
             log.info("[%s] 오늘 차례(%s) 후보가 없어 %s로 대신합니다.", topic.name, kind, other)
             kind = other
-            same = [p for p in pool if ranking.source_kind(p) == kind]
-        pool = same
+        fresh = [p for p in fresh if ranking.source_kind(p) == kind]
         label = ranking.KIND_LABELS[kind]
-        log.info("[%s] 오늘은 %s · 후보 %d편", topic.name, label, len(pool))
+    pool = ranking.candidates_for(topic, fresh, now)
+    log.info("[%s] 수집 %d편 → 중복·기발송 제외 %d편 → 기간 내 후보 %d편 %s",
+             topic.name, len(raw), len(fresh), len(pool), label)
+    if not pool:
+        return [], "", ""
     with_abstract = [p for p in pool if p.abstract]
     if len(with_abstract) >= topic.count:  # 요약과 Abstract를 보여 줄 수 있도록 초록 있는 논문 우선
         pool = with_abstract
