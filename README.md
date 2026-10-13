@@ -8,6 +8,7 @@
 | 🔋 배터리 일반 | 리튬이온·리튬금속·전고체·나트륨이온, 양극/음극/전해질, 계면(SEI), 급속충전, 열폭주, 재활용 | 1 |
 
 - **논문 출처**: [arXiv API](https://info.arxiv.org/help/api/) (프리프린트, API가 막히면 분야별 arXiv RSS로 대신 수집), [OpenAlex](https://openalex.org) (저널 논문 — Journal of Power Sources, JES, Joule, Nature Energy 등), Nature Energy RSS. 모두 API 키 없이 동작합니다.
+- **저널/arXiv 교대**: 하루는 저널 논문, 다음 날은 arXiv 프리프린트를 보냅니다(날짜 기준으로 하루씩 교대). 그날 차례인 종류의 후보가 없으면 다른 종류로 대신합니다. 메시지 머리에 `📰 저널 논문` 또는 `📝 arXiv 프리프린트`로 표시됩니다. 끄려면 `config/topics.yaml`에서 `alternate_sources: false`로 바꿉니다.
 - **선정**: `ANTHROPIC_API_KEY`가 있으면 Claude가 후보 중 주제에 맞고 중요한 논문을 고르고, 없으면 키워드·주요 저널·최신순으로 고릅니다. 초록이 있는 논문을 우선합니다. 편수를 늘리면(`count`) 한 저널이나 arXiv가 2편을 넘지 않게 섞습니다.
 - **요약**: Claude가 한국어 제목, 3~4문장 한국어 요약, 핵심 정리(목적·방법·결과·의의), "왜 볼 만한가" 한 줄을 씁니다. **초록에 있는 내용만** 근거로 씁니다. 키가 없거나 API가 실패하면 한국어 요약 없이 보냅니다.
 - **Abstract**: 영문 초록 원문을 접을 수 있는 인용 블록으로 붙입니다(길면 2,000자에서 자름). 출처가 초록을 주지 않으면 그렇다고 표시합니다.
@@ -93,6 +94,7 @@ Physics-informed learning of health-aware equivalent circuit parameter evolution
 ### 6. 첫 실행
 **Actions → Daily papers → Run workflow**
 - 처음에는 `dry_run`을 켜고 실행해 로그에서 어떤 논문이 뽑히는지 확인해 보세요.
+- `source`로 날짜 교대와 상관없이 `journal` 또는 `arxiv`를 골라 보낼 수 있습니다(`auto`가 기본).
 - 문제없으면 `dry_run` 없이 실행하면 텔레그램으로 옵니다. 같은 날 다시 받으려면 `force`를 켭니다.
 - 실패하면 로그를 Claude에게 보여 주세요.
 

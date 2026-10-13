@@ -1,7 +1,7 @@
 """후보 필터링과 키 없이 고르는 기본 선정 규칙."""
 from __future__ import annotations
 
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 from .config import Topic
 from .papers import Paper
@@ -71,3 +71,17 @@ def rank(papers: list[Paper], topic: Topic, today: datetime) -> list[Paper]:
 
 def basic_select(papers: list[Paper], topic: Topic, today: datetime) -> list[Paper]:
     return diversify(rank(papers, topic, today), topic.count, topic.max_per_venue)
+
+
+# ------------------------------------------------------------ 저널/arXiv 번갈아 보내기
+KIND_LABELS = {"journal": "📰 저널 논문", "arxiv": "📝 arXiv 프리프린트"}
+
+
+def source_kind(paper: Paper) -> str:
+    """저널에 실린 논문은 arXiv에 함께 올라와 있어도 저널로 본다."""
+    return "arxiv" if paper.venue == "arXiv" else "journal"
+
+
+def kind_for_day(day: date) -> str:
+    """날짜마다 저널과 arXiv를 번갈아 고른다(하루씩 교대)."""
+    return "journal" if day.toordinal() % 2 == 0 else "arxiv"

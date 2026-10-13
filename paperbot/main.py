@@ -24,13 +24,26 @@ log = logging.getLogger("paperbot")
 
 
 # ------------------------------------------------------------------ 수집·선정
-def pick_papers(topic: Topic, history: History, now: datetime, session=None, client=None) -> tuple[list[Paper], str, str]:
-    """(선정 논문, 한 줄 정리, 안내 문구)를 돌려준다."""
+def pick_papers(topic: Topic, history: History, now: datetime, session=None, client=None,
+                kind: str | None = None) -> tuple[list[Paper], str, str]:
+    """(선정 논문, 한 줄 정리, 안내 문구)를 돌려준다. kind는 "journal"/"arxiv"로 날짜 교대를 덮어쓴다."""
     log.info("[%s] 수집 시작", topic.name)
     raw = sources.collect(topic.sources, topic.max_lookback_days, now, session=session)
     fresh = [p for p in dedupe(raw) if not history.was_sent(p)]
+    label = ""
+    if topic.alternate_sources or kind:
+        # 기간 필터보다 먼저 종류를 고른다(OpenAlex의 arXiv 색인은 며칠 늦어 3일 창에서 밀려나기 쉬움)
+        kind = kind or ranking.kind_for_day(now.date())
+        same = ranking.candidates_for(topic, [p for p in fresh if ranking.source_kind(p) == kind], now)
+        if not same:
+            other = "arxiv" if kind == "journal" else "journal"
+            log.info("[%s] 오늘 차례(%s) 후보가 없어 %s로 대신합니다.", topic.name, kind, other)
+            kind = other
+        fresh = [p for p in fresh if ranking.source_kind(p) == kind]
+        label = ranking.KIND_LABELS[kind]
     pool = ranking.candidates_for(topic, fresh, now)
-    log.info("[%s] 수집 %d편 → 중복·기발송 제외 %d편 → 기간 내 후보 %d편", topic.name, len(raw), len(fresh), len(pool))
+    log.info("[%s] 수집 %d편 → 중복·기발송 제외 %d편 → 기간 내 후보 %d편 %s",
+             topic.name, len(raw), len(fresh), len(pool), label)
     if not pool:
         return [], "", ""
     with_abstract = [p for p in pool if p.abstract]
@@ -41,19 +54,21 @@ def pick_papers(topic: Topic, history: History, now: datetime, session=None, cli
     curated = summarize.curate(topic, ranked[: summarize.MAX_CANDIDATES], client=client)
     if curated is not None:
         papers, digest = curated
-        return papers, digest, ""
-    note = "" if not os.environ.get("ANTHROPIC_API_KEY") else "요약 생성에 실패해 제목·링크 위주로 보냅니다."
+        return papers, digest, label
+    failed = "요약 생성에 실패해 제목·링크 위주로 보냅니다." if os.environ.get("ANTHROPIC_API_KEY") else ""
+    note = " · ".join(x for x in (label, failed) if x)
     return ranking.basic_select(pool, topic, now), "", note
 
 
 def run_topic(topic: Topic, history: History, now: datetime, *, dry_run: bool = False, force: bool = False,
-              chat_id: str | None = None, session=None, client=None, telegram: Telegram | None = None) -> bool:
+              chat_id: str | None = None, session=None, client=None, telegram: Telegram | None = None,
+              kind: str | None = None) -> bool:
     day = now.date().isoformat()
     if history.sent_today(day, topic.id) and not force:
         log.info("[%s] 오늘(%s) 이미 보냈습니다. 다시 보내려면 --force", topic.name, day)
         return True
 
-    papers, digest, note = pick_papers(topic, history, now, session=session, client=client)
+    papers, digest, note = pick_papers(topic, history, now, session=session, client=client, kind=kind)
     messages = build_messages(topic, papers, digest, day, note=note)
 
     if dry_run:
@@ -80,13 +95,14 @@ def run_topic(topic: Topic, history: History, now: datetime, *, dry_run: bool = 
     return True
 
 
-def run_daily(topics: list[Topic], history: History, *, dry_run: bool, force: bool) -> bool:
+def run_daily(topics: list[Topic], history: History, *, dry_run: bool, force: bool,
+              kind: str | None = None) -> bool:
     now = now_kst()
     session = sources.make_session()
     ok = True
     for topic in topics:
         try:
-            ok &= run_topic(topic, history, now, dry_run=dry_run, force=force, session=session)
+            ok &= run_topic(topic, history, now, dry_run=dry_run, force=force, session=session, kind=kind)
         except Exception:  # noqa: BLE001 — 한 주제가 실패해도 다음 주제는 계속
             log.exception("[%s] 처리 중 오류", topic.name)
             ok = False
@@ -201,6 +217,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--dry-run", action="store_true", help="발송·저장 없이 메시지를 출력")
     parser.add_argument("--topic", help="이 주제만 실행 (id 또는 이름)")
     parser.add_argument("--force", action="store_true", help="오늘 이미 보냈어도 다시 수집·발송")
+    parser.add_argument("--source", choices=["journal", "arxiv"],
+                        help="날짜 교대와 상관없이 이 종류로 보냄 (journal / arxiv)")
     parser.add_argument("--poll", action="store_true", help="텔레그램 봇 명령 처리")
     parser.add_argument("--config", default=str(DEFAULT_CONFIG))
     parser.add_argument("--history", default=str(DEFAULT_HISTORY))
@@ -224,7 +242,7 @@ def main(argv: list[str] | None = None) -> int:
 
     if not os.environ.get("ANTHROPIC_API_KEY"):
         log.info("ANTHROPIC_API_KEY가 없어 Claude 요약 없이 제목·링크 위주로 보냅니다.")
-    ok = run_daily(topics, history, dry_run=args.dry_run, force=args.force)
+    ok = run_daily(topics, history, dry_run=args.dry_run, force=args.force, kind=args.source)
     return 0 if ok else 1
 
 

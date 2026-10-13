@@ -1,4 +1,5 @@
 import json
+from datetime import timedelta
 from types import SimpleNamespace
 
 from conftest import NOW
@@ -237,3 +238,54 @@ def test_prefers_papers_with_abstract(monkeypatch, tmp_path, topic, paper_factor
                                  paper_factory("plain model", abstract="We do things.")])
     papers, _, _ = main.pick_papers(topic, History(tmp_path / "h.json"), NOW)
     assert [p.title for p in papers] == ["plain model"]
+
+
+# ------------------------------------------------------------ 저널/arXiv 교대
+def test_kind_alternates_daily():
+    from datetime import date, timedelta
+
+    days = [date(2026, 10, 14) + timedelta(days=i) for i in range(4)]
+    kinds = [ranking.kind_for_day(d) for d in days]
+    assert kinds == ["arxiv", "journal", "arxiv", "journal"]
+
+
+def _mixed(paper_factory):
+    return [paper_factory("journal model", venue="Journal of Power Sources", abstract="a"),
+            paper_factory("preprint model", venue="arXiv", arxiv_id="2610.1", abstract="b")]
+
+
+def test_alternate_picks_todays_kind(monkeypatch, tmp_path, topic, paper_factory):
+    topic.count, topic.alternate_sources = 1, True
+    _patch_collect(monkeypatch, _mixed(paper_factory))
+    papers, _, note = main.pick_papers(topic, History(tmp_path / "h.json"), NOW)  # 10/14 = arXiv 차례
+    assert [p.venue for p in papers] == ["arXiv"] and "arXiv" in note
+    tomorrow = NOW + timedelta(days=1)
+    papers, _, note = main.pick_papers(topic, History(tmp_path / "h.json"), tomorrow)
+    assert [p.venue for p in papers] == ["Journal of Power Sources"] and "저널" in note
+
+
+def test_alternate_falls_back_and_override(monkeypatch, tmp_path, topic, paper_factory):
+    topic.count, topic.alternate_sources = 1, True
+    _patch_collect(monkeypatch, _mixed(paper_factory)[:1])  # 저널만 있음
+    papers, _, note = main.pick_papers(topic, History(tmp_path / "h.json"), NOW)
+    assert papers[0].venue == "Journal of Power Sources" and "저널" in note
+    _patch_collect(monkeypatch, _mixed(paper_factory))
+    topic.alternate_sources = False
+    papers, _, _ = main.pick_papers(topic, History(tmp_path / "h.json"), NOW, kind="journal")
+    assert papers[0].venue == "Journal of Power Sources"
+
+
+def test_journal_version_counts_as_journal(paper_factory):
+    p = paper_factory("x", venue="Joule", arxiv_id="2610.2")
+    assert ranking.source_kind(p) == "journal"
+
+
+def test_alternate_uses_older_arxiv_beyond_short_window(monkeypatch, tmp_path, topic, paper_factory):
+    # OpenAlex의 arXiv 색인은 며칠 늦으므로, 최근 3일에 저널만 있어도 arXiv 날에는 arXiv를 골라야 함
+    topic.count, topic.alternate_sources = 1, True
+    _patch_collect(monkeypatch, [
+        paper_factory("fresh journal model", venue="Journal of Power Sources", days_ago=1, abstract="a"),
+        paper_factory("older preprint model", venue="arXiv", arxiv_id="2610.9", days_ago=6, abstract="b"),
+    ])
+    papers, _, note = main.pick_papers(topic, History(tmp_path / "h.json"), NOW)  # 10/14 = arXiv 차례
+    assert [p.title for p in papers] == ["older preprint model"] and "arXiv" in note
