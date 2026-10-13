@@ -1,0 +1,75 @@
+name: Daily papers
+
+on:
+  schedule:
+    # 매일 07:00 KST 발송 목표. GitHub cron은 늦게 시작하는 경우가 많아 10분 일찍 예약(06:50 KST = 21:50 UTC)
+    - cron: "50 21 * * *"
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: "한 주제만 실행 (비우면 전체, 예: modeling / general)"
+        required: false
+        default: ""
+      force:
+        description: "오늘 이미 보냈어도 다시 수집·발송"
+        type: boolean
+        default: false
+      dry_run:
+        description: "발송·저장 없이 로그로만 출력"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: paperbot-data   # 명령 처리 워크플로와 기록 파일을 동시에 고치지 않도록
+  cancel-in-progress: false
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Collect and send
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          CONTACT_EMAIL: ${{ secrets.CONTACT_EMAIL }}
+          CLAUDE_MODEL: ${{ vars.CLAUDE_MODEL }}
+          INPUT_TOPIC: ${{ inputs.topic }}
+          INPUT_FORCE: ${{ inputs.force }}
+          INPUT_DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=()
+          if [ -n "$INPUT_TOPIC" ]; then args+=(--topic "$INPUT_TOPIC"); fi
+          if [ "$INPUT_FORCE" = "true" ]; then args+=(--force); fi
+          if [ "$INPUT_DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          python -m paperbot.main "${args[@]}"
+
+      - name: Commit history
+        if: always() && inputs.dry_run != true
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data/
+          if git diff --cached --quiet; then
+            echo "변경 없음"; exit 0
+          fi
+          git commit -m "chore: daily paper history $(TZ=Asia/Seoul date +%F)"
+          for i in 1 2 3 4; do
+            git pull --rebase origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}" && exit 0
+            sleep $((i * 5))
+          done
+          echo "기록 push 실패"; exit 1

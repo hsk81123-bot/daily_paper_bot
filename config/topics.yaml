@@ -1,0 +1,128 @@
+# 데일리 페이퍼 봇 주제 설정
+# 주제를 늘리려면 topics 아래에 항목을 하나 더 추가하면 됩니다.
+# 주제 순서대로 수집·발송하며, 앞 주제에서 보낸 논문은 뒤 주제에서 다시 보내지 않습니다.
+
+defaults:
+  count: 5                 # 주제별로 보낼 논문 수
+  lookback_days: 3         # 우선 이 기간 안의 논문만 사용 (arXiv는 주말에 새 논문이 없음)
+  max_lookback_days: 14    # 후보가 부족하면 이 기간까지 늘림
+  max_per_venue: 2         # 한 저널/arXiv가 독점하지 않도록 출처당 최대 편수
+  telegram:
+    bot_token_env: TELEGRAM_BOT_TOKEN
+    chat_id_env: TELEGRAM_CHAT_ID
+  # 키워드·저널 가중치 (Claude 키가 없을 때 고르는 기준이자, Claude에게 주는 힌트)
+  priority_venues:
+    - Nature Energy
+    - Nature
+    - Science
+    - Nature Communications
+    - Joule
+    - Energy & Environmental Science
+    - Advanced Energy Materials
+    - ACS Energy Letters
+    - Energy Storage Materials
+    - Journal of Power Sources
+    - Journal of The Electrochemical Society
+    - Journal of Energy Storage
+    - eTransportation
+    - Applied Energy
+    - Electrochimica Acta
+    - Batteries & Supercaps
+    - IEEE Transactions on Transportation Electrification
+    - IEEE Transactions on Industrial Electronics
+
+topics:
+  - id: modeling
+    name: 배터리 모델링
+    emoji: 🧮
+    count: 5
+    description: >-
+      Battery modeling and simulation: physics-based electrochemical models (DFN/P2D, SPM/SPMe),
+      equivalent circuit models, degradation/aging and lifetime models, thermal and multiphysics models,
+      SOC/SOH/RUL estimation, parameter identification, physics-informed machine learning,
+      digital twins, BMS algorithms, open-source tools such as PyBaMM.
+    keywords:
+      - model
+      - modeling
+      - modelling
+      - simulation
+      - equivalent circuit
+      - single particle
+      - Doyle
+      - P2D
+      - DFN
+      - pseudo-two-dimensional
+      - state of charge
+      - state of health
+      - remaining useful life
+      - estimation
+      - digital twin
+      - physics-informed
+      - parameter identification
+      - parameterization
+      - degradation
+      - aging
+      - thermal
+      - PyBaMM
+      - Kalman
+      - battery management system
+    sources:
+      - type: arxiv
+        query: >-
+          (abs:battery OR abs:batteries OR abs:"lithium-ion" OR abs:"Li-ion") AND
+          (abs:model OR abs:modeling OR abs:modelling OR abs:simulation OR abs:"state of health"
+          OR abs:"state of charge" OR abs:"digital twin" OR abs:PyBaMM OR abs:"equivalent circuit")
+        max_results: 60
+      - type: openalex
+        search: >-
+          "battery model" OR "battery modeling" OR "battery modelling" OR "electrochemical model"
+          OR "equivalent circuit model" OR "single particle model" OR "Doyle-Fuller-Newman"
+          OR "pseudo-two-dimensional model" OR "battery degradation model" OR "battery aging model"
+          OR "state of health estimation" OR "state of charge estimation" OR "battery digital twin"
+          OR "battery thermal model" OR PyBaMM
+        max_results: 60
+
+  - id: general
+    name: 배터리 일반
+    emoji: 🔋
+    count: 5
+    description: >-
+      Battery research in general: lithium-ion, lithium-metal, solid-state, sodium-ion and
+      next-generation batteries; cathode/anode/electrolyte materials, interfaces (SEI/CEI),
+      manufacturing, fast charging, safety/thermal runaway, recycling, characterization and diagnostics.
+      Prefer impactful, broadly interesting results.
+    keywords:
+      - battery
+      - batteries
+      - lithium-ion
+      - lithium metal
+      - solid-state
+      - sodium-ion
+      - cathode
+      - anode
+      - electrolyte
+      - interphase
+      - SEI
+      - fast charging
+      - thermal runaway
+      - recycling
+      - silicon
+      - high-nickel
+      - LFP
+    sources:
+      - type: arxiv
+        query: >-
+          ti:battery OR ti:batteries OR ti:"lithium-ion" OR ti:"Li-ion" OR ti:"sodium-ion"
+          OR ti:"solid-state electrolyte" OR ti:"lithium metal" OR ti:cathode OR ti:"solid electrolyte"
+        max_results: 60
+      - type: openalex
+        search: >-
+          "lithium-ion battery" OR "lithium-ion batteries" OR "solid-state battery" OR "solid-state batteries"
+          OR "sodium-ion battery" OR "sodium-ion batteries" OR "lithium metal battery" OR "lithium metal anode"
+          OR "battery cathode" OR "battery electrolyte" OR "battery recycling" OR "thermal runaway"
+        max_results: 80
+      - type: rss
+        name: Nature Energy
+        url: https://www.nature.com/nenergy.rss
+        # 배터리와 무관한 기사가 섞이므로 제목/요약에 아래 단어가 있는 것만 사용
+        require_keywords: [battery, batteries, lithium, sodium-ion, electrolyte, cathode, anode]

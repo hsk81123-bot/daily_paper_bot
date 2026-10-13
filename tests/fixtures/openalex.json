@@ -1,0 +1,18 @@
+{"meta": {"count": 2}, "results": [
+ {"id": "https://openalex.org/W1", "doi": "https://doi.org/10.1016/j.jpowsour.2026.111111",
+  "title": "Thermal model of <i>pouch</i> cells", "publication_date": "2026-10-12", "type": "article",
+  "authorships": [{"author": {"display_name": "Min Choi"}}, {"author": {"display_name": "Su Lee"}}],
+  "primary_location": {"landing_page_url": "https://www.sciencedirect.com/x", "pdf_url": null,
+                       "source": {"display_name": "Journal of Power Sources"}},
+  "best_oa_location": null,
+  "abstract_inverted_index": {"We": [0], "model": [2], "heat": [1], "generation.": [3]},
+  "ids": {"openalex": "https://openalex.org/W1"}},
+ {"id": "https://openalex.org/W2", "doi": "https://doi.org/10.48550/arxiv.2610.05555",
+  "title": "Physics-informed neural networks for state of health estimation", "publication_date": "2026-10-11",
+  "type": "preprint", "authorships": [],
+  "primary_location": {"landing_page_url": "https://arxiv.org/abs/2610.05555",
+                       "source": {"display_name": "arXiv (Cornell University)"}},
+  "best_oa_location": {"pdf_url": "https://arxiv.org/pdf/2610.05555"},
+  "abstract_inverted_index": null, "ids": {}},
+ {"id": "https://openalex.org/W3", "doi": null, "title": null, "publication_date": "2026-10-11"}
+]}
