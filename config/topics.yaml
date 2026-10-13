@@ -3,7 +3,7 @@
 # 주제 순서대로 수집·발송하며, 앞 주제에서 보낸 논문은 뒤 주제에서 다시 보내지 않습니다.
 
 defaults:
-  count: 5                 # 주제별로 보낼 논문 수
+  count: 1                 # 주제별로 하루에 보낼 논문 수
   lookback_days: 3         # 우선 이 기간 안의 논문만 사용 (arXiv는 주말에 새 논문이 없음)
   max_lookback_days: 14    # 후보가 부족하면 이 기간까지 늘림
   max_per_venue: 2         # 한 저널/arXiv가 독점하지 않도록 출처당 최대 편수
@@ -35,7 +35,7 @@ topics:
   - id: modeling
     name: 배터리 모델링
     emoji: 🧮
-    count: 5
+    count: 1
     description: >-
       Battery modeling and simulation: physics-based electrochemical models (DFN/P2D, SPM/SPMe),
       equivalent circuit models, degradation/aging and lifetime models, thermal and multiphysics models,
@@ -90,7 +90,7 @@ topics:
   - id: general
     name: 배터리 일반
     emoji: 🔋
-    count: 5
+    count: 1
     description: >-
       Battery research in general: lithium-ion, lithium-metal, solid-state, sodium-ion and
       next-generation batteries; cathode/anode/electrolyte materials, interfaces (SEI/CEI),

@@ -33,6 +33,9 @@ def pick_papers(topic: Topic, history: History, now: datetime, session=None, cli
     log.info("[%s] 수집 %d편 → 중복·기발송 제외 %d편 → 기간 내 후보 %d편", topic.name, len(raw), len(fresh), len(pool))
     if not pool:
         return [], "", ""
+    with_abstract = [p for p in pool if p.abstract]
+    if len(with_abstract) >= topic.count:  # 요약과 Abstract를 보여 줄 수 있도록 초록 있는 논문 우선
+        pool = with_abstract
 
     ranked = ranking.rank(pool, topic, now)
     curated = summarize.curate(topic, ranked[: summarize.MAX_CANDIDATES], client=client)

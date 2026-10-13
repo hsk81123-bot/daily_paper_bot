@@ -26,6 +26,7 @@ class Paper:
     # 아래는 Claude가 채움
     title_ko: str = ""
     summary: str = ""
+    points: list[str] = field(default_factory=list)   # 핵심 정리(목적/방법/결과/의의)
     why: str = ""
 
     @property

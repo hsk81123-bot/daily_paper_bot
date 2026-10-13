@@ -4,12 +4,13 @@
 
 | 주제 | 내용 | 하루 편수 |
 |---|---|---|
-| 🧮 배터리 모델링 | 전기화학 모델(DFN/P2D, SPM), 등가회로, 열화·수명 모델, 열 모델, SOC/SOH/RUL 추정, 파라미터 식별, physics-informed ML, 디지털 트윈, PyBaMM | 5 |
-| 🔋 배터리 일반 | 리튬이온·리튬금속·전고체·나트륨이온, 양극/음극/전해질, 계면(SEI), 급속충전, 열폭주, 재활용 | 5 |
+| 🧮 배터리 모델링 | 전기화학 모델(DFN/P2D, SPM), 등가회로, 열화·수명 모델, 열 모델, SOC/SOH/RUL 추정, 파라미터 식별, physics-informed ML, 디지털 트윈, PyBaMM | 1 |
+| 🔋 배터리 일반 | 리튬이온·리튬금속·전고체·나트륨이온, 양극/음극/전해질, 계면(SEI), 급속충전, 열폭주, 재활용 | 1 |
 
-- **논문 출처**: [arXiv API](https://info.arxiv.org/help/api/) (프리프린트), [OpenAlex](https://openalex.org) (저널 논문 — Journal of Power Sources, JES, Joule, Nature Energy 등), Nature Energy RSS. 모두 API 키 없이 동작합니다.
-- **선정**: `ANTHROPIC_API_KEY`가 있으면 Claude가 후보 중 주제에 맞고 중요한 논문을 고르고, 없으면 키워드·주요 저널·최신순으로 고릅니다. 한 저널이나 arXiv가 2편을 넘지 않게 섞습니다.
-- **요약**: Claude가 한국어 제목, 2~3문장 요약, "왜 볼 만한가" 한 줄, 주제별 "오늘의 한 줄 정리"를 씁니다. **초록에 있는 내용만** 근거로 씁니다. 키가 없거나 API가 실패하면 제목·저자·저널·링크만으로 보냅니다.
+- **논문 출처**: [arXiv API](https://info.arxiv.org/help/api/) (프리프린트, API가 막히면 분야별 arXiv RSS로 대신 수집), [OpenAlex](https://openalex.org) (저널 논문 — Journal of Power Sources, JES, Joule, Nature Energy 등), Nature Energy RSS. 모두 API 키 없이 동작합니다.
+- **선정**: `ANTHROPIC_API_KEY`가 있으면 Claude가 후보 중 주제에 맞고 중요한 논문을 고르고, 없으면 키워드·주요 저널·최신순으로 고릅니다. 초록이 있는 논문을 우선합니다. 편수를 늘리면(`count`) 한 저널이나 arXiv가 2편을 넘지 않게 섞습니다.
+- **요약**: Claude가 한국어 제목, 3~4문장 한국어 요약, 핵심 정리(목적·방법·결과·의의), "왜 볼 만한가" 한 줄을 씁니다. **초록에 있는 내용만** 근거로 씁니다. 키가 없거나 API가 실패하면 한국어 요약 없이 보냅니다.
+- **Abstract**: 영문 초록 원문을 접을 수 있는 인용 블록으로 붙입니다(길면 2,000자에서 자름). 출처가 초록을 주지 않으면 그렇다고 표시합니다.
 - **중복 방지**: 같은 논문이 arXiv와 저널 양쪽에서 잡히면 하나로 합치고(DOI·arXiv ID·제목 유사도), 이미 보낸 논문은 다시 보내지 않습니다. 프리프린트가 나중에 저널에 실려도 제목으로 걸러냅니다. 모델링 주제에서 보낸 논문은 일반 주제에서 다시 보내지 않습니다.
 - **기간**: 최근 3일 논문을 우선 쓰고(arXiv는 주말에 새 논문이 없음), 후보가 모자라면 14일까지 늘립니다.
 
@@ -17,24 +18,31 @@
 
 ```
 🧮 배터리 모델링 — 오늘의 논문
-2026-10-14 (수) · 5편
+2026-10-15 (목)
 
-💡 오늘의 한 줄 정리
-물리 기반 모델을 가볍게 만들어 BMS에 넣으려는 연구가 이어지고 있습니다.
+Physics-informed learning of health-aware equivalent circuit parameter evolution …   ← 링크
+리튬이온 배터리의 건강 상태를 반영한 등가회로 파라미터 변화의 물리 기반 학습
+👥 Tianyi Zhang, Hang Yu, Yulong Yu 외 3명 · 📚 Journal of Energy Storage · 🗓 2026-10-10
 
-1. A Reduced-Order Electrochemical Model for Fast-Charging Lithium-Ion Batteries   ← 링크
-리튬이온 배터리 급속충전을 위한 축소 차수 전기화학 모델
-👥 J. Kim, L. Park · 📚 arXiv · 🗓 2026-10-12
-📝 DFN 모델을 축소해 리튬 석출을 실시간으로 예측할 수 있는 모델을 제안했다. 상용 셀 실험 데이터와 비교해 정확도를 검증했다.
-🔍 BMS에 바로 넣을 수 있는 급속충전 제어용 모델이라 실무 적용성이 높다.
+📝 요약
+리튬이온 배터리는 사용 조건에 따라 비선형적으로 열화되어 등가회로 모델 파라미터가 시간에 따라 변한다. …
 
-2. …
+📌 핵심 정리
+• 목적: 열화에 따라 변하는 ECM 파라미터를 SOH와 함께 추정
+• 방법: 물리 제약을 넣은 신경망으로 파라미터 변화 학습
+• 결과: 여러 데이터셋에서 기존 방법 대비 추정 정확도 향상
+• 의의: BMS의 모델 기반 추정을 수명 전체에서 유지할 수 있음
 
-[1. 논문 보기] [1. PDF]
-[2. 논문 보기] …
+🔍 ECM 기반 BMS를 열화까지 고려해 갱신하려는 실무 수요에 바로 닿는 연구다.
+
+📄 Abstract
+┃ Lithium-ion batteries exhibit nonlinear degradation under complex operating
+┃ conditions, causing equivalent circuit model (ECM) parameters to evolve … (탭하면 펼침)
+
+[논문 보기] [PDF]
 ```
 
-(위 내용은 형식을 보여 주는 예시입니다. 실제 메시지는 HTML로 꾸며지고 버튼이 달립니다.)
+(위 내용은 형식을 보여 주는 예시입니다. 요약·핵심 정리는 `ANTHROPIC_API_KEY`가 있을 때만 나옵니다. 하루 편수는 `config/topics.yaml`의 `count`로 바꿀 수 있고, 2편 이상이면 번호와 "오늘의 한 줄 정리"가 붙습니다.)
 
 ## 봇 명령어
 
