@@ -19,6 +19,7 @@ log = logging.getLogger(__name__)
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 ARXIV_RSS = "https://rss.arxiv.org/rss"
+OPENALEX_ARXIV_SOURCE = "S4306400194"  # OpenAlex의 arXiv (Cornell University) 소스 ID
 OPENALEX_API = "https://api.openalex.org/works"
 USER_AGENT = "daily-paper-bot/1.0 (+https://github.com/hsk81123-bot/daily_paper_bot)"
 ARXIV_DELAY = 3.0  # arXiv 이용 규칙: 요청 사이 3초 간격
@@ -51,18 +52,40 @@ def _one_line(query: str) -> str:
 
 
 # ---------------------------------------------------------------- arXiv
-def fetch_arxiv(cfg: dict, session: requests.Session) -> list[Paper]:
-    """arXiv 검색 API를 쓰고, 막히면(GitHub Actions IP에 429가 잦음) 분야별 RSS로 대신한다."""
-    try:
-        return fetch_arxiv_api(cfg)
-    except requests.RequestException as exc:
-        if not cfg.get("rss_categories"):
-            raise
-        log.warning("  arXiv API 실패(%s) → arXiv RSS로 대신 수집", exc)
-        return fetch_arxiv_rss(cfg, session)
+def fetch_arxiv(cfg: dict, session: requests.Session, max_lookback_days: int = 14,
+                today: datetime | None = None) -> list[Paper]:
+    """arXiv 논문을 여러 경로로 시도해 처음 결과가 나온 것을 쓴다.
+
+    GitHub Actions에서는 arXiv 검색 API가 429/시간 초과로 막히고 RSS도 빈 피드를 주는 일이 잦아서,
+    마지막에는 OpenAlex가 색인한 arXiv 논문(OPENALEX_ARXIV_SOURCE)으로 대신한다.
+    """
+    today = today or datetime.now(timezone.utc)
+    routes = [("API", lambda: fetch_arxiv_api(cfg))]
+    if cfg.get("rss_categories"):
+        routes.append(("RSS", lambda: fetch_arxiv_rss(cfg, session)))
+    if cfg.get("openalex_search"):
+        routes.append(("OpenAlex", lambda: fetch_openalex(
+            {"search": cfg["openalex_search"], "filter": f"primary_location.source.id:{OPENALEX_ARXIV_SOURCE}",
+             "max_results": cfg.get("max_results", 50)},
+            session, max_lookback_days, today)))
+    last_exc: Exception | None = None
+    for name, fetch in routes:
+        try:
+            got = fetch()
+        except requests.RequestException as exc:
+            log.warning("  arXiv %s 실패: %s", name, str(exc)[:160])
+            last_exc = exc
+            continue
+        if got:
+            log.info("  arXiv %s 경로로 수집", name)
+            return got
+        log.info("  arXiv %s: 0편", name)
+    if last_exc and len(routes) == 1:
+        raise last_exc
+    return []
 
 
-def fetch_arxiv_api(cfg: dict, attempts: int = 2) -> list[Paper]:
+def fetch_arxiv_api(cfg: dict, attempts: int = 1) -> list[Paper]:
     # 공용 세션의 빠른 재시도는 arXiv 429를 악화시키므로 따로 천천히 재시도한다
     global _last_arxiv_call
     params = {
@@ -164,7 +187,8 @@ def fetch_openalex(cfg: dict, session: requests.Session, max_lookback_days: int,
     end = today.date().isoformat()
     params = {
         "search": _one_line(cfg["search"]),
-        "filter": f"from_publication_date:{start},to_publication_date:{end},type:article|preprint|review",
+        "filter": f"from_publication_date:{start},to_publication_date:{end},type:article|preprint|review"
+        + (f",{cfg['filter']}" if cfg.get("filter") else ""),
         "sort": "publication_date:desc",
         "per-page": min(int(cfg.get("max_results", 50)), 200),
         "select": "id,doi,title,publication_date,authorships,primary_location,"
@@ -204,7 +228,8 @@ def parse_openalex(data: dict) -> list[Paper]:
         papers.append(
             Paper(
                 title=title,
-                url=f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or w.get("id", "")),
+                url=(f"https://arxiv.org/abs/{aid}" if aid
+                     else f"https://doi.org/{doi}" if doi else (loc.get("landing_page_url") or w.get("id", ""))),
                 published=datetime.fromisoformat(date).replace(tzinfo=timezone.utc),
                 source="OpenAlex",
                 authors=[
@@ -216,7 +241,7 @@ def parse_openalex(data: dict) -> list[Paper]:
                 venue=venue,
                 doi="" if aid else doi,
                 arxiv_id=aid,
-                pdf_url=loc.get("pdf_url") or oa.get("pdf_url") or "",
+                pdf_url=(f"https://arxiv.org/pdf/{aid}" if aid else loc.get("pdf_url") or oa.get("pdf_url") or ""),
             )
         )
     return papers
@@ -274,7 +299,7 @@ def collect(sources: list[dict], max_lookback_days: int, today: datetime,
         label = cfg.get("name") or kind
         try:
             if kind == "arxiv":
-                got = fetch_arxiv(cfg, session)
+                got = fetch_arxiv(cfg, session, max_lookback_days, today)
             elif kind == "openalex":
                 got = fetch_openalex(cfg, session, max_lookback_days, today)
             elif kind == "rss":

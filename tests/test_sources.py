@@ -145,3 +145,40 @@ def test_fetch_arxiv_without_rss_reraises(monkeypatch):
     monkeypatch.setattr(sources, "fetch_arxiv_api", lambda cfg: (_ for _ in ()).throw(requests.HTTPError("429")))
     with pytest.raises(requests.HTTPError):
         sources.fetch_arxiv({"query": "x"}, object())
+
+
+def test_fetch_arxiv_uses_openalex_when_api_and_rss_empty(monkeypatch):
+    import json
+
+    import requests
+
+    monkeypatch.setattr(sources, "fetch_arxiv_api", lambda cfg: (_ for _ in ()).throw(requests.HTTPError("429")))
+    monkeypatch.setattr(sources, "fetch_arxiv_rss", lambda cfg, s: [])
+    seen = {}
+
+    class Resp:
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return json.loads((FIXTURES / "openalex.json").read_text())
+
+    class Session:
+        def get(self, url, params, timeout):
+            seen.update(params)
+            return Resp()
+
+    cfg = {"query": "x", "rss_categories": ["eess.SY"], "openalex_search": '"battery model"'}
+    got = sources.fetch_arxiv(cfg, Session(), 14, NOW)
+    assert "primary_location.source.id:S4306400194" in seen["filter"]
+    assert seen["search"] == '"battery model"'
+    pre = next(p for p in got if p.arxiv_id)
+    assert pre.url == "https://arxiv.org/abs/2610.05555" and pre.pdf_url == "https://arxiv.org/pdf/2610.05555"
+
+
+def test_real_config_arxiv_sources_have_fallbacks():
+    from paperbot.config import DEFAULT_CONFIG, load_topics
+
+    for t in load_topics(DEFAULT_CONFIG):
+        arxiv = [s for s in t.sources if s["type"] == "arxiv"]
+        assert arxiv and all(s.get("openalex_search") for s in arxiv)
