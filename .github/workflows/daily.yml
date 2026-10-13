@@ -18,6 +18,11 @@ on:
         description: "발송·저장 없이 로그로만 출력"
         type: boolean
         default: false
+      source:
+        description: "논문 종류 (auto = 날짜마다 저널/arXiv 교대)"
+        type: choice
+        options: [auto, journal, arxiv]
+        default: auto
 
 permissions:
   contents: write
@@ -51,11 +56,13 @@ jobs:
           INPUT_TOPIC: ${{ inputs.topic }}
           INPUT_FORCE: ${{ inputs.force }}
           INPUT_DRY_RUN: ${{ inputs.dry_run }}
+          INPUT_SOURCE: ${{ inputs.source }}
         run: |
           args=()
           if [ -n "$INPUT_TOPIC" ]; then args+=(--topic "$INPUT_TOPIC"); fi
           if [ "$INPUT_FORCE" = "true" ]; then args+=(--force); fi
           if [ "$INPUT_DRY_RUN" = "true" ]; then args+=(--dry-run); fi
+          if [ -n "$INPUT_SOURCE" ] && [ "$INPUT_SOURCE" != "auto" ]; then args+=(--source "$INPUT_SOURCE"); fi
           python -m paperbot.main "${args[@]}"
 
       - name: Commit history

@@ -7,6 +7,8 @@ defaults:
   lookback_days: 3         # 우선 이 기간 안의 논문만 사용 (arXiv는 주말에 새 논문이 없음)
   max_lookback_days: 14    # 후보가 부족하면 이 기간까지 늘림
   max_per_venue: 2         # 한 저널/arXiv가 독점하지 않도록 출처당 최대 편수
+  alternate_sources: true  # 하루는 저널 논문, 다음 날은 arXiv 프리프린트를 번갈아 보냄
+                           # (그날 종류의 후보가 없으면 다른 종류로 대신함)
   telegram:
     bot_token_env: TELEGRAM_BOT_TOKEN
     chat_id_env: TELEGRAM_CHAT_ID

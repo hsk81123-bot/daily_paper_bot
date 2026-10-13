@@ -45,6 +45,7 @@ class Topic:
     max_lookback_days: int = 14
     max_per_venue: int = 2
     priority_venues: list[str] = field(default_factory=list)
+    alternate_sources: bool = False   # 날짜마다 저널/arXiv 번갈아 보내기
     bot_token_env: str = "TELEGRAM_BOT_TOKEN"
     chat_id_env: str = "TELEGRAM_CHAT_ID"
 
@@ -81,6 +82,7 @@ def load_topics(path: Path = DEFAULT_CONFIG) -> list[Topic]:
                 max_lookback_days=int(raw.get("max_lookback_days", defaults.get("max_lookback_days", 14))),
                 max_per_venue=int(raw.get("max_per_venue", defaults.get("max_per_venue", 2))),
                 priority_venues=raw.get("priority_venues", defaults.get("priority_venues", [])) or [],
+                alternate_sources=bool(raw.get("alternate_sources", defaults.get("alternate_sources", False))),
                 bot_token_env=tg.get("bot_token_env", "TELEGRAM_BOT_TOKEN"),
                 chat_id_env=tg.get("chat_id_env", "TELEGRAM_CHAT_ID"),
             )
