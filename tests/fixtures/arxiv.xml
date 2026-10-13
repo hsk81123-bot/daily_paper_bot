@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:arxiv="http://arxiv.org/schemas/atom">
+  <title>arXiv Query</title>
+  <entry>
+    <id>http://arxiv.org/abs/2610.01234v2</id>
+    <updated>2026-10-13T10:00:00Z</updated>
+    <published>2026-10-12T17:59:00Z</published>
+    <title>A Reduced-Order   Electrochemical Model
+      for Fast-Charging Lithium-Ion Batteries</title>
+    <summary>We propose a reduced-order DFN model that captures lithium plating.</summary>
+    <author><name>Jane Kim</name></author>
+    <author><name>Lee Park</name></author>
+    <arxiv:doi>10.1149/1945-7111/abc123</arxiv:doi>
+    <link href="http://arxiv.org/abs/2610.01234v2" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2610.01234v2" rel="related" type="application/pdf"/>
+    <arxiv:primary_category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+    <category term="eess.SY" scheme="http://arxiv.org/schemas/atom"/>
+  </entry>
+  <entry>
+    <id>http://arxiv.org/abs/2610.05555v1</id>
+    <updated>2026-10-11T10:00:00Z</updated>
+    <published>2026-10-11T10:00:00Z</published>
+    <title>Physics-informed neural networks for state of health estimation</title>
+    <summary>A PINN approach to SOH.</summary>
+    <author><name>A. Author</name></author>
+    <link href="http://arxiv.org/abs/2610.05555v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2610.05555v1" rel="related" type="application/pdf"/>
+  </entry>
+</feed>
