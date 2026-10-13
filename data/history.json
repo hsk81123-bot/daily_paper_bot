@@ -1,1 +1,326 @@
-{"sent": {}, "days": {}, "telegram_offset": 0}
+{
+ "sent": {
+  "doi:10.1007/s41918-026-00285-0": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "doi:10.1016/j.apenergy.2026.129000": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.est.2026.125017": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.est.2026.125087": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "doi:10.1016/j.est.2026.125097": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.est.2026.125109": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "doi:10.1016/j.jpowsour.2026.241662": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.jpowsour.2026.241695": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "doi:10.3390/batteries12100414": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.3390/batteries12100421": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:frequencydecoupleddynamicgraphlearningwithdegradationpriorforrobuststateofhealthestimationoflithiumionbatteries": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:insitupolymerizedfluorinatedpolyurethanebasedgelpolymerelectrolyteforhighstabilitylithiummetalbatteries": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:lithiummetalanodeinterfacesinlisbatteriesfromfailuremechanismstopracticalstabilization": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:rapiddynamicelectrochemicalimpedancespectroscopyreconstructionoflithiumionbatteriesusinggenerativeadversarialnetwork": {
+   "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:robuststateofhealthestimationforlithiumionbatteriesunderstochasticloadingaphysicsinformedbayesiancontinuoustimeapproach": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:sequenceconditionedphysicsinformedneuralnetworkforlithiumionbatterystateofhealthestimationusingchargingsegmentsathighsta": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:tokenizingbatterydegradationaphysicsinformedanduncertaintyawareframeworkforstateofhealthestimation": {
+   "date": "2026-10-14",
+   "topic": "modeling"
+  }
+ },
+ "days": {
+  "2026-10-14": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Tokenizing battery degradation: a physics-informed and uncertainty-aware framework for state-of-health estimation",
+      "url": "https://doi.org/10.1016/j.apenergy.2026.129000",
+      "published": "2026-10-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Shan Huang",
+       "Jinyang Jiao",
+       "Hao Li",
+       "Lin Jing"
+      ],
+      "abstract": "Accurate and trustworthy estimation of State of Health (SOH) is essential for the safe and efficient operation of modern battery management systems. While data-driven methods have achieved high accuracy, they often lack physical grounding and fail to provide reliable confidence metrics for their predictions, posing risks in safety-critical applications. In this work, we introduce TBD-SOH, an SOH estimation framework that combines physics-informed feature construction with uncertainty-aware regression. Specifically, each charging cycle is represented as a fused cycle-level token constructed from two complementary sources: statistical descriptors of charging behavior and a hardware-free pseudo-impedance representation derived from routine voltage and current measurements in the frequency domain. The pseudo-impedance branch is introduced as a degradation-sensitive proxy rather than a direct electrochemical impedance spectroscopy measurement. In addition, an MC dropout-based regression head is adopted to provide confidence intervals together with point estimates. Comprehensive experiments on the public MIT and HUST battery datasets demonstrate that TBD-SOH achieves high accuracy, outperforming conventional deep learning models. More importantly, its uncertainty estimates are shown to be dynamically responsive to prediction difficulty, and provide a new reference point for developing trustworthy and reliable battery health monitoring systems.",
+      "venue": "Applied Energy",
+      "doi": "10.1016/j.apenergy.2026.129000",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Sequence-Conditioned Physics-Informed Neural Network for Lithium-Ion Battery State of Health Estimation Using Charging Segments at High State of Charge",
+      "url": "https://doi.org/10.3390/batteries12100414",
+      "published": "2026-10-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Pengxiang Wang",
+       "Tao Wang",
+       "Xiaodong Xu",
+       "Jijun Xiang",
+       "Liangyu Zhu",
+       "Leiming Jiang",
+       "Yuhao Zhong",
+       "Aihua Li"
+      ],
+      "abstract": "Accurate and reliable state of health (SOH) estimation is essential for lithium-ion battery safety and lifetime management. Physics-informed neural networks (PINNs) integrate battery degradation knowledge with deep learning to improve the physical consistency of SOH estimation. However, existing PINNs insufficiently capture degradation evolution across consecutive cycles and show limited applicability across battery chemistries and charge/discharge protocols. To address these issues, we propose a sequence-conditioned physics-informed neural network (SC-PINN) that uses a gated recurrent unit (GRU) to encode local degradation states and incorporates a degradation dynamics consistency constraint and a monotonic degradation prior to improve prediction accuracy and physical plausibility. We also develop a general charging feature extraction method for different battery chemistries and charge/discharge protocols, extracting unified 18-dimensional health features from charging segments at high state of charge (SOC). The method is validated using 317 batteries and 197,024 valid cycle samples covering four battery chemistries across nine representative tasks. SC-PINN achieves a mean absolute percentage error (MAPE) of 0.6285% and a root mean square error (RMSE) of 0.8924%, with the lowest RMSE in eight of nine tasks. Compared with other methods, the proposed method demonstrates good stability and applicability in both standard and small-sample experiments.",
+      "venue": "Batteries",
+      "doi": "10.3390/batteries12100414",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Physics-informed learning of health-aware equivalent circuit parameter evolution for lithium-ion batteries",
+      "url": "https://doi.org/10.1016/j.est.2026.125097",
+      "published": "2026-10-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Tianyi Zhang",
+       "Hang Yu",
+       "Yulong Yu",
+       "Yifan Wang",
+       "Jin Wang",
+       "Lei Chen"
+      ],
+      "abstract": "Lithium-ion batteries exhibit nonlinear degradation under complex operating conditions and long-term cycling. Existing studies mainly focus on state-of-health (SOH) estimation, while continuous SOC–SOH-dependent ECM parameter representation and validation of neural-network-inverted parameters remain limited. This study proposes an ECM-PINN framework that integrates a neural network with a differentiable first-order RC model for joint SOH estimation, ECM parameter inversion, and voltage reconstruction. An SOH-guided consistency regularization is introduced to regulate excessive cross-cell parameter dispersion. The framework is evaluated on the Samsung 50E and HUST datasets. On unseen Samsung 50E cells, the Pearson correlation coefficients between the inverted and conventionally identified R 0 , R 1 , and C 1 are 0.996, 0.998, and 0.992, respectively. On the HUST dataset, the SOH estimation MAE and RMSE are 0.53% and 0.74%, while the voltage reconstruction MAE and RMSE are 20.50 mV and 26.00 mV. These results demonstrate that the proposed framework can perform SOC–SOH-dependent ECM parameter inversion under both standardized HPPC and non-standard dynamic operating conditions, while maintaining stable SOH estimation and voltage reconstruction performance.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125097",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Robust state-of-health estimation for lithium-ion batteries under stochastic loading: A physics-informed Bayesian continuous-time approach",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.241662",
+      "published": "2026-10-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yuefeng Liu",
+       "Ziyu Yang",
+       "Ning Yang"
+      ],
+      "abstract": "We estimate state of health (SOH), rather than safety, from five temporally causal 600-s block features: mean voltage, block Ah throughput, voltage variance, mean temperature, and cumulative Ah. The proposed Shadow-Mode CfC uses SPMe simulations only as an initialization prior and is subsequently fine-tuned on measured data. Under the fixed paper protocol with untreated reference-capacity labels and no prediction smoothing, the fixed-protocol Shadow CfC obtains RMSE 0.0320 and MAE 0.0245 on RW11. Under a separate validation-selected protocol, the validation-selected Shadow CfC obtains RMSE 0.0360 in the common baseline comparison. External leave-one-cell-out tests on CALCE and Oxford are reported as dataset-specific stress tests, not as safety certification or universal transfer. Monte Carlo dropout variability is reported descriptively because its empirical coverage is insufficient to support calibrated confidence-interval claims.",
+      "venue": "Journal of Power Sources",
+      "doi": "10.1016/j.jpowsour.2026.241662",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Frequency-decoupled dynamic graph learning with degradation prior for robust state-of-health estimation of lithium-ion batteries",
+      "url": "https://doi.org/10.1016/j.est.2026.125017",
+      "published": "2026-10-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yiming Wang",
+       "Han Liu",
+       "Haiqiang Yang"
+      ],
+      "abstract": "State-of-health (SOH) estimation of lithium-ion batteries is critical for reliable battery management in energy storage systems, where SOH must be inferred from noisy multi-frequency health indicators under varying operating conditions. Existing methods often fail to decouple multi-frequency degradation information, capture dynamic couplings among health indicators, and preserve consistency with degradation mechanisms, which limits their robustness across temperatures and chemistries. To address these issues, this study proposes a degradation-prior-enhanced frequency-decoupled dynamic graph learning framework for robust SOH estimation. STL decomposition is first employed to separate low-frequency degradation trends from high-frequency fluctuations, each handled by a dedicated temporal branch. A degradation-guided dynamic graph module is then developed, integrating health-indicator coupling priors and degradation-direction consistency priors to suppress spurious correlations. Finally, degradation-guided loss terms are embedded to encourage SOH trajectories consistent with battery aging behavior. Experiments on three public datasets (NASA, CALCE, and Zhu et al. dataset) show that the proposed method achieves an average mean absolute percentage error (MAPE) of 0.798%, outperforming mainstream baselines. In the cross-temperature transfer experiments, compared with the best-performing baseline GRU, the proposed method reduces the average root mean square error (RMSE) and mean absolute percentage error (MAPE) by 57.41% and 60.03%, respectively, indicating greater robustness and more reliable support for battery health management in practical battery monitoring.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125017",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "In-situ polymerized fluorinated polyurethane-based gel polymer electrolyte for high-stability lithium metal batteries",
+      "url": "https://doi.org/10.1016/j.est.2026.125109",
+      "published": "2026-10-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yongqi Li",
+       "Xiang Gao",
+       "X. Zeng",
+       "Peiqi Zhou",
+       "Ruoke Li",
+       "Qiantong Liu",
+       "Junmin Nan"
+      ],
+      "abstract": "A fluorinated polyurethane-based gel polymer electrolyte (GPE) with flame-retardant properties and high interfacial stability for lithium metal batteries (LMBs) is developed by in-situ polymerization of polycaprolactriol, dicyclohexylmethane diisocyanate, and a fluorinated chain extender (octafluoro-1,6-hexanediol) in carbonate-based electrolyte. This GPE exhibits ionic conductivity of 2.78 × 10 −3 S cm −1 , oxidative stability up to 4.75 V, and a lithium ion transference number of 0.54. The introduction of fluorinated segments promotes the formation of a LiF-rich solid electrolyte interphase (SEI) on the lithium anode, effectively suppressing lithium dendrite growth. The gel polymer electrolyte enables stable cycling of Li/Li symmetric cell for over 500 h at 1 mA cm −2 . Moreover, the Li/LiFePO 4 cell achieves a capacity retention of 87.85% after 600 cycles at 2C, and Li/NCM811 cell maintains 76% capacity retention after 150 cycles at 0.5C. Furthermore, this GPE also exhibits good flame retardancy, indicating that this fluorinated polyurethane-based GPEs offer promising prospects for the application of LMBs with enhanced safety.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125109",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Lithium-metal anode interfaces in Li-S batteries: From failure mechanisms to practical stabilization",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.241695",
+      "published": "2026-10-11T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Dhilip Kumar Chinnalagu",
+       "Jaya Kumar Ponraj",
+       "Kundali Yadav",
+       "Vinodkumar Etacheri",
+       "Aniruddha Kundu",
+       "Surjit Sahoo"
+      ],
+      "abstract": "Lithium-sulfur (Li-S) batteries are among the most promising post-lithium-ion energy storage technologies because of their extremely high theoretical specific capacity (1675 mAh g −1 ) and gravimetric energy density of 2567 Wh kg −1 . However, the use of lithium metal anodes in a high-concentration polysulfide environment is a primary limitation to the practical deployment of Li-S batteries. This is exacerbated by commercially relevant conditions of lean electrolyte operation, high sulfur loading (6-10 mg cm −2 ), and limited lithium supply. In this review, we present a holistic picture of the underlying failure processes in lithium metal degradation in the Li-S battery, focusing on lithium plating/stripping processes, SEI formation mechanisms, ion-transport heterogeneity, and chemo-mechanical instabilities. The latest developments on lithium-anode stabilization by three-dimensional current collectors and host architecture, artificial interphases, lithiophilic surface engineering, solid-state and gel-polymer electrolyte are critically evaluated. Importantly, this review emphasises the interplay between interface chemistry, transport kinetics, and structural evolution and their effect on long-term anode stability and cell performance. This review links fundamental mechanistic insights with practical engineering solutions and highlights major challenges and new opportunities for stable lithium-metal anodes under operating conditions. The perspectives discussed herein set the groundwork for designing commercially viable, high-energy-density Li-S batteries.",
+      "venue": "Journal of Power Sources",
+      "doi": "10.1016/j.jpowsour.2026.241695",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Advancing Sulfide Electrolyte/Silicon-Based Anode Systems in All-Solid-State Batteries: Interface Stability, Design, and Perspectives",
+      "url": "https://doi.org/10.1007/s41918-026-00285-0",
+      "published": "2026-10-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Haijian Lv",
+       "Xiaorong Chu",
+       "Xinyu Zhang",
+       "Shijie Lu",
+       "Yuanxing Zhang",
+       "Qi Liu",
+       "Daobin Mu",
+       "Feng Wu"
+      ],
+      "abstract": "",
+      "venue": "Electrochemical Energy Reviews",
+      "doi": "10.1007/s41918-026-00285-0",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Rapid dynamic electrochemical impedance spectroscopy reconstruction of lithium-ion batteries using generative adversarial network",
+      "url": "https://doi.org/10.1016/j.est.2026.125087",
+      "published": "2026-10-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yijing Li",
+       "Wenchao Liu",
+       "Zhipeng Yang",
+       "Yuhao Pan",
+       "Jinhao Meng",
+       "Zhengxiang Song",
+       "Anxiang Guo",
+       "Ruogu Wang"
+      ],
+      "abstract": "As the global transition toward renewable energy accelerates, lithium-ion batteries have become indispensable for electric vehicles and grid-scale energy storage, driving urgent demand for reliable real-time battery diagnostics. Dynamic electrochemical impedance spectroscopy (DEIS) can acquire impedance during operation without interrupting the load, but full-spectrum measurement is still time-consuming, especially at low frequencies. Sparse frequency sampling can shorten acquisition time, yet it often compromises the spectral completeness needed for equivalent circuit model (ECM) fitting and distribution of relaxation times (DRT) analysis. To address this challenge, this study develops a conditional Wasserstein generative adversarial network with gradient penalty (WGAN-GP) for fast and robust reconstruction of full-spectrum DEIS from sparse frequency measurements. The DRT analysis is first used to resolve the impedance response and identify electrochemically informative relaxation features in the mid-to-high frequency region. Based on these characteristic peaks, four representative frequency points are selected as compact model inputs, thereby substantially reducing the required measurement burden while retaining critical diagnostic information. The conditional WGAN-GP then learns the nonlinear mapping between the sparse-frequency inputs and the complete DEIS. On the cell 4 test set, the proposed framework achieves R 2 values of 0.999583 for real impedance component and 0.992254 for imaginary impedance component. ECM analysis further shows that several impedance-related descriptors remain comparatively well constrained, while weakly identifiable parameters are explicitly distinguished. The framework therefore provides an experimentally supported basis for rapid, condition-aware DEIS reconstruction under dynamic operating conditions.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125087",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     },
+     {
+      "title": "Cross-Dataset Assessment of Cathode Thermal Descriptors for Whole-Cell Self-Heating Kinetics in Lithium-Ion Batteries: Onset, Reaction Magnitude, and Limits of Transferability",
+      "url": "https://doi.org/10.3390/batteries12100421",
+      "published": "2026-10-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yuanzhe Li",
+       "Ningning Wei",
+       "Minghai Li",
+       "Lei Huo"
+      ],
+      "abstract": "Component calorimetry is widely used to assess the thermal stability of lithium-ion battery cathode materials, yet it remains unclear which material-scale descriptors retain consistent relationships with whole-cell self-heating kinetics across independent datasets and test protocols. Here, raw accelerating rate calorimetry (ARC) and thermogravimetric/differential scanning calorimetry (TGA/DSC) data for lithium cobalt oxide (LCO), lithium iron phosphate (LFP), and nickel–cobalt–aluminum oxide (NCA) cells were reanalyzed using a physics-guided event framework. Cathode decomposition onset, event-specific apparent exothermic energy, and associated mass loss were compared with the maximum whole-cell self-heating rate. In the Sandia dataset, cathode onset and event-specific exothermic energy showed large matched-state-of-charge correlations with whole-cell self-heating kinetics (r = −0.983 and 0.980, respectively). In an independently generated dataset, the cathode–electrolyte onset relationship was substantially weaker (r = −0.376), whereas cathode–electrolyte reaction enthalpy retained a large association (r = 0.886). Rank-based sensitivity analysis preserved this contrast, whereas leave-one-chemistry-out stress tests were unstable for all three Sandia linear models, indicating that the strong within-dataset associations did not extrapolate reliably to an unseen chemistry. Because the two heat-release metrics were obtained under different sample configurations and calorimetric protocols, the cross-study comparison is interpreted at the descriptor-class level rather than as direct metric equivalence. Across the two conventional lithium-ion datasets examined, cathode-associated exothermic magnitude showed greater cross-dataset consistency than onset temperature alone. However, neither descriptor supported a universal chemistry-independent scaling law, indicating that component-to-cell relationships remain dependent on experimental protocol, electrode interactions, cell architecture, and battery platform.",
+      "venue": "Batteries",
+      "doi": "10.3390/batteries12100421",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "why": ""
+     }
+    ]
+   }
+  }
+ },
+ "telegram_offset": 0
+}
