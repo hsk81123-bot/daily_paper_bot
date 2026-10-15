@@ -8,6 +8,14 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "arxiv:2610.16006": {
+   "date": "2026-10-16",
+   "topic": "modeling"
+  },
+  "arxiv:2610.17599": {
+   "date": "2026-10-16",
+   "topic": "general"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
@@ -64,12 +72,20 @@
    "date": "2026-10-15",
    "topic": "general"
   },
+  "t:anempiricalmodelforderivinginformationoniondynamicsfromsrdataviatheconventionalkubotoyabefunctionanalysis": {
+   "date": "2026-10-16",
+   "topic": "modeling"
+  },
   "t:assessingmodelingfidelityforlongtermbatteryenergystorageplanningoperationdegradationandtemporalrepresentation": {
    "date": "2026-10-14",
    "topic": "modeling"
   },
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
    "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
+   "date": "2026-10-16",
    "topic": "general"
   },
   "t:frequencydecoupleddynamicgraphlearningwithdegradationpriorforrobuststateofhealthestimationoflithiumionbatteries": {
@@ -450,6 +466,64 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-16": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "An empirical model for deriving information on ion dynamics from $μ$SR data via the conventional Kubo-Toyabe function analysis",
+      "url": "https://arxiv.org/abs/2610.16006",
+      "published": "2026-10-12T00:13:40+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Ryosuke Kadono"
+      ],
+      "abstract": "We present an empirical model that analytically relates the parameters of the extended Kubo-Toyabe (KT) function $G_z^{\\rm EA}(t;Δ,ν_{\\rm i},Q)$, which describes muon spin relaxation ($μ$SR) induced by jump diffusion of ions using the Edwards-Anderson parameter $Q$, to those of the conventional KT function $G_z^{\\rm KT}(t;Δ_{\\rm KT},ν_{\\rm KT})$ that serves as an approximation of $G_z^{\\rm EA}(t)$. The proposed formulae successfully reproduce the anomalous temperature dependences of the linewidth $Δ_{\\rm KT}(T)$ and the fluctuation rate $ν_{\\rm KT}(T)$ which are artifacts observed upon analyzing $μ$SR data on ion diffusion using $G_z^{\\rm KT}(t)$. Applying this model to $Δ_{\\rm KT}$ and $ν_{\\rm KT}$ published in the literature of battery materials yields activation energy $E_{\\rm i}$ and pre-exponential factor $ν_{\\rm i0}$ in the Arrhenius equation for ion diffusion, $ν_{\\rm i}(T)=ν_{\\rm i0} e^{-E_{\\rm i}/kT}$, that are in excellent agreement with those deduced using other techniques, transforming peculiar artifacts into a powerful diagnostic tool.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.16006",
+      "pdf_url": "https://arxiv.org/pdf/2610.16006v1",
+      "categories": [
+       "cond-mat.mtrl-sci"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Fast charging of quantum batteries assisted by nonlinear couplings",
+      "url": "https://arxiv.org/abs/2610.17599",
+      "published": "2026-10-13T02:18:38+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Y. -J. Shen",
+       "Y. -C. Shen",
+       "C. -H. Chu",
+       "H. H. Jen"
+      ],
+      "abstract": "Charger-mediated quantum batteries offer promising opportunities for efficient energy transfer and storage at the quantum level, with potential advantages beyond their classical counterparts. Here, we theoretically demonstrate that nonlinear charger-battery interactions can substantially accelerate the charging of quantum batteries. In the weak-driving regime, sufficiently strong nonlinear coupling can dominate over the effect of dephasing and significantly reduce the charging time. In the strong- and optimal-driving regimes, where the optimal driving strength maximizes the steady-state ergotropy in the linear-coupling regime, nonlinear coupling gives rise to a new optimum in the charging time beyond that of the linear-coupling regime, accompanied by nearly critically damped dynamics. Remarkably, even in the absence of external driving, nonlinear coupling alone can substantially reduce the charging time, providing an alternative route toward fast battery charging. Our results establish nonlinear charger-battery coupling as an effective resource for accelerating quantum-battery charging and broaden the scope of interaction-enabled quantum advantages in energy transfer and storage.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.17599",
+      "pdf_url": "https://arxiv.org/pdf/2610.17599v1",
+      "categories": [
+       "quant-ph",
+       "physics.atom-ph"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
