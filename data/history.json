@@ -32,6 +32,10 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.1016/j.est.2026.125113": {
+   "date": "2026-10-15",
+   "topic": "general"
+  },
   "doi:10.1016/j.jpowsour.2026.241662": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -48,8 +52,16 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.3390/eng7100554": {
+   "date": "2026-10-15",
+   "topic": "modeling"
+  },
   "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
    "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:agingmodelingoflithiumioncellsbyintegratingactivemateriallosselectrolytedegradationsolidelectrolyteinterphasegrowthandli": {
+   "date": "2026-10-15",
    "topic": "general"
   },
   "t:assessingmodelingfidelityforlongtermbatteryenergystorageplanningoperationdegradationandtemporalrepresentation": {
@@ -74,6 +86,10 @@
   },
   "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
    "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:piecewisearrheniuslongshorttermmemoryresidualcorrectionmodelingforwholelifestateofhealthestimationandremainingusefullife": {
+   "date": "2026-10-15",
    "topic": "modeling"
   },
   "t:rapiddynamicelectrochemicalimpedancespectroscopyreconstructionoflithiumionbatteriesusinggenerativeadversarialnetwork": {
@@ -371,6 +387,68 @@
       "doi": "",
       "arxiv_id": "2610.03821",
       "pdf_url": "https://arxiv.org/pdf/2610.03821",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-15": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Piecewise Arrhenius–Long Short-Term Memory Residual Correction Modeling for Whole-Life State of Health Estimation and Remaining Useful Life Prediction of Lithium-Ion Batteries",
+      "url": "https://doi.org/10.3390/eng7100554",
+      "published": "2026-10-13T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Kuo Yang",
+       "Shunli Wang",
+       "Liya Zhang",
+       "Liangwei Cheng",
+       "Lei Zhou",
+       "Yuchen Huo",
+       "Carlos Fernandez"
+      ],
+      "abstract": "Lithium-ion batteries exhibit nonlinear capacity degradation under variable-temperature and complex operating conditions, which makes remaining useful life (RUL) prediction challenging. To address this issue, we propose a hybrid Arrhenius-long short-term memory (LSTM) method that combines piecewise Arrhenius thermal-damage modeling with LSTM-based residual correction. The method constructs a piecewise Arrhenius capacity-degradation model around the knee point and introduces an equivalent thermal-damage factor to accumulate temperature-induced aging effects. An LSTM residual branch then learns the discrepancy between measured capacity and the physical baseline from historical capacity, temperature, voltage, current, and prior physical predictions. A three-stage optimization strategy, comprising physical-parameter pre-fitting, residual-branch training, and physics-constrained joint fine-tuning, stabilizes residual learning while preserving mechanistic interpretability. Experiments on four CALCE CX2 validation cells yield mean SOH RMSE and MAE values of 0.020 and 0.016, respectively. The corresponding mean RUL RMSE and MAE are 41.52 and 31.58 cycles. Compared with Ade-lwT, the proposed method reduces mean SOH RMSE and MAE by 22.33% and 35.05%, respectively. For RUL prediction, the corresponding reductions are 58.06% and 62.29%. These results support the effectiveness of coupling a piecewise Arrhenius baseline with capacity-residual learning for cross-cell SOH estimation and RUL prediction.",
+      "venue": "Eng—Advances in Engineering",
+      "doi": "10.3390/eng7100554",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Aging modeling of lithium-ion cells by integrating active material loss, electrolyte degradation, solid electrolyte interphase growth, and lithium plating",
+      "url": "https://doi.org/10.1016/j.est.2026.125113",
+      "published": "2026-10-13T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Prasath Raj",
+       "Ernst Richter",
+       "Kai Schofer",
+       "Julian Kempf",
+       "Florence Michel",
+       "Alexander Fill",
+       "Kai Peter Birke"
+      ],
+      "abstract": "Multiple interrelated degradation mechanisms, heavily dependent on temperature, current rate, and rest periods, govern the performance and lifetime of Lithium-ion batteries (LIBs). This study extends a previously established modeling framework, initially focused on loss of Lithium inventory (LLI) from solid electrolyte interphase (SEI) growth and Lithium plating, to include a more comprehensive suite of degradation pathways. Specifically, the solvent-diffusion-limited SEI growth (SD) and combined calendar and cyclic aging (CCC) models are enhanced to incorporate loss of active material (LAM) driven by diffusion-induced mechanical stress. Additionally, the framework now accounts for electrolyte depletion and the loss of electrical connectivity. Electrolyte consumption from SEI thickening and Lithium plating is dynamically modeled via a depletion factor, capturing the cascading effects on transport properties and accelerated aging. The proposed models are validated against experimental data from 43 Ah automotive-grade Li-ion pouch cells. These cells were cycled at 10 °C using optimized charging profiles ranging from 50% to 150% of the experimentally determined Lithium plating current limit. To assess predictive accuracy, results are benchmarked against both experimental trends and the original SD and CCC modeling frameworks. Simulations demonstrate how degradation pathways shift under varying charging intensities. While lower current rates mitigate Lithium plating risks, degradation continues through SEI thickening and progressive LAM. Conversely, at higher current rates, Lithium plating accelerates electrolyte depletion. This triggers a self-reinforcing feedback loop that amplifies LAM. Temperature variations further modulate these trends by modifying intercalation kinetics and mechanical stress evolution. Root Mean Square Error (RMSE) analysis of the capacity fade (SoH C ) confirms that the enhanced models achieve errors within 5% across all charging strategies. This accuracy demonstrates the framework’s robustness in capturing long-term degradation dynamics. By highlighting the critical interplay between Lithium plating, SEI growth, LAM, and electrolyte depletion, this study provides a mechanistic foundation for developing optimized battery management and fast-charging strategies.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125113",
+      "arxiv_id": "",
+      "pdf_url": "",
       "categories": [],
       "title_ko": "",
       "summary": "",
