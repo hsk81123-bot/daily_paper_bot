@@ -52,6 +52,14 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.1149/1945-7111/aeb4ee": {
+   "date": "2026-10-17",
+   "topic": "modeling"
+  },
+  "doi:10.1149/1945-7111/aeb4f1": {
+   "date": "2026-10-17",
+   "topic": "general"
+  },
   "doi:10.3390/batteries12100414": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -67,6 +75,10 @@
   "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:afusionstateofchargeestimationframeworkforlithiumionbatteriesofelectricvehiclesusingenhancedsingleparticlemodelandcnnbil": {
+   "date": "2026-10-17",
+   "topic": "modeling"
   },
   "t:agingmodelingoflithiumioncellsbyintegratingactivemateriallosselectrolytedegradationsolidelectrolyteinterphasegrowthandli": {
    "date": "2026-10-15",
@@ -98,6 +110,10 @@
   },
   "t:lithiummetalanodeinterfacesinlisbatteriesfromfailuremechanismstopracticalstabilization": {
    "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
+   "date": "2026-10-17",
    "topic": "general"
   },
   "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
@@ -524,6 +540,67 @@
        "quant-ph",
        "physics.atom-ph"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-17": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A Fusion State-of-Charge Estimation Framework for Lithium-Ion Batteries of Electric Vehicles Using Enhanced Single Particle Model and CNN-BiLSTM",
+      "url": "https://doi.org/10.1149/1945-7111/aeb4ee",
+      "published": "2026-10-15T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Xiaolong Zhang",
+       "Xudong Qu",
+       "Wei Huang",
+       "Yushan Leng",
+       "Jiuzheng Ji",
+       "Haifeng Wang",
+       "Hui Pang"
+      ],
+      "abstract": "Abstract Accurate state-of-charge (SOC) estimation is critical for driving range prediction and battery safety in lithium-ion electric vehicles. Purely data-driven methods often lack physical interpretability, whereas electrochemical models are limited by model complexity, parameter identification, and real-time computational burden. This study proposes a physics-guided SOC estimation framework that integrates an enhanced single-particle model (ESPM) with a convolutional bidirectional long short-term memory network (CNN-BiLSTM). The ESPM incorporates electrolyte-phase dynamics and derives electrode utilization variables to describe internal electrochemical states. These physically meaningful variables are combined with measured current, voltage, and temperature as hybrid inputs, while Bayesian optimization is used to tune key hyperparameters. Experiments are performed on A123 lithium iron phosphate cells under FUDS, DST, and US06 profiles from −10 to 40 °C. The proposed framework limits maximum relative SOC errors to 4% under DST and 3% under US06, with maximum RMSE and MAE values of 1.35% and 1.08%. Compared with LSTM, GRU, and CNN-BiLSTM baselines, the framework improves estimation accuracy by 15.16% to 51.06%, demonstrating improved robustness under dynamic and wide-temperature conditions.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aeb4ee",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Mechanism-Guided Alkaline Leaching of Al–Si Alloy Enables High-Purity Porous Silicon Anodes for Fast-Charging Lithium-Ion Batteries",
+      "url": "https://doi.org/10.1149/1945-7111/aeb4f1",
+      "published": "2026-10-15T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Somen  Sagar Jena",
+       "Ashwani Kumar Pandey",
+       "Sarthak Patnaik",
+       "Uttam Kumar Chanda",
+       "Amritendu Roy",
+       "Soobhankar Pati"
+      ],
+      "abstract": "Abstract Selective alkaline leaching of Al–Si alloys is a simple and economical route for producing porous silicon. However, the mechanism governing aluminium hydroxide (gibbsite) formation and its suppression during leaching remains poorly understood. This work develops a mechanism-guided alkaline leaching strategy for producing high-purity porous silicon from an Al–Si alloy. The effects of KOH concentration, solution volume, and leaching conditions on aluminium dissolution and gibbsite formation were systematically investigated. Regulated-pH experiments, phase analysis, and shrinking-core kinetic modelling revealed that gibbsite precipitation originates from localized pH gradients near the solid–liquid interface. Vigorous agitation and optimised alkaline conditions suppress gibbsite formation by enhancing mass transport. The optimised porous silicon was subsequently purified by acid leaching and systematically characterised to confirm its high purity and porous architecture. As a lithium-ion battery anode, the porous silicon delivered an initial discharge capacity of approximately 2752 mAh g-1, an initial coulombic efficiency of 80.56%, stable cycling over 300 cycles, and a high-rate capacity of approximately 580 mAh g -1 at 5 A g -1 . The mechanistic understanding provides practical guidelines for scalable, HF-free production of high-purity porous silicon and demonstrates its potential for high-capacity lithium-ion battery applications.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aeb4f1",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
