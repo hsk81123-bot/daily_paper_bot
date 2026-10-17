@@ -16,6 +16,14 @@
    "date": "2026-10-16",
    "topic": "general"
   },
+  "arxiv:2610.19846": {
+   "date": "2026-10-18",
+   "topic": "general"
+  },
+  "arxiv:2610.21391": {
+   "date": "2026-10-18",
+   "topic": "modeling"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
@@ -88,6 +96,10 @@
    "date": "2026-10-16",
    "topic": "modeling"
   },
+  "t:apracticalroutetoamorphoussolidstateelectrolytestructuresbyhybridreversemontecarlowithfoundationpotentials": {
+   "date": "2026-10-18",
+   "topic": "general"
+  },
   "t:assessingmodelingfidelityforlongtermbatteryenergystorageplanningoperationdegradationandtemporalrepresentation": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -115,6 +127,10 @@
   "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
    "date": "2026-10-17",
    "topic": "general"
+  },
+  "t:nocenetrepresentationlearningforbatteryoperationalcontextvianestedsequencemodelling": {
+   "date": "2026-10-18",
+   "topic": "modeling"
   },
   "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
    "date": "2026-10-14",
@@ -601,6 +617,68 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-18": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "NOCE-Net: Representation Learning for Battery Operational Context via Nested Sequence Modelling",
+      "url": "https://arxiv.org/abs/2610.21391",
+      "published": "2026-10-15T07:07:42+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Arnab Bhattacharjee",
+       "Wayes Tushar",
+       "Tapan Kumar Saha"
+      ],
+      "abstract": "Learning effective representations from battery operational history is essential for predictive health management and control-oriented applications. Existing approaches rely on response-dependent engineered features or short early-life windows, limiting generalisability and precluding use in prospective settings where future responses are unavailable. We propose NOCE-Net, a deep nested sequence model that learns control-enabling representations directly from raw cyclic operational or telemetric data. Our data pipeline, re-BatteryData, standardises heterogeneous aging datasets into semantically equivalent Full Equivalent Cycles (FECs) defined by absolute charge throughput, enabling end-to-end learning across diverse operational regimes. NOCE-Net combines multi-patch transformer encoders for intra-cycle dynamics with a GRU backbone for inter-cycle state evolution, operating on approximately $700$ batteries across ten public datasets spanning over $300$ operational profiles. In zero-shot evaluation on unseen battery chemistries and usage patterns, NOCE-Net achieves $13.7\\%$ MAPE in voltage response prediction, outperforming strong long-sequence baselines by over $43\\%$ while using $40 \\times$ fewer parameters. Shape and component diagnostics of the learned hidden states reveal that the GRU's principal direction of evolution achieves Spearman $|ρ| \\geq 0.95$ with the capacity fade trajectory on average across all datasets with monotone degradation profiles, including zero-shot test batteries, providing evidence that the representations encode degradation dynamics transferable to downstream tasks beyond battery response modelling. Code is available at https://github.com/BeArnab96/NOCE-Net.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.21391",
+      "pdf_url": "https://arxiv.org/pdf/2610.21391v1",
+      "categories": [
+       "cs.CE",
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A practical route to amorphous solid-state electrolyte structures by hybrid reverse Monte Carlo with foundation potentials",
+      "url": "https://arxiv.org/abs/2610.19846",
+      "published": "2026-10-14T09:14:58+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Xintian Wang",
+       "Xinyu Zhang",
+       "Denys Butenko",
+       "Bolong Hong",
+       "Jinlong Zhu",
+       "Peichen Zhong"
+      ],
+      "abstract": "Amorphous alkali oxychlorides are fast ion conductors, but their atomic structure remains unresolved. Total scattering sums all partial pair correlations into one curve that has no unique inversion, so the structure must be modeled. Melt-quench molecular dynamics builds a model from the interatomic potential alone, and reverse Monte Carlo (RMC) builds one from the measurement alone. The two have rarely been compared with all else held fixed. We benchmark both routes and two hybrid schemes on amorphous \\ce{Li_{0.9}NbO_{0.9}Cl_{4.1}} against one neutron pair distribution function with one foundation potential. The hybrid schemes put the energy either in the acceptance rule (inline) or in short relaxations between blocks of refinement (alternating). Each refinement starts from a melt-quench glass or from a random packing of isolated units. The glass has the lowest energy and places the first-shell peaks correctly, but carries almost none of the oscillation beyond 6~Å (goodness of fit $R^{2} = 0.29$). Pure RMC fits the measurement to within its counting noise ($R^{2} = 0.99$), but at more than $1.3$~eV/atom above the glass, and niobium loses about half of its first-shell chlorine. Started from the glass, both hybrid schemes reach $R^{2} = 0.92$ within $0.1$~eV/atom of its energy and keep its coordination chemistry. Structures from the two inputs fit almost equally well and differ in energy by a tenth of the RMC penalty, yet they differ in whether their polyhedra are connected. The input is therefore part of the method. We recommend quenching a glass with a foundation potential and refining it against the measurement with a hybrid scheme. The resulting structure carries both the local chemistry and the medium-range order, and it is the starting point for modeling ion transport in these conductors.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.19846",
+      "pdf_url": "https://arxiv.org/pdf/2610.19846v1",
+      "categories": [
+       "cond-mat.mtrl-sci"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
