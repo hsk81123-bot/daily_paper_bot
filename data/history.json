@@ -48,9 +48,17 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.1016/j.est.2026.125112": {
+   "date": "2026-10-19",
+   "topic": "general"
+  },
   "doi:10.1016/j.est.2026.125113": {
    "date": "2026-10-15",
    "topic": "general"
+  },
+  "doi:10.1016/j.ijoes.2026.101527": {
+   "date": "2026-10-19",
+   "topic": "modeling"
   },
   "doi:10.1016/j.jpowsour.2026.241662": {
    "date": "2026-10-14",
@@ -108,6 +116,10 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "t:ecmpareasystematicframeworkforcomparingparameterestimationmethodsinlithiumionbatteryequivalentcircuitmodels": {
+   "date": "2026-10-19",
+   "topic": "modeling"
+  },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
    "topic": "general"
@@ -151,6 +163,10 @@
   "t:sequenceconditionedphysicsinformedneuralnetworkforlithiumionbatterystateofhealthestimationusingchargingsegmentsathighsta": {
    "date": "2026-10-14",
    "topic": "modeling"
+  },
+  "t:siliconbasedanodesforlithiumandsodiumionbatteriesnanoparticledesigncompositeengineeringfailuremechanismsandpracticalchal": {
+   "date": "2026-10-19",
+   "topic": "general"
   },
   "t:spacechargelayerandfacilehaliderearrangementenablefastlithiumiontransportathalidesolidelectrolyteinterfaces": {
    "date": "2026-10-14",
@@ -679,6 +695,66 @@
       "categories": [
        "cond-mat.mtrl-sci"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-19": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "ECMpare: A systematic framework for comparing parameter estimation methods in lithium-ion battery equivalent circuit models",
+      "url": "https://doi.org/10.1016/j.ijoes.2026.101527",
+      "published": "2026-10-15T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Ivan Fernandez",
+       "Jan Petter Mæhlen",
+       "Julia Wind",
+       "Preben J. S. Vie",
+       "Odne Stokke Burheim",
+       "Jacob Joseph Lamb"
+      ],
+      "abstract": "Accurate parameter estimation of equivalent circuit models (ECMs) is essential for reliable electrochemical modelling, control, and state of charge (SOC) and state of health (SOH) estimation of lithium-ion batteries. This work presents a systematic comparison framework for least-squares-based parameter estimation methods applied to Thevenin-type ECMs (0RC, 1RC, and 2RC). A physics-informed synthetic dataset is generated using a many-particle Doyle-Fuller-Newman (MP-DFN) model implemented in PyBaMM, ensuring internal electrochemical consistency while enabling controlled variation of operating conditions. The framework integrates multiple estimation strategies, including linear least squares, nonlinear least squares, trust-region optimisation, and sequential least-squares programming, with consistent parameter bounds and initialisation. A cycle-based data segmentation approach is introduced to associate locally estimated parameters with specific operating conditions defined by SOC current, and temperature. SOC is derived from electrode stoichiometry, and the open-circuit voltage (OCV) is reconstructed accordingly, thereby avoiding inconsistencies associated with nominal-capacity-based definitions. The comparative analysis is performed using data generated specifically for this study from a range of dynamic protocols, including HPPC-derived, drive-cycle-based, and application-relevant load profiles, with performance evaluated using voltage-prediction error metrics. The proposed framework enables transparent and reproducible assessment of the influence of estimation method, excitation profile, and model structure on model parametrisation and predictive accuracy. Results demonstrate that both the choice of estimation algorithm and the characteristics of the input data strongly affect the convergence consistency and physical interpretability of the identified parameters. The methodology provides a generalised platform for benchmarking ECM parameter estimation techniques and supports the development of more reliable reduced-order models for electrochemical energy storage systems.",
+      "venue": "International Journal of Electrochemical Science",
+      "doi": "10.1016/j.ijoes.2026.101527",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Silicon-based anodes for lithium and sodium-ion batteries: nanoparticle design, composite engineering, failure mechanisms, and practical challenges",
+      "url": "https://doi.org/10.1016/j.est.2026.125112",
+      "published": "2026-10-17T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Farhana Syakirah Ismail",
+       "Hafiz Kashif Razzaq",
+       "Chun-Chen Yang",
+       "Farah Ezzah Ab Latif",
+       "Muhammad Norhaffis Mustafa",
+       "Arshid Numan"
+      ],
+      "abstract": "The development of high-performance anode materials is crucial for improving the energy density and cycle life of lithium-ion batteries (LIBs) and sodium-ion batteries (SIBs). Silicon (Si) is a promising anode candidate because of its high theoretical capacity (~3579 mAh/g), far exceeding that of conventional carbonaceous anodes. However, its practical application is hindered by severe volume expansion during cycling, which triggers mechanical fracture, unstable interphase formation, loss of electrical contact, and rapid capacity fading. This review provides an integrated assessment of Si-based anodes for both LIBs and SIBs by linking synthesis and structural design with ion-storage mechanisms, failure behaviour, and mitigation strategies. Particular emphasis is placed on the synergies and trade-offs among carbon modification, polymer encapsulation, nanostructured/porous Si architectures, and electrolyte/interfacial engineering in simultaneously addressing mechanical, electrical, and interfacial degradation. The distinct challenges associated with Li and Na storage are critically compared, highlighting the substantially less developed understanding of Si-based anodes for SIBs. Rather than evaluating individual modification strategies in isolation, this review establishes relationships among material architecture, conductive networks, mechanical stability, and interphase chemistry and discusses their implications for practical electrode design. Finally, remaining challenges and research priorities are identified toward scalable, high-loading, interfacial stable, and sustainable Si-based anodes for next-generation energy-storage systems.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125112",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
