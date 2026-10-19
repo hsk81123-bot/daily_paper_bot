@@ -1,6 +1,6 @@
 # 🔋 Daily Paper Bot — 배터리 데일리 논문 텔레그램 봇
 
-매일 아침 **7시(KST)** 에 배터리 분야 최신 논문을 골라 텔레그램으로 보냅니다.
+매일 새벽 **5시(KST)** 에 배터리 분야 최신 논문을 골라 텔레그램으로 보냅니다.
 
 | 주제 | 내용 | 하루 편수 |
 |---|---|---|
@@ -98,7 +98,7 @@ Physics-informed learning of health-aware equivalent circuit parameter evolution
 - 문제없으면 `dry_run` 없이 실행하면 텔레그램으로 옵니다. 같은 날 다시 받으려면 `force`를 켭니다.
 - 실패하면 로그를 Claude에게 보여 주세요.
 
-이후에는 매일 **06:50 KST**(cron `50 21 * * *` UTC)에 시작합니다. GitHub 예약 실행은 몇 분~수십 분 늦게 시작하는 경우가 많아 10분 일찍 잡아 두었습니다.
+이후에는 매일 **04:50 KST**(cron `50 19 * * *` UTC)에 시작합니다. GitHub 예약 실행은 몇 분~수십 분 늦게 시작하는 경우가 많아 10분 일찍 잡아 두었습니다.
 
 ---
 
@@ -149,7 +149,7 @@ python -m pytest -q                             # 테스트 (네트워크 없이
 
 ```cron
 CRON_TZ=Asia/Seoul
-0 7 * * *   cd /path/to/daily_paper_bot && .venv/bin/python -m paperbot.main >> bot.log 2>&1
+0 5 * * *   cd /path/to/daily_paper_bot && .venv/bin/python -m paperbot.main >> bot.log 2>&1
 */10 * * * * cd /path/to/daily_paper_bot && .venv/bin/python -m paperbot.main --poll >> bot.log 2>&1
 ```
 
