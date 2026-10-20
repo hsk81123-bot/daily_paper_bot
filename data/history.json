@@ -68,6 +68,14 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.1016/j.jpowsour.2026.241760": {
+   "date": "2026-10-21",
+   "topic": "modeling"
+  },
+  "doi:10.1021/acsenergylett.6c02555": {
+   "date": "2026-10-21",
+   "topic": "general"
+  },
   "doi:10.1149/1945-7111/aeb4ee": {
    "date": "2026-10-17",
    "topic": "modeling"
@@ -144,6 +152,10 @@
    "date": "2026-10-18",
    "topic": "modeling"
   },
+  "t:operandoopticalmonitoringofchemomechanicaldegradationinsiliconcarbonanodebatteriesforstateofhealthestimation": {
+   "date": "2026-10-21",
+   "topic": "modeling"
+  },
   "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -154,6 +166,10 @@
   },
   "t:rapiddynamicelectrochemicalimpedancespectroscopyreconstructionoflithiumionbatteriesusinggenerativeadversarialnetwork": {
    "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:rationalintegrationofmultipleadditivesforhightemperaturelithiumionbatteries": {
+   "date": "2026-10-21",
    "topic": "general"
   },
   "t:robuststateofhealthestimationforlithiumionbatteriesunderstochasticloadingaphysicsinformedbayesiancontinuoustimeapproach": {
@@ -752,6 +768,73 @@
       "abstract": "The development of high-performance anode materials is crucial for improving the energy density and cycle life of lithium-ion batteries (LIBs) and sodium-ion batteries (SIBs). Silicon (Si) is a promising anode candidate because of its high theoretical capacity (~3579 mAh/g), far exceeding that of conventional carbonaceous anodes. However, its practical application is hindered by severe volume expansion during cycling, which triggers mechanical fracture, unstable interphase formation, loss of electrical contact, and rapid capacity fading. This review provides an integrated assessment of Si-based anodes for both LIBs and SIBs by linking synthesis and structural design with ion-storage mechanisms, failure behaviour, and mitigation strategies. Particular emphasis is placed on the synergies and trade-offs among carbon modification, polymer encapsulation, nanostructured/porous Si architectures, and electrolyte/interfacial engineering in simultaneously addressing mechanical, electrical, and interfacial degradation. The distinct challenges associated with Li and Na storage are critically compared, highlighting the substantially less developed understanding of Si-based anodes for SIBs. Rather than evaluating individual modification strategies in isolation, this review establishes relationships among material architecture, conductive networks, mechanical stability, and interphase chemistry and discusses their implications for practical electrode design. Finally, remaining challenges and research priorities are identified toward scalable, high-loading, interfacial stable, and sustainable Si-based anodes for next-generation energy-storage systems.",
       "venue": "Journal of Energy Storage",
       "doi": "10.1016/j.est.2026.125112",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-21": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Operando optical monitoring of chemo-mechanical degradation in silicon-carbon anode batteries for state-of-health estimation",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.241760",
+      "published": "2026-10-17T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Jiayong Pan",
+       "Zhongbao Wei",
+       "Liqun Chen",
+       "Hao Zhong",
+       "Cher Ming Tan",
+       "Lingshi Zhang"
+      ],
+      "abstract": "Silicon/carbon (Si/C) anodes are promising candidates for next-generation high-energy-density lithium-ion batteries (LIBs). However, severe volume changes lead to chemo-mechanical degradation, which is difficult to observe using conventional external monitoring approaches and hinders accurate state-of-health (SOH) estimation consequently. In this study, embedded Fiber Bragg Grating (FBG) sensors are employed for operando monitoring of the internal strain evolution of Si/C-anode pouch cells, enabling the investigation of chemo-mechanical degradation mechanisms and the development of a strain-informed SOH estimation framework. Crucially, Si/C-anode cells exhibit higher peak and irreversible strains compared with graphite-anode cells, indicating more severe mechanical deformation during cycling. Furthermore, aging experiments reveal that the accumulated irreversible strain serves as an effective indicator of interfacial degradation. Correlation analysis demonstrates that both reversible and irreversible strains exhibit strong linear relationships with capacity degradation, with Pearson coefficients of 0.991 and −0.973, respectively. Finally, mechanically interpretable strain features are incorporated into a Ridge-regression model for SOH estimation, achieving a root mean square error of 1.255%. This study establishes an internal strain-driven diagnostic framework for revealing chemo-mechanical degradation mechanisms and enabling accurate SOH estimation of high-energy-density LIBs.",
+      "venue": "Journal of Power Sources",
+      "doi": "10.1016/j.jpowsour.2026.241760",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Rational Integration of Multiple Additives for High-Temperature Lithium-Ion Batteries",
+      "url": "https://doi.org/10.1021/acsenergylett.6c02555",
+      "published": "2026-10-19T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Gihoon Lee",
+       "Seung Hee Han",
+       "Jiwon Seo",
+       "Jaehyuk Choi",
+       "Sanggil Park",
+       "Jaebum Kim",
+       "Jae-Seung Kim",
+       "Junghyo Lee",
+       "Myung-Hoon Kim",
+       "Arum Amy Yu",
+       "Seungbum Hong",
+       "Dong‐Hwa Seo",
+       "Nam‐Soon Choi"
+      ],
+      "abstract": "Abstract The rational combination of multiple electrolyte additives is a promising strategy for constructing stable interphases in lithium-ion batteries. However, unintended additive interactions can alter the preferential reduction/oxidation pathways at electrode surfaces, compromising cell performance. In this study, we identify a detrimental interaction between succinonitrile (SN) and lithium bis(oxalato)borate (LiBOB) on a graphite-silicon (Gr-Si) anode. Specifically, an electron-deficient boron-embedded solid electrolyte interphase (SEI) derived from LiBOB promotes the reduction of the electron-rich nitrile moieties of SN, disrupting fluoroethylene carbonate (FEC)-driven SEI construction. Based on this mechanism, SN was replaced with triisopropanolamine borate (TPAB), which mitigates transition metal dissolution through its amine moiety while forming a robust borate-based cathode electrolyte interphase. Moreover, TPAB combined with LiBOB avoided detrimental side reductions at the anode–electrolyte interface. The FEC-LiBOB-TPAB combination creates thermally stable interphases on the Gr-Si anode and LiNi0.91Co0.08Al0.01O2 cathode (4.8 mAh cm–2), enabling 68.7% capacity retention after 300 cycles at 45 °C and 1C.",
+      "venue": "ACS Energy Letters",
+      "doi": "10.1021/acsenergylett.6c02555",
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
