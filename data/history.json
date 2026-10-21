@@ -24,6 +24,14 @@
    "date": "2026-10-18",
    "topic": "modeling"
   },
+  "arxiv:2610.26741": {
+   "date": "2026-10-22",
+   "topic": "modeling"
+  },
+  "arxiv:2610.28373": {
+   "date": "2026-10-22",
+   "topic": "general"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
@@ -187,6 +195,14 @@
   "t:spacechargelayerandfacilehaliderearrangementenablefastlithiumiontransportathalidesolidelectrolyteinterfaces": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:stablechargedenergyandphasetransitionsinananisotropicdickequantumbatterywithkerrnonlinearity": {
+   "date": "2026-10-22",
+   "topic": "general"
+  },
+  "t:systemidentificationfornonlinearstochasticstatespacemodelsusingensemblekalmaninversionwithapplicationtolithiumionbatteri": {
+   "date": "2026-10-22",
+   "topic": "modeling"
   },
   "t:tokenizingbatterydegradationaphysicsinformedanduncertaintyawareframeworkforstateofhealthestimation": {
    "date": "2026-10-14",
@@ -838,6 +854,67 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-22": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "System Identification for Nonlinear Stochastic State-Space Models Using Ensemble Kalman Inversion with Application to Lithium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2610.26741",
+      "published": "2026-10-19T00:00:00+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Farzaneh Barat",
+       "Rachel Carter",
+       "Sara Wilson",
+       "Huijeong Kim",
+       "Xinfan Lin",
+       "Huazhen Fang"
+      ],
+      "abstract": "Nonlinear state-space system identification has attracted decades of interest, yet remains challenging because of the interplay among unknown parameters, nonlinear dynamics, and latent state variables. Its difficulty increases dramatically when the state and parameter dimensions increase. To address this challenge, we develop an ensemble Kalman inversion (EnKI)-based approach. This approach leverages EnKI to perform maximum a posteriori parameter estimation through successive local Gaussian approximations, enabling an iterative and incremental search for unknown parameters. The search combines Monte Carlo sampling with Kalman-type updates to evolve an ensemble of parameter samples, thereby offering empirical stability and the ability to handle strongly nonlinear models. The EnKI search is coupled with state estimation conditioned on the latest parameter estimates. This enables parameter identification along with latent state recovery. To improve scalability for large datasets, we further develop a cascaded EnKI (CasEnKI) method, which assimilates subdatasets sequentially to accelerate computation. We validate the proposed methods using a lithium-ion battery model with ten state variables and 18 unknown parameters. Simulation results show that the EnKI approach offers high identification accuracy and empirical stability in parameter search. Further, experimental results illustrate the computational efficiency and scalability of the CasEnKI method for large battery datasets.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.26741",
+      "pdf_url": "https://arxiv.org/pdf/2610.26741v1",
+      "categories": [
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Stable charged energy and phase transitions in an anisotropic Dicke quantum battery with Kerr nonlinearity",
+      "url": "https://arxiv.org/abs/2610.28373",
+      "published": "2026-10-20T15:30:26+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Shao-Fan He",
+       "Lv-Ting Gong",
+       "Fu-Quan Dou"
+      ],
+      "abstract": "Phase transitions (PTs) in quantum many-body systems offer a powerful route to manipulate the performance of quantum batteries (QBs). Here, we investigate an anisotropic Dicke QB with Kerr nonlinearity, focusing on the role of PTs in the charging process of the QB system. By analyzing how the Kerr nonlinearity reshapes the cavity level-spacing structure, we find that multiple near-degeneracies emerge at specific nonlinearity strengths. Away from the region of multiple near-degeneracies, the stable stored energy is governed primarily by the ergodic-nonergodic transition (ENET), whereas within this region it is controlled by first- and second-order dissipative phase transitions (DPTs). We employ Liouvillian spectral theory to quantify the critical slowing down associated with the DPTs, and use the Wigner function to characterize the properties of the cavity field in the vicinity of criticality. We optimize the charging process via reinforcement learning (RL) and reveal the physical mechanism underlying performance enhancement from the perspective of ergodic and nonergodic phase dynamics. Our results offer a feasible pathway for manipulating and optimizing quantum battery performance based on intrinsic PT behaviors.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.28373",
+      "pdf_url": "https://arxiv.org/pdf/2610.28373v1",
+      "categories": [
+       "quant-ph"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
