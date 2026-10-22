@@ -32,6 +32,10 @@
    "date": "2026-10-22",
    "topic": "general"
   },
+  "doi:10.1002/aenm.71710": {
+   "date": "2026-10-23",
+   "topic": "general"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
@@ -63,6 +67,10 @@
   "doi:10.1016/j.est.2026.125113": {
    "date": "2026-10-15",
    "topic": "general"
+  },
+  "doi:10.1016/j.est.2026.125197": {
+   "date": "2026-10-23",
+   "topic": "modeling"
   },
   "doi:10.1016/j.ijoes.2026.101527": {
    "date": "2026-10-19",
@@ -128,9 +136,17 @@
    "date": "2026-10-14",
    "topic": "modeling"
   },
+  "t:atailoredmultifunctionallithiumorganosilicatesaltconstructingrobustinterphasesforhighvoltagelithiummetalbatteries": {
+   "date": "2026-10-23",
+   "topic": "general"
+  },
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:degradationinformedstateofhealthestimationoflithiumionbatteriesusingatabularpriordatafittednetwork": {
+   "date": "2026-10-23",
+   "topic": "modeling"
   },
   "t:ecmpareasystematicframeworkforcomparingparameterestimationmethodsinlithiumionbatteryequivalentcircuitmodels": {
    "date": "2026-10-19",
@@ -915,6 +931,78 @@
       "categories": [
        "quant-ph"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-23": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Degradation-informed state-of-health estimation of lithium-ion batteries using a Tabular Prior-data Fitted Network",
+      "url": "https://doi.org/10.1016/j.est.2026.125197",
+      "published": "2026-10-21T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yao Cheng",
+       "Xinxin Yue",
+       "但文蛟",
+       "Mingyu Wang",
+       "Jiefa Ding",
+       "Miao Xue",
+       "Jian Zhang",
+       "Yi Zhang"
+      ],
+      "abstract": "Lithium-ion batteries degrade during service through coupled electrochemical and thermal aging, causing capacity fade and increased operational risk. Accurate state-of-health (SOH) estimation is therefore required for battery health management. When only compact cycle-level descriptors are available, maintaining prediction accuracy together with model interpretability remains difficult. This study proposes a degradation-informed hyperparameter-optimized Tabular Prior-data Fitted Network (HPO-TabPFN) framework for SOH estimation. Each cycle is represented using temporal, energy-related and incremental-capacity descriptors, chronological context is constructed for TabPFN, and inference-related hyperparameters are optimized. Grid search, random search, particle swarm optimization and Bayesian optimization (BO) are evaluated under the same temporal validation protocol. Shapley additive explanations (SHAP) is used to analyze local feature attribution, and Sobol analysis is used to quantify model-output sensitivity and interaction effects. On the evaluated NASA and CALCE cell sequences, hyperparameter optimization reduced the prediction error of TabPFN, and the Bayesian-optimized model achieved average mean absolute percentage error (MAPE) values of 0.2450% and 0.1800%, respectively. Under the same chronological delayed-label protocol, BO-TabPFN gave the lowest error among the unoptimized TabPFN and the evaluated baseline regressors on the tested cells. These results indicate that cycling-derived health indicators can support accurate tabular SOH estimation in the evaluated public datasets, while the NASA B05 case study illustrates how the fitted estimator depends on the selected health factors under the stated attribution and sensitivity settings.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125197",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A Tailored Multifunctional Lithium Organosilicate Salt Constructing Robust Interphases for High Voltage Lithium Metal Batteries",
+      "url": "https://doi.org/10.1002/aenm.71710",
+      "published": "2026-10-22T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Ningxiang Zhu",
+       "Gaojie J. Xu",
+       "Guansheng Chen",
+       "Shenghang Zhang",
+       "Zhilin Yang",
+       "Yu Zhao",
+       "Qilong Chen",
+       "Peihao Yan",
+       "Xiong Shui",
+       "Cizhen Luo",
+       "Fengxiang Guo",
+       "Shitao Wang",
+       "Lixin Qiao",
+       "Botao Zhang",
+       "Zili Cui",
+       "Guanglei Cui"
+      ],
+      "abstract": "ABSTRACT Lithium metal batteries (LMBs) have attracted extensive attention due to their high energy density. However, when lithium (Li) metal is paired with high‐voltage cathode materials, its practical application is limited by issues such as continuous oxidative decomposition of electrolytes and the incompatibility between electrolytes and aggressive electrodes. Herein, we synthesize a fluorinated lithium organosilicate salt (i.e., lithium fluorobis(fluoropinacolatoborato)silicate, LiPBS) to address the aforementioned challenges. The results show that the LiPBS can form a protective and rigid‐flexible cathode electrolyte interphase (CEI) on the cathode surface. Simultaneously, PBS − readily forms a coordination ion pair (CIP) with Li + , constructing an inorganic‐rich solid electrolyte interphase (SEI) on the Li anode. Furthermore, Si─O groups in the LiPBS can effectively scavenge HF and H 2 O from the electrolyte. These advantageous properties enable LiCoO 2 (LCO, 1.89 mAh cm −2 )/Li (50 µm) coin and pouch cells to exhibit excellent cycling performance at high voltages and elevated rates‒for example, retaining 82% capacity after 250 cycles at 1 C and 4.5 V, compared to 80% retention after only 67 cycles for the LiPF 6 ‐based counterpart. This performance is maintained even at an elevated temperature of 50°C. This work highlights the crucial role of lithium organosilicate salt in determining the electrochemical performance of LMBs.",
+      "venue": "Advanced Energy Materials",
+      "doi": "10.1002/aenm.71710",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
