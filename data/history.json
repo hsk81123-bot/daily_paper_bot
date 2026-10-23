@@ -32,6 +32,14 @@
    "date": "2026-10-22",
    "topic": "general"
   },
+  "arxiv:2610.29775": {
+   "date": "2026-10-24",
+   "topic": "modeling"
+  },
+  "arxiv:2610.31242": {
+   "date": "2026-10-24",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -140,6 +148,10 @@
    "date": "2026-10-23",
    "topic": "general"
   },
+  "t:consistentmodelingofseigrowthviaelectrondiffusionvalidatedacrossdiversecellspecificationsandoperatingconditionsinlfpgrap": {
+   "date": "2026-10-24",
+   "topic": "modeling"
+  },
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
    "date": "2026-10-14",
    "topic": "general"
@@ -154,6 +166,10 @@
   },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
+   "topic": "general"
+  },
+  "t:fluctuationfreequantumbatterychargingenabledbybelllikeentangledandseparablechargerstates": {
+   "date": "2026-10-24",
    "topic": "general"
   },
   "t:frequencydecoupleddynamicgraphlearningwithdegradationpriorforrobuststateofhealthestimationoflithiumionbatteries": {
@@ -1003,6 +1019,71 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-24": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Consistent Modeling of SEI Growth via Electron Diffusion Validated Across Diverse Cell Specifications and Operating Conditions in LFP/Graphite Cells",
+      "url": "https://arxiv.org/abs/2610.29775",
+      "published": "2026-10-21T14:05:49+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Lukas Köbbing",
+       "William Black",
+       "Claire Floras",
+       "Saad Azam",
+       "Eniko Zsoldos",
+       "Ben Tang",
+       "J. R. Dahn",
+       "Birger Horstmann"
+      ],
+      "abstract": "Understanding and predicting degradation in lithium-ion batteries is critical for their widespread deployment. The continuous growth of the solid-electrolyte interphase (SEI) remains a dominant aging pathway, yet accurately modeling its kinetics across diverse cell specifications and operating conditions remains a significant challenge. Here, we present and validate a physically grounded SEI growth model mediated by the electron diffusion mechanism. This framework intrinsically captures the state of charge (SOC) dependence of degradation through the impact of the anode potential on the electron concentration, which governs the rate of SEI growth. The presented model explicitly accounts for variations in electrolyte salt, anode material, temperature, and cycling rate. Validation against experimental aging data for LFP/graphite cells demonstrates high predictive accuracy across a broad range of cell specifications and cycling conditions, including confined SOC windows, electrolyte salts (LiFSI, LiPF6), artificial graphites (AGC, AGD), temperatures (40-70°C), and C-rates (C/20-1C). Remarkably, a single, consistent set of parameters is applied to simulate the capacity fade for all experiments without recalibration. While quantitative overestimations occur during high-SOC storage periods, the framework consistently captures the observed degradation trends. Our findings underscore that lower SOC operation mitigates degradation, establishing a physics-based model for predicting long-term lithium-ion battery aging.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.29775",
+      "pdf_url": "https://arxiv.org/pdf/2610.29775v1",
+      "categories": [
+       "physics.chem-ph",
+       "physics.app-ph"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Fluctuation-free Quantum Battery Charging Enabled by Bell-like Entangled and Separable Charger States",
+      "url": "https://arxiv.org/abs/2610.31242",
+      "published": "2026-10-22T13:24:47+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Longyan Gong",
+       "Jing Zhang",
+       "Yongtao Li"
+      ],
+      "abstract": "The implication of entanglement in quantum battery charging remains poorly understood. In addition, intrinsic quantum randomness poses a fundamental challenge to charging uniformity across distinct trials. To address these issues, we study a three-qubit system within a cascaded collision frame, with two qubits acting as the charger and the third serving as the battery. After each collision, an adaptive measurement is performed on the charger, yielding four conditional post-measurement battery states with identical expected stored energy. For arbitrary fixed charger states, we derive analytical expressions for the recurrence relation of stored energy. We find that stored-energy fluctuations depend on whether the dynamics relies on the battery phase \\(γ_n\\). For two Bell-like families of entangled states, together with their computational basis states termed Bell-like separable states, the dynamics is \\(γ_n\\)-independent and fluctuations vanish, whereas for other entangled and separable states, fluctuations emerge. These insights establish a paradigm for engineering charger states to design uniform-charging quantum-battery architectures despite inherent quantum randomness.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.31242",
+      "pdf_url": "https://arxiv.org/pdf/2610.31242v1",
+      "categories": [
+       "quant-ph",
+       "cond-mat.mes-hall"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
