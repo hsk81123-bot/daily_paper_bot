@@ -92,12 +92,20 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.1016/j.jpowsour.2026.241725": {
+   "date": "2026-10-25",
+   "topic": "modeling"
+  },
   "doi:10.1016/j.jpowsour.2026.241760": {
    "date": "2026-10-21",
    "topic": "modeling"
   },
   "doi:10.1021/acsenergylett.6c02555": {
    "date": "2026-10-21",
+   "topic": "general"
+  },
+  "doi:10.1021/acsnano.6c13032": {
+   "date": "2026-10-25",
    "topic": "general"
   },
   "doi:10.1149/1945-7111/aeb4ee": {
@@ -151,6 +159,10 @@
   "t:consistentmodelingofseigrowthviaelectrondiffusionvalidatedacrossdiversecellspecificationsandoperatingconditionsinlfpgrap": {
    "date": "2026-10-24",
    "topic": "modeling"
+  },
+  "t:coupleddesignofsiliconanodesandsolidstateelectrolytesforhighperformanceallsolidstatebatteries": {
+   "date": "2026-10-25",
+   "topic": "general"
   },
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
    "date": "2026-10-14",
@@ -211,6 +223,10 @@
   "t:rationalintegrationofmultipleadditivesforhightemperaturelithiumionbatteries": {
    "date": "2026-10-21",
    "topic": "general"
+  },
+  "t:realtimestateofhealthestimationandonlinedegradationprognosisfrompartialbatterydischargeusingphysicsinformedneuralnetwork": {
+   "date": "2026-10-25",
+   "topic": "modeling"
   },
   "t:robuststateofhealthestimationforlithiumionbatteriesunderstochasticloadingaphysicsinformedbayesiancontinuoustimeapproach": {
    "date": "2026-10-14",
@@ -1084,6 +1100,63 @@
        "quant-ph",
        "cond-mat.mes-hall"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-25": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Real-time state-of-health estimation and online degradation prognosis from partial battery discharge using Physics-Informed Neural Networks",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.241725",
+      "published": "2026-10-23T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Begoña Ispizua",
+       "Serio Gil-López",
+       "Leire Arrizabalaga",
+       "Ibai Laña"
+      ],
+      "abstract": "With the increasing integration of renewable energy sources, energy storage systems have become essential, making the accurate estimation of their State of Health (SOH) and degradation behavior critical. In this work, we propose a physics-informed deep learning approach for lithium-ion battery SOH prediction using incomplete discharge curves extracted from arbitrary voltage ranges, thereby reflecting realistic and heterogeneous operating conditions. The proposed method combines data-driven learning with physically motivated degradation dynamics to ensure consistent and reliable SOH estimation from partial discharge information, achieving a MAPE below 4$\\%$. In addition, a real-time degradation trend estimation strategy is introduced to detect key aging transitions without requiring prior knowledge or historical data, making it applicable to a wide range of batteries. Overall, our approach enables SOH estimation from arbitrary discharge segments and a real-time degradation forecast that continuously integrates all usage, overcoming previous methods that rely on fixed protocols or early, non-adaptive predictions.",
+      "venue": "Journal of Power Sources",
+      "doi": "10.1016/j.jpowsour.2026.241725",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Coupled Design of Silicon Anodes and Solid-State Electrolytes for High-Performance All-Solid-State Batteries",
+      "url": "https://doi.org/10.1021/acsnano.6c13032",
+      "published": "2026-10-23T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Jinjun Zhou",
+       "Guanjia Zhu",
+       "Taotao Xu",
+       "Wei Dong Luo",
+       "Haijiao Zhang"
+      ],
+      "abstract": "Abstract Silicon-based solid-state batteries (Si-SSBs) offer enhanced safety and higher energy density over conventional liquid-electrolyte systems, yet their practical realization is critically hindered by severe volume expansion of silicon anodes and poor interfacial compatibility with solid-state electrolytes. This review provides a comprehensive evaluation of recent advances from a coupled design perspective, integrating silicon anode engineering, electrolyte compatibility optimization, and interfacial stabilization. We systematically examine emerging strategies for silicon anodes alongside compatibility approaches tailored to each electrolyte type, with a particular focus on the coupled chemo-mechanical degradation at the silicon/electrolyte interface. A systematic compatibility mapping linking different Si architectures with specific electrolyte families reveals the most promising material combinations and their underlying design principles. Beyond materials design, we address critical manufacturing challenges including stack pressure management, scalable processing, and prelithiation techniques essential for industrial translation. Finally, we propose a forward-looking roadmap integrating multiscale characterization, AI-assisted design, and scalable fabrication, providing both theoretical guidance and practical strategies for developing high-performance, commercially viable Si-SSBs.",
+      "venue": "ACS Nano",
+      "doi": "10.1021/acsnano.6c13032",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
