@@ -24,6 +24,10 @@
    "date": "2026-10-18",
    "topic": "modeling"
   },
+  "arxiv:2610.22787": {
+   "date": "2026-10-26",
+   "topic": "general"
+  },
   "arxiv:2610.26741": {
    "date": "2026-10-22",
    "topic": "modeling"
@@ -34,6 +38,10 @@
   },
   "arxiv:2610.29775": {
    "date": "2026-10-24",
+   "topic": "modeling"
+  },
+  "arxiv:2610.31204": {
+   "date": "2026-10-26",
    "topic": "modeling"
   },
   "arxiv:2610.31242": {
@@ -178,6 +186,14 @@
   },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
+   "topic": "general"
+  },
+  "t:feederawareserviceconditionedflexibilityofgridinteractivebuildings": {
+   "date": "2026-10-26",
+   "topic": "modeling"
+  },
+  "t:filteraugmentedreinforcementlearningforbatteryfastchargingwithstateofhealthandplatingawarerewarddesign": {
+   "date": "2026-10-26",
    "topic": "general"
   },
   "t:fluctuationfreequantumbatterychargingenabledbybelllikeentangledandseparablechargerstates": {
@@ -1157,6 +1173,64 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-26": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Feeder-Aware Service-Conditioned Flexibility of Grid-Interactive Buildings",
+      "url": "https://arxiv.org/abs/2610.31204",
+      "published": "2026-10-22T12:51:45+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Dafang Zhao",
+       "Ittetsu Taniguchi",
+       "Takao Onoye"
+      ],
+      "abstract": "Grid-interactive buildings can adjust demand, but building-feasible power budgets may differ from accepted feeder-head offers. This study addresses a practical question: to what extent can the adjustable electricity consumption of buildings be translated into deliverable flexibility services while satisfying feeder-head operating requirements? To enable a fair comparison, we adopt the same baseline operating schedule, equipment conditions, and post-service recovery requirements for indoor temperature and battery state of charge (SOC). Flexibility is then evaluated under two settings: one considering only building-level constraints, and the other additionally accounting for feeder-head constraints. We first use a simplified network model with explicit security margins to determine a preliminary amount of flexibility that can be committed. The resulting schedule is then validated using a more detailed network simulation via Modelica. If network losses cause the actual response to deviate from the committed response, the electricity consumption of individual buildings is rescheduled. If the required response still cannot be achieved, the committed flexibility level is reduced. The experiments cover multiple service activation times, regulation directions, and service durations. For comparative purposes, we retain the initial optimization result as the reference estimate of the maximum potentially available flexibility, rather than interpreting the failure of a particular subsequent realization attempt as evidence that a larger flexibility level is inherently infeasible. The results demonstrated that 24.51\\% of nonzero flexibility contracts were rejected due to feeder-head constraints, 67.04\\% of contracts were accepted with some rescheduling and building redispatch, and only 8.09\\% of contracts were accepted without any changes.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.31204",
+      "pdf_url": "https://arxiv.org/pdf/2610.31204v1",
+      "categories": [
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Filter-Augmented Reinforcement Learning for Battery Fast Charging with State of Health and Plating-Aware Reward Design",
+      "url": "https://arxiv.org/abs/2610.22787",
+      "published": "2026-10-16T00:55:27+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Meng Yuan",
+       "Yang Li",
+       "Changfu Zou"
+      ],
+      "abstract": "Fast charging of lithium-ion batteries is crucial for electric vehicle adoption, yet it increases safety risks and accelerates battery ageing. To address this, we propose a filter-augmented reinforcement learning (RL) framework for lifelong health-aware fast charging, based on the twin-delayed deep deterministic policy gradient (TD3) algorithm. The RL agent is guided by a reward function that balances charging speed and battery longevity through the incorporation of state of health (SoH) information and an SoH-dependent voltage penalty term derived from a constant--current constant--overpotential charging strategy. Since onboard SoH estimates are inevitably corrupted by noise, two filtering strategies are integrated: an exponential moving average (EMA) filter when noise statistics are unknown, and a Kalman filter when they are available, with the filtered estimate embedded in both the agent's state and reward computation. The RL policy is trained using data from high-fidelity life-cycle simulations. The evaluation uses a published electrochemical and degradation parameterisation for a commercial LG M50 cell. Results show that the proposed method achieves up to 21.4\\% more equivalent full cycles (EFCs) than conventional constant current--constant voltage (CC--CV) charging under 2\\% SoH estimation noise, and maintains this lifetime advantage even under 5\\% noise, while sustaining comparable charging speed.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.22787",
+      "pdf_url": "https://arxiv.org/pdf/2610.22787v1",
+      "categories": [
+       "eess.SY"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
