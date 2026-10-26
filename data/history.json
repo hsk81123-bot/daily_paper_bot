@@ -52,12 +52,20 @@
    "date": "2026-10-23",
    "topic": "general"
   },
+  "doi:10.1002/aenm.71748": {
+   "date": "2026-10-27",
+   "topic": "general"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
   },
   "doi:10.1016/j.apenergy.2026.129000": {
    "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.egyr.2026.109765": {
+   "date": "2026-10-27",
    "topic": "modeling"
   },
   "doi:10.1016/j.est.2026.125017": {
@@ -134,6 +142,10 @@
   },
   "doi:10.3390/eng7100554": {
    "date": "2026-10-15",
+   "topic": "modeling"
+  },
+  "t:acomprehensivereviewofsupercapacitormodellingandsocsohandrulestimationtechniquesforenergymanagementsystems": {
+   "date": "2026-10-27",
    "topic": "modeling"
   },
   "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
@@ -214,6 +226,10 @@
   },
   "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
    "date": "2026-10-17",
+   "topic": "general"
+  },
+  "t:mineralparticlesuspensionsincarbonateelectrolyteenablelifrichinterphasesfordurablelithiummetalbatteries": {
+   "date": "2026-10-27",
    "topic": "general"
   },
   "t:nocenetrepresentationlearningforbatteryoperationalcontextvianestedsequencemodelling": {
@@ -1231,6 +1247,66 @@
       "categories": [
        "eess.SY"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-27": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A comprehensive review of supercapacitor modelling and SOC, SOH, and RUL estimation techniques for energy management systems",
+      "url": "https://doi.org/10.1016/j.egyr.2026.109765",
+      "published": "2026-10-23T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Sulabh Sachan",
+       "Håkon Viumdal",
+       "Roshan Sharma",
+       "Thomas Øyvang",
+       "Sambeet Mishra"
+      ],
+      "abstract": "Supercapacitors function as effective energy storage systems which provide high power output and fast charging and discharging and extended operational time. The precise measurement of state of charge and state of health and remaining useful life presents a major challenge that must be solved for successful energy management system implementation. This review offers an in-depth study which comprehensively examines all supercapacitor modelling methods and advanced estimation techniques that have been developed during recent years. The research assesses different modelling methods which include electrochemical models and equivalent circuit models and fractional-order models and data-driven models according to their accuracy and computational demands and their ability to function in real-world situations. The research investigates the various mechanisms which cause supercapacitors to fail and the aging patterns which result in performance loss. The article presents an extensive examination of techniques used for estimating state of charge and state of health and remaining useful life which includes model-based and data-driven and hybrid methods together with their benefits and drawbacks and their ability to function in real-time. The discussion addresses implementation factors which include sensing accuracy and computational constraints and environmental variability and system integration challenges. The research identifies existing limitations and research gaps and future development paths which will enable the creation of improved supercapacitor management systems that deliver better performance and greater reliability. This review provides essential research material which researchers and engineers can use to improve estimation accuracy and operational safety and lifecycle optimization of advanced supercapacitor energy storage systems.",
+      "venue": "Energy Reports",
+      "doi": "10.1016/j.egyr.2026.109765",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Mineral Particle Suspensions in Carbonate Electrolyte Enable LiF‐Rich Interphases for Durable Lithium Metal Batteries",
+      "url": "https://doi.org/10.1002/aenm.71748",
+      "published": "2026-10-24T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hongmei Liang",
+       "Lisha Mou",
+       "Jin Leng",
+       "Aiping Wang",
+       "Li Wang",
+       "Yongsheng Han",
+       "Xiangming He"
+      ],
+      "abstract": "ABSTRACT The solid electrolyte interphase in lithium metal batteries determines cycling stability but often suffers from the incomplete decomposition of fluorinated components. Herein, we demonstrate that suspending LiF and Li 2 O particles in a carbonate‐based electrolyte promotes the defluorination of fluoroethylene carbonate and lithium hexafluorophosphate. These particles preferentially adsorb fluorinated electrolyte species and induce electronic polarization, thereby modulating their redox reactivity and facilitating interfacial decomposition toward LiF. The generated LiF, together with the trace dissolution and interfacial reprecipitation of suspended LiF particles, continuously enriches the electrode surface with LiF‐rich inorganic species. This process results in the formation of a bilayer interphase on both the lithium metal anode and LiNi 0.6 Co 0.2 Mn 0.2 O 2 cathode, featuring a flexible inner layer and a dense LiF‐rich outer layer. The resulting interphase suppresses lithium dendrites, mitigates parasitic reactions, and enables 2400 h of stable cycling in symmetric cells and 85.6% capacity retention after 400 cycles in full cells. By introducing suspended LiF/Li 2 O particles to regulate the interfacial decomposition of fluorinated electrolyte species, this work provides an effective electrolyte‐design strategy for constructing robust interphases in lithium metal batteries.",
+      "venue": "Advanced Energy Materials",
+      "doi": "10.1002/aenm.71748",
+      "arxiv_id": "",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.71748",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
