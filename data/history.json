@@ -144,6 +144,14 @@
    "date": "2026-10-17",
    "topic": "general"
   },
+  "doi:10.1149/1945-7111/aeba1e": {
+   "date": "2026-10-29",
+   "topic": "modeling"
+  },
+  "doi:10.1149/1945-7111/aeba1f": {
+   "date": "2026-10-29",
+   "topic": "general"
+  },
   "doi:10.3390/batteries12100414": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -188,6 +196,10 @@
    "date": "2026-10-23",
    "topic": "general"
   },
+  "t:compositiondependentelectrochemicalperformanceofpitchderivedcarbonenhancedsilicongraphitecompositeanodesforlithiumionbat": {
+   "date": "2026-10-29",
+   "topic": "general"
+  },
   "t:computationalscreeningofamorphouslithiumtrivalentmetalchloridesolidstateelectrolytes": {
    "date": "2026-10-28",
    "topic": "general"
@@ -227,6 +239,10 @@
   "t:fluctuationfreequantumbatterychargingenabledbybelllikeentangledandseparablechargerstates": {
    "date": "2026-10-24",
    "topic": "general"
+  },
+  "t:fractionalordermodelbasedstateofchargeandstateofpowerestimationwithavailablecapacityfeedbackforlithiumionbatteries": {
+   "date": "2026-10-29",
+   "topic": "modeling"
   },
   "t:frequencydecoupleddynamicgraphlearningwithdegradationpriorforrobuststateofhealthestimationoflithiumionbatteries": {
    "date": "2026-10-14",
@@ -1389,6 +1405,66 @@
       "categories": [
        "cond-mat.mtrl-sci"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-29": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Fractional-Order Model-Based State-of-Charge and State-of-Power Estimation with Available-Capacity Feedback for Lithium-ion Batteries",
+      "url": "https://doi.org/10.1149/1945-7111/aeba1e",
+      "published": "2026-10-27T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Tao Chen",
+       "Hongguang Zhang",
+       "Shuo Wang",
+       "Jianming Li",
+       "Siyuan Shang",
+       "Jiayao Du",
+       "Yinlian Yan",
+       "Fubin Yang",
+       "Yonghong Xu"
+      ],
+      "abstract": "Abstract Accurate state-of-charge (SOC) and state-of-power (SOP) estimation requires consistent treatment of voltage dynamics and available-capacity uncertainty. This study couples a fractional-order equivalent circuit model, a fast multi-innovation unscented Kalman filter SOC observer, and a slow capacity estimator. Self-adaptive learning particle swarm optimization (SLPSO) identifies the model parameters. Capacity feedback links SOC correction to voltage prediction and multi-constraint SOP calculation, with constant-power discharge verification. Compared with a second-order resistor-capacitor model, the fractional-order model reduces voltage root-mean-square error (RMSE) and mean absolute error by 3.45% and 5.82%, respectively. SLPSO reduces the mean final voltage RMSE from 2.215 to 1.561 mV. Across two dynamic profiles and initial SOC values of 0.90 to 1.05, the proposed method yields SOC RMSE values of 0.844% to 0.966%. The fixed-capacity baseline yields 4.9% to 9.8% under initial-SOC mismatch. The maximum capacity-related state-of-health indicator deviation remains below 0.279 percentage points. The maximum discharge-power error is 2.20% for 10 s and below 5% for all 30 s cases. It reaches 8.34% at 30% SOC for 60 s, indicating the need for caution under low-SOC, long-duration operation. These results are limited to fresh-cell tests at 25 °C.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aeba1e",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Composition-Dependent Electrochemical Performance of Pitch-Derived Carbon-Enhanced Silicon–Graphite Composite Anodes for Lithium-ion Batteries",
+      "url": "https://doi.org/10.1149/1945-7111/aeba1f",
+      "published": "2026-10-27T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Vijaya",
+       "Mononita Das",
+       "Pankaj Kalita"
+      ],
+      "abstract": "Abstract Silicon–graphite composite anodes are high-potential contenders for high-energy lithium-ion batteries, yet their practical application is hindered by the volume expansion of silicon during cycling. In this work, silicon–graphite–pitch composite anodes containing 10–15 wt% micron-sized silicon and 20–25 wt% coal tar pitch is prepared through solution-assisted mixing followed by carbonization. The structural and morphological characterization indicates the coexistence of silicon, graphite and pitch-derived carbon within the composite framework. Electrochemical evaluation demonstrates significantly higher reversible capacities than graphite, delivering initial capacities of ~558 mAh g⁻¹, ~796 mAh g⁻¹ and ~809 mAh g⁻¹ for the samples containing 10%, 12% and 15% silicon, respectively. After 100 cycles at 0.2 mA cm⁻2, the corresponding capacity retentions are 87.44%, 72.03%, and 68.35%. Quantitative irreversible capacity analysis reveals composition-dependent differences in capacity loss, with greater irreversible capacity accumulation in silicon-rich composites. Furthermore, the composite anode containing 12% silicon, when tested in an NMC-811 full-cell configuration, delivers an initial discharge areal capacity of ~2.5 mAh cm⁻² and sustains electrochemical activity over 100 cycles. The study highlights the role of composition on the electrochemical response of silicon–graphite–pitch composites and offers guidance for the design of silicon-based composite anodes for lithium-ion batteries.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aeba1f",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
