@@ -56,6 +56,14 @@
    "date": "2026-10-28",
    "topic": "general"
   },
+  "arxiv:2610.37023": {
+   "date": "2026-10-30",
+   "topic": "general"
+  },
+  "arxiv:2610.37147": {
+   "date": "2026-10-30",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -256,6 +264,10 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "t:maplesecmobilityawarepartitionedlanguagemodelengineforroamingiotsecurity": {
+   "date": "2026-10-30",
+   "topic": "modeling"
+  },
   "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
    "date": "2026-10-17",
    "topic": "general"
@@ -279,6 +291,10 @@
   "t:piecewisearrheniuslongshorttermmemoryresidualcorrectionmodelingforwholelifestateofhealthestimationandremainingusefullife": {
    "date": "2026-10-15",
    "topic": "modeling"
+  },
+  "t:prussianblueandprussianwhitethinfilmelectrodessinglestepelectrodepositionforanodeandcathodeapplications": {
+   "date": "2026-10-30",
+   "topic": "general"
   },
   "t:rapiddynamicelectrochemicalimpedancespectroscopyreconstructionoflithiumionbatteriesusinggenerativeadversarialnetwork": {
    "date": "2026-10-14",
@@ -1465,6 +1481,77 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-30": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "MAPLE-Sec: Mobility-Aware Partitioned Language-Model Engine for Roaming IoT Security",
+      "url": "https://arxiv.org/abs/2610.37147",
+      "published": "2026-10-27T12:43:24+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Yuhang Qiu",
+       "Ziwei Li",
+       "Jinfeng Xu",
+       "Jialiang Xie",
+       "Fangmin Ren",
+       "Shirong Guo",
+       "Jing Yang",
+       "Sunil Prajapat",
+       "Por Lip Yee"
+      ],
+      "abstract": "Mobile Internet-of-Things (IoT) endpoints such as connected vehicles, wearables, and drones continuously cross heterogeneous network domains, creating handover-driven attack surfaces that static, cloud-anchored detectors cannot follow. However, three obstacles block real-time detection on such roaming endpoints: detection state is lost at every inter-domain handover; transmitting raw telemetry to a fixed detector exhausts the uplink and the device battery; and full-depth language model inference cannot meet millisecond latency budgets on constrained hardware. To tackle these challenges, we propose MAPLE-Sec, a mobility-aware partitioning framework that splits a compact, security-tuned language model across a roaming device and its nearest edge node. First, a trajectory-conditioned partition scheduler recomputes the split point from predicted handover timing, residual battery, and uplink quality. Second, a token-budgeted early-exit mechanism emits a verdict at the shallowest layer that meets a confidence threshold. Finally, a learned activation-compression codec migrates the intermediate inference state across edge nodes during handover without retransmitting raw telemetry. We formalize the partition-and-migration decision as an on-device constrained optimization solved in sub-millisecond time. Extensive experiments across the CIC-IoT and Edge-IIoTset corpora under both IID and non-IID roaming conditions demonstrate that MAPLE-Sec sustains detection across mobility events, improving the converged F1-score by up to 9.3\\% relative to Cloud-only and by 2.9 percentage points over the strongest edge-collaborative baseline (EdgeShard), while reducing end-to-end latency by up to 2.5$\\times$. Ablation confirms that the activation-compression codec reduces migration energy by 2.4$\\times$ versus the raw-activation migration variant.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.37147",
+      "pdf_url": "https://arxiv.org/pdf/2610.37147v1",
+      "categories": [
+       "cs.NI"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Prussian blue and Prussian white thin-film electrodes: Single-step electrodeposition for anode and cathode applications",
+      "url": "https://arxiv.org/abs/2610.37023",
+      "published": "2026-10-27T10:59:50+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Michael Pohlitz",
+       "Mohammed Fayis Kalady",
+       "Larissa de O. Garcia",
+       "Lindiomar Borges de Avila",
+       "Darius Pohl",
+       "Falk Röder",
+       "Flavio Abreu Araujo",
+       "Axel Lubk",
+       "Daniel Wolf",
+       "Christian K. Müller"
+      ],
+      "abstract": "This study examines how deposition potential influences the composition and nanoscale structure of Prussian Blue (PB)/Prussian White (PW)-family films, providing an experimental basis for assessing their proposed functions. Films were grown directly on Au/Cr/Si in a single potentiostatic step from a common aqueous bath at $-0.20$ to $+0.40$\\,V versus a saturated calomel electrode, with a fixed deposition charge of 10\\,mC. Electron microscopy, elemental analysis, X-ray photoelectron spectroscopy, and Raman spectroscopy revealed potential-dependent chemistry and nonmonotonic morphology. EDS indicated greater K incorporation in lower-potential deposits, whose Fe~2p and Raman features were consistent with more reduced, PW-like environments. Surface K/Fe ratios varied nonmonotonically from 1.129 to 1.322 across the series, corresponding to 52.95--56.94\\% K within the detected K+Fe population. Larger faceted crystallites at $+0.30$\\,V contrasted with finer pyramids and cracks at $+0.40$\\,V. Selected PB-like and PW-like regions had local cubic lattice parameters of $(10.31\\pm0.10)$\\,Å and $(10.36\\pm0.10)$\\,Å, respectively; their overlapping uncertainties prevent discrimination by lattice spacing alone. Cross-sectional maps showed broadly uniform framework-element distributions within locally continuous coatings. Together, these observations relate deposition conditions to contrasting chemical and morphological starting states without establishing bulk stoichiometry or phase purity. A literature-grounded outlook identifies ion storage, sensing, electrochromism, resistive switching, and ion handling as research opportunities requiring functional validation in these films.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.37023",
+      "pdf_url": "https://arxiv.org/pdf/2610.37023v1",
+      "categories": [
+       "cond-mat.mtrl-sci"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
