@@ -160,6 +160,10 @@
    "date": "2026-10-29",
    "topic": "general"
   },
+  "doi:10.3389/fbael.2026.1995764": {
+   "date": "2026-10-31",
+   "topic": "general"
+  },
   "doi:10.3390/batteries12100414": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -170,6 +174,10 @@
   },
   "doi:10.3390/eng7100554": {
    "date": "2026-10-15",
+   "topic": "modeling"
+  },
+  "doi:10.3390/wevj17110566": {
+   "date": "2026-10-31",
    "topic": "modeling"
   },
   "t:acomprehensivereviewofsupercapacitormodellingandsocsohandrulestimationtechniquesforenergymanagementsystems": {
@@ -232,6 +240,10 @@
    "date": "2026-10-19",
    "topic": "modeling"
   },
+  "t:electrothermalmodelingandlongtermdegradationexposureanalysisofactivebtmsundertropicalheatsoakconditions": {
+   "date": "2026-10-31",
+   "topic": "modeling"
+  },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
    "topic": "general"
@@ -270,6 +282,10 @@
   },
   "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
    "date": "2026-10-17",
+   "topic": "general"
+  },
+  "t:mechanismsgoverningcalendaraginginthreeelectrodelithiumioncellswithlayeredoxidecathodeandmilledsiliconanode": {
+   "date": "2026-10-31",
    "topic": "general"
   },
   "t:mineralparticlesuspensionsincarbonateelectrolyteenablelifrichinterphasesfordurablelithiummetalbatteries": {
@@ -1552,6 +1568,70 @@
       "categories": [
        "cond-mat.mtrl-sci"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-10-31": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Electro-Thermal Modeling and Long-Term Degradation-Exposure Analysis of Active BTMS Under Tropical Heat-Soak Conditions",
+      "url": "https://doi.org/10.3390/wevj17110566",
+      "published": "2026-10-28T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Praphat Phuangchuen",
+       "Prakasit Prabpal",
+       "Somchat Sonasang",
+       "Thunyaput Kittiphotiklang",
+       "Pantree Khompittaya",
+       "Rachata Maneechot",
+       "Niwat Angkawisittpan"
+      ],
+      "abstract": "The aim of this scientific study is to investigate the coupled effects of active battery thermal management on temperature regulation, auxiliary cooling energy demand, and long-term degradation-related exposure under a prescribed tropical heat-soak scenario. A reference 50 Ah equivalent lithium-ion cell is represented by a temperature- and state-of-charge-dependent second-order equivalent-circuit model coupled to a two-node core–surface thermal network. The numerical methods include Coulomb counting, irreversible electrical heat generation, proportional cooling control, time integration of normalized degradation-stress indicators, and ambient-temperature and cooling-setpoint sensitivity analyses. A synthetic 3-day charge–discharge duty cycle and a deterministic 28–42 °C ambient-temperature waveform provide repeatable boundary conditions. Relative to passive operation, the modeled active system lowers peak core temperature while incurring additional cooling electricity demand. The setpoint analysis demonstrates a trade-off between thermal protection, auxiliary energy, and normalized degradation exposure. The framework offers a consistent basis for comparative thermal-management assessment; because the reference parameters and exposure relationships are not experimentally calibrated, it does not establish cell-specific capacity fade, service life, or predictive accuracy.",
+      "venue": "World Electric Vehicle Journal",
+      "doi": "10.3390/wevj17110566",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Mechanisms governing calendar aging in three-electrode lithium-ion cells with layered oxide cathode and milled silicon anode",
+      "url": "https://doi.org/10.3389/fbael.2026.1995764",
+      "published": "2026-10-29T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hrishikesh Tupkar",
+       "Pavan  P. Badami",
+       "Ankit Verma",
+       "Avi Gargye",
+       "Marco-Tulio F. Rodrigues",
+       "Andrew M. Colclasure",
+       "Matthew A. Gebbie",
+       "Ilya Shkrob",
+       "Daniel P. Abraham"
+      ],
+      "abstract": "Calendar aging is a major degradation pathway for silicon-containing lithium-ion batteries because parasitic reactions continue during open-circuit storage, consuming cyclable lithium and altering electrode behavior. Here, we investigate the calendar aging of three-electrode cells, with LiNi 0.8 Mn 0.1 Co 0.1 O 2 (NMC811) and silicon (Si) electrodes, over an 11-month period to identify electrode-specific degradation mechanisms. Capacity measurements, voltage-relaxation analysis, impedance evaluation and post-test characterization were used to monitor evolution of the individual electrodes. The Si anode dominates full-cell voltage relaxation and discharge impedance throughout aging, while progressive loss of lithium inventory continuously shifts operating windows of both electrodes, forcing the NMC811 cathode to increasingly higher states of delithiation. Voltage-relaxation analysis reveals two kinetically distinct equilibration processes, with the longer-timescale process evolving systematically within each month-long storage interval and partially resetting following the reference performance test (RPT) cycling indicating a strong dependence on the electrochemical history of the Si electrode. Although the harvested NMC811 and Si electrodes exhibit only minor capacity loss, the increase in anode impedance demonstrates evolution of the SEI and the Si interfacial environment. These results indicate that calendar-aging-induced capacity loss is governed primarily by interfacial reactions and associated loss of lithium inventory rather than extensive loss of active material. More broadly, the results demonstrate the utility of voltage-relaxation analysis as a non-destructive diagnostic for resolving electrode-specific degradation mechanisms in Si-containing lithium-ion cells.",
+      "venue": "Frontiers in Batteries and Electrochemistry",
+      "doi": "10.3389/fbael.2026.1995764",
+      "arxiv_id": "",
+      "pdf_url": "https://www.frontiersin.org/journals/batteries-and-electrochemistry/articles/10.3389/fbael.2026.1995764/pdf",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
