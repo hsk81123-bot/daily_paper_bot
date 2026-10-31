@@ -64,6 +64,14 @@
    "date": "2026-10-30",
    "topic": "modeling"
   },
+  "arxiv:2610.39275": {
+   "date": "2026-11-01",
+   "topic": "modeling"
+  },
+  "arxiv:2610.39652": {
+   "date": "2026-11-01",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -236,6 +244,10 @@
    "date": "2026-10-23",
    "topic": "modeling"
   },
+  "t:designingbatteryswappingandchargingnetworksforelectricfreighttransportunderdemanduncertainty": {
+   "date": "2026-11-01",
+   "topic": "general"
+  },
   "t:ecmpareasystematicframeworkforcomparingparameterestimationmethodsinlithiumionbatteryequivalentcircuitmodels": {
    "date": "2026-10-19",
    "topic": "modeling"
@@ -275,6 +287,10 @@
   "t:lithiummetalanodeinterfacesinlisbatteriesfromfailuremechanismstopracticalstabilization": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:llmassistedoptimizationforsimulationbasedredesign": {
+   "date": "2026-11-01",
+   "topic": "modeling"
   },
   "t:maplesecmobilityawarepartitionedlanguagemodelengineforroamingiotsecurity": {
    "date": "2026-10-30",
@@ -1632,6 +1648,66 @@
       "arxiv_id": "",
       "pdf_url": "https://www.frontiersin.org/journals/batteries-and-electrochemistry/articles/10.3389/fbael.2026.1995764/pdf",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-01": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "LLM-Assisted Optimization for Simulation-Based Redesign",
+      "url": "https://arxiv.org/abs/2610.39275",
+      "published": "2026-10-29T03:28:30+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Chan-Eui Song",
+       "Jeremy J. Michalek",
+       "Christopher McComb"
+      ],
+      "abstract": "Engineering design frequently involves redesigning a prior solution to adapt to changes in context, such as material prices or system requirements. Redesign often leverages simulators too complex and/or computationally intensive for traditional numerical solvers, which lack engineering knowledge and context, to ensure global solution quality. Large language models (LLMs) can interpret semantic information, including engineering knowledge about the system and changes in context, to help guide search, and recent studies have shown that incorporating this knowledge into optimization can improve search performance. However, how best to combine LLMs with numerical solvers in redesign remains unclear. We develop and test an integrated LLM-optimization approach for redesign and compare three methods for leveraging LLMs (warm start, variable fixing and ReAct) and four black-box solvers (Bayesian optimization, genetic algorithms, mesh adaptive direct search and random search) on an electric vehicle battery pack cost minimization case study across four types of redesign scenarios. We find that the integrated approach can match feasible design discovery of the numerical-solver baselines with 80% fewer simulator evaluations while tripling the fraction of runs that find near-optimal solutions. We find that the best LLM-solver integration approach and the way the prior solution is leveraged depend on the structure of the design requirement change, and that the benefit of increasing LLM model size grows with the extent to which the LLM controls the search. These results show clear potential for LLMs in redesign tasks for guiding or replacing numerical solvers.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.39275",
+      "pdf_url": "https://arxiv.org/pdf/2610.39275v1",
+      "categories": [
+       "cs.AI",
+       "cs.CE",
+       "math.OC"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Designing battery swapping and charging networks for electric freight transport under demand uncertainty",
+      "url": "https://arxiv.org/abs/2610.39652",
+      "published": "2026-10-29T09:08:12+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Yujia Xu",
+       "Walid Klibi",
+       "Benoit Montreuil"
+      ],
+      "abstract": "Long-haul truck electrification requires rapid energy replenishment near freight demand, although dispersed hubs may lack sufficient grid capacity. We study a \"Swap-Locally, Charge-Centrally\" architecture embedded in a relay freight network: swapping remains close to freight flows, charging can be shifted to grid-suitable hubs, and co-location is retained where economical. A multi-period, two-stage stochastic location-inventory-fleet model coordinates station deployment, replenishment assignments and grid-bounded charging capacity with scenario-dependent battery stocks, batch sizes and incremental fleet requirements. Corridor electrification competes with temporary diesel operation. Building on submodularity-based constraint generation for location-inventory systems, we give an alternative scalar partial-minimization proof that the battery value function is submodular, show that the fleet recourse is affine in the binary swap-station decisions, and develop a Lovász-cut Benders decomposition with hub-period block cuts and a convex battery oracle with analytic gradients and memoization. On a seven-state southeastern U.S. freight network, the method reaches gaps below 0.01% on all five instances, the largest in about four minutes, whereas a strengthened extensive formulation reaches this tolerance only on the two smallest instances within three hours. Stochastic planning avoids the capacity shortfalls of a mean-value plan, and joint planning avoids the battery and fleet costs that sequential siting shifts downstream. The optimized network uses remote charging selectively, keeps most replenishment local, and expands geographic coverage before intensifying capacity within its committed deployment plan.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2610.39652",
+      "pdf_url": "https://arxiv.org/pdf/2610.39652v1",
+      "categories": [
+       "math.OC"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
