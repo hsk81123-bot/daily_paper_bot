@@ -144,6 +144,10 @@
    "date": "2026-10-21",
    "topic": "modeling"
   },
+  "doi:10.1021/acsenergylett.6c02308": {
+   "date": "2026-11-02",
+   "topic": "general"
+  },
   "doi:10.1021/acsenergylett.6c02555": {
    "date": "2026-10-21",
    "topic": "general"
@@ -182,6 +186,10 @@
   },
   "doi:10.3390/eng7100554": {
    "date": "2026-10-15",
+   "topic": "modeling"
+  },
+  "doi:10.3390/mi17111266": {
+   "date": "2026-11-02",
    "topic": "modeling"
   },
   "doi:10.3390/wevj17110566": {
@@ -250,6 +258,10 @@
   },
   "t:ecmpareasystematicframeworkforcomparingparameterestimationmethodsinlithiumionbatteryequivalentcircuitmodels": {
    "date": "2026-10-19",
+   "topic": "modeling"
+  },
+  "t:electricalmodelingandexperimentalvalidationofsub5mgsgtsvinterconnectsundercombinedelectrothermalcouplingandparasiticsurf": {
+   "date": "2026-11-02",
    "topic": "modeling"
   },
   "t:electrothermalmodelingandlongtermdegradationexposureanalysisofactivebtmsundertropicalheatsoakconditions": {
@@ -371,6 +383,10 @@
   "t:tokenizingbatterydegradationaphysicsinformedanduncertaintyawareframeworkforstateofhealthestimation": {
    "date": "2026-10-14",
    "topic": "modeling"
+  },
+  "t:ultralowdepositionpotentialandantisiteboosteddiffusivityofli3ga2anodeforallsolidstatebatteries": {
+   "date": "2026-11-02",
+   "topic": "general"
   }
  },
  "days": {
@@ -1708,6 +1724,76 @@
       "categories": [
        "math.OC"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-02": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Electrical Modeling and Experimental Validation of Sub-5 μm GSG-TSV Interconnects Under Combined Electrothermal Coupling and Parasitic Surface Conduction for 3D ICs",
+      "url": "https://doi.org/10.3390/mi17111266",
+      "published": "2026-10-30T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Luming Chen",
+       "Shenglin Ma",
+       "Yingying Liu",
+       "Ruochen Ding",
+       "何曉晴",
+       "Yan Chen"
+      ],
+      "abstract": "Through-silicon via (TSV)-based 3D ICs continue to scale with advanced CMOS technology nodes. TSV interconnects therefore operate over a wide operating-temperature range, set jointly by the ambient temperature and by self-heating under rising power density. As a result, the temperature dependence of their electrical behavior can no longer be neglected. To address this, a temperature dependence equivalent circuit model for ground signal ground through silicon vias (GSG-TSVs) is proposed in this paper. The model simultaneously incorporates electrothermal coupling effects and the parasitic surface conduction (PSC) effect. The model is validated against HFSS simulations for three geometries (2.5/12.5, 3.5/25 and 5/50 μm) and against measurements of a fabricated 3.5/25 μm GSG-TSV from −40 °C to 100 °C and from DC to 50 GHz. Good agreement and scalability are achieved from −40 °C to 100 °C and from DC to 50 GHz. The influence of TSV size variations is further investigated. The results demonstrate that GSG-TSVs become increasingly susceptible to electrothermal effects as the diameter scales below 5 μm. This work provides a modeling methodology for analyzing the temperature-dependent behavior of TSV interconnects, including electrothermal coupling, over a wide temperature range.",
+      "venue": "Micromachines",
+      "doi": "10.3390/mi17111266",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Ultralow Deposition Potential and Antisite-Boosted Diffusivity of Li3Ga2 Anode for All-Solid-State Batteries",
+      "url": "https://doi.org/10.1021/acsenergylett.6c02308",
+      "published": "2026-10-31T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Guoyong Xue",
+       "Zhe-Tao Sun",
+       "Shiwei Chen",
+       "Jie Lu",
+       "Yirui Fu",
+       "Guokang Chen",
+       "Chu Lu",
+       "Yanming Cui",
+       "Chenji Hu",
+       "Shou‐Hang Bo",
+       "Linsen Li",
+       "Fuqiang Huang",
+       "Ziyang Ning",
+       "Chuying Ouyang",
+       "Kai Wu",
+       "Liwei Chen"
+      ],
+      "abstract": "Abstract Existing alloy anodes suffer from high redox potentials and sluggish Li atomic kinetics, limiting the energy density and rate capability of all-solid-state lithium batteries (ASSLBs). Herein, we report a well-designed Li3Ga2 alloy anode that simultaneously delivers an ultralow Li deposition potential (0.007 V vs. Li+/Li) and fast Li atomic diffusion kinetics (2.0 × 10–8 cm2 s–1). The high Li atomic diffusivity primarily originates from moderate Li/Ga antisite mixing, stabilizing the anode-solid electrolyte interface and enabling a high critical current density of 24 mA cm–2 in ASSLBs. Coupled with a LiCoO2 cathode, the ASSLB delivers a high initial Coulombic efficiency of 96.5% and an ultralong cycle life of 2000 cycles at room temperature, with a high output voltage of 3.84 V, outperforming state-of-the-art alloy-based counterparts. A practical all-solid-state pouch cell employing the LiNi0.8Co0.1Mn0.1O2 cathode also delivers outstanding cycling stability. This work redefines alloy anode design principles through synergistic optimization of Li deposition potential and Li atomic diffusivity.",
+      "venue": "ACS Energy Letters",
+      "doi": "10.1021/acsenergylett.6c02308",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
