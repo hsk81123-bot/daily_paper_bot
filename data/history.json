@@ -104,6 +104,10 @@
    "date": "2026-10-27",
    "topic": "modeling"
   },
+  "doi:10.1016/j.electacta.2026.150341": {
+   "date": "2026-11-04",
+   "topic": "modeling"
+  },
   "doi:10.1016/j.est.2026.125017": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -131,6 +135,10 @@
   "doi:10.1016/j.est.2026.125197": {
    "date": "2026-10-23",
    "topic": "modeling"
+  },
+  "doi:10.1016/j.est.2026.125365": {
+   "date": "2026-11-04",
+   "topic": "general"
   },
   "doi:10.1016/j.ijoes.2026.101527": {
    "date": "2026-10-19",
@@ -224,6 +232,10 @@
    "date": "2026-10-16",
    "topic": "modeling"
   },
+  "t:anovelmethodformechanicalbatteryabusetestingplanetarymillcalorimetricevaluationofallsolidstatebatterymaterialsandtheirsa": {
+   "date": "2026-11-04",
+   "topic": "general"
+  },
   "t:apracticalroutetoamorphoussolidstateelectrolytestructuresbyhybridreversemontecarlowithfoundationpotentials": {
    "date": "2026-10-18",
    "topic": "general"
@@ -311,6 +323,10 @@
   "t:insitupolymerizedfluorinatedpolyurethanebasedgelpolymerelectrolyteforhighstabilitylithiummetalbatteries": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:kineticelectrochemicalreactivetransportmodelingofcalciumleachingandporosityevolutioninmultiphaseconcrete": {
+   "date": "2026-11-04",
+   "topic": "modeling"
   },
   "t:lithiummetalanodeinterfacesinlisbatteriesfromfailuremechanismstopracticalstabilization": {
    "date": "2026-10-14",
@@ -1868,6 +1884,67 @@
        "cs.LG",
        "stat.AP"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-04": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Kinetic Electrochemical Reactive-Transport Modeling of Calcium Leaching and Porosity Evolution in Multiphase Concrete",
+      "url": "https://doi.org/10.1016/j.electacta.2026.150341",
+      "published": "2026-11-01T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Qimin Liu",
+       "Song Shi",
+       "Zi Wei Ng",
+       "Zechuan Yu",
+       "Kek Boon Goh"
+      ],
+      "abstract": "ABSTRACT Calcium leaching degrades concrete durability through progressive dissolution and decalcification of cement hydrate phases, yet it is commonly modelled by assuming local equilibrium between the pore solution and solid hydrates. While useful for estimating how much calcium is eventually depleted, such approaches do not fully resolve the kinetic coupling among hydrate dissolution, ionic transport within the bulk concrete and across the concrete-solution interface, and ultimately porosity evolution. Departing from local solid-liquid equilibrium, we couple dissolution-precipitation kinetics of calcium silicate hydrate, portlandite, ettringite, and monosulfate with multi-ionic diffusion and electrochemical migration in a unified concrete-solution domain, wherein interfacial ion concentrations emerge from flux continuity rather than prescribed fixed values. We reveal two coexisting Ca 2+ transport modes: (i) outward diffusion into the surrounding solution and (ii) accumulation at the active dissolution front, where Ca 2+ drives hydrate re-precipitation. The resulting near-surface porosity profile is non-monotonic, highest at the exposed surface due to dissolution, locally falling below the bulk value due to Ca 2+ -assisted re-precipitation, before recovering to a stable interior plateau. Lower w/c ratios reduce bulk porosity, whereas prolonged exposure extends the dissolution-dominated zone deeper into the concrete. Validated against long-term leaching profiles ( t = 3150 d; w/c = 0.30 and 0.55), the framework provides a mechanistic and experimentally grounded basis for predicting porosity evolution and strength degradation induced by calcium leaching in concrete.",
+      "venue": "Electrochimica Acta",
+      "doi": "10.1016/j.electacta.2026.150341",
+      "arxiv_id": "",
+      "pdf_url": "https://www.sciencedirect.com/science/article/pii/S001346862602222X/pdf",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A novel method for mechanical battery abuse testing: Planetary mill calorimetric evaluation of all-solid-state battery materials and their safety",
+      "url": "https://doi.org/10.1016/j.est.2026.125365",
+      "published": "2026-11-02T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Florian Salk",
+       "Thomas Bayha",
+       "Sebastian Scharner",
+       "Philipp Heugel",
+       "Martin Miller",
+       "Thomas Berger",
+       "Franziska Klein",
+       "Jens Tübke"
+      ],
+      "abstract": "This work presents a novel quantitative calorimeter-mill methodology for ASSB materials that quantitatively measures energy release by combining ball milling with calorimetry and pressure monitoring during extreme mechanical activation. The method accounts for the mechanical milling contribution using an operational reference. Applied to a shredded cathode consisting of delithiated state of charge 100% (SOC 100) Li x Ni 0.83 Mn z Co 0.17-z O 2 (x < 1, z < 0.17) (NMC), Al current collector, binder and conductive carbon together with systematically chosen amounts of Li 6 PS 5 Cl representing different catholyte compositions, the method quantifies composition-dependent energy release and gas evolution under extreme mechanical abuse. The method revealed that a shredded, delithiated NMC cathode showed substantial reactivity (2799 ± 159 J/g (NMC) ) with significant gas evolution, while Li 6 PS 5 Cl electrolyte addition enhanced the energy release and reduced the required mechanical activation and the gas generation. The calorimeter-mill approach provides a quantitative framework for establishing worst-case energy boundaries and enabling early-stage safety decisions in battery material development.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125365",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
