@@ -80,6 +80,14 @@
    "date": "2026-11-03",
    "topic": "general"
   },
+  "arxiv:2611.03150": {
+   "date": "2026-11-05",
+   "topic": "modeling"
+  },
+  "arxiv:2611.05010": {
+   "date": "2026-11-05",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -170,6 +178,10 @@
   },
   "doi:10.1021/acsnano.6c13032": {
    "date": "2026-10-25",
+   "topic": "general"
+  },
+  "doi:10.1103/1l87-5hzr": {
+   "date": "2026-11-05",
    "topic": "general"
   },
   "doi:10.1149/1945-7111/aeb4ee": {
@@ -288,6 +300,10 @@
    "date": "2026-10-31",
    "topic": "modeling"
   },
+  "t:ergotropyactivationandcoherenceindissipativelychargedquantumbatteries": {
+   "date": "2026-11-05",
+   "topic": "general"
+  },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
    "topic": "general"
@@ -299,6 +315,10 @@
   "t:filteraugmentedreinforcementlearningforbatteryfastchargingwithstateofhealthandplatingawarerewarddesign": {
    "date": "2026-10-26",
    "topic": "general"
+  },
+  "t:flowbattflowmatchingforprobabilisticbatterydegradationprediction": {
+   "date": "2026-11-05",
+   "topic": "modeling"
   },
   "t:fluctuationfreequantumbatterychargingenabledbybelllikeentangledandseparablechargerstates": {
    "date": "2026-10-24",
@@ -1945,6 +1965,70 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-05": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "FlowBatt: Flow Matching for Probabilistic Battery Degradation Prediction",
+      "url": "https://arxiv.org/abs/2611.03150",
+      "published": "2026-11-02T00:00:00+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Hamidreza Eivazi",
+       "Eslam Sharaawy",
+       "Stefan Wittek",
+       "André Hebenbrock",
+       "Raphael Ginster",
+       "Steffen Blömeke"
+      ],
+      "abstract": "Battery degradation remains a central challenge in the development and broad application of sustainable energy technologies. Accurate degradation prediction is challenging, as battery aging emerges from complex and heterogeneous interactions among cycling behavior, operating conditions, and cell chemistry. Existing machine-learning approaches typically focus on deterministic end-of-life predictions or modeling degradation curves within fixed chemistry settings, leaving probabilistic state of health (SOH) trajectory modeling across heterogeneous chemistries underexplored. We introduce FlowBatt, a use-inspired conditional generative framework that adapts flow matching with a diffusion transformer (DiT) backbone to battery degradation trajectory modeling. FlowBatt models full SOH trajectories as probabilistic degradation processes conditioned on early-cycle capacity data. To strengthen this conditioning pathway, we use explainable AI analysis to diagnose and improve the encoder that maps early-cycle capacity matrices into conditioning vectors. We evaluate FlowBatt on five public benchmark settings spanning diverse chemistries and aging conditions, comparing it with supervised and diffusion-based trajectory models as well as established baselines for remaining useful life (RUL) prediction under shared data splits. FlowBatt achieves the best trajectory-wise SOH prediction performance on all five datasets, with errors below 2.5%, and delivers competitive RUL prediction performance. By generating multiple plausible trajectories, FlowBatt provides empirical prediction intervals for battery degradation modeling. These results indicate that flow-matching-based trajectory modeling is a promising framework for probabilistic battery health prediction.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.03150",
+      "pdf_url": "https://arxiv.org/pdf/2611.03150v1",
+      "categories": [
+       "cs.LG",
+       "physics.chem-ph"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Ergotropy Activation and Coherence in Dissipatively Charged Quantum Batteries",
+      "url": "https://arxiv.org/abs/2611.05010",
+      "published": "2026-11-03T14:55:25+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Hui-Yu Yang",
+       "Kang-Yuan Chen",
+       "Kun Zhang",
+       "Yang-Yang Chen",
+       "Xiao-Hui Wang"
+      ],
+      "abstract": "Quantum batteries can exploit quantum resources to enhance energy storage and work extraction, and recent experimental progress has brought their implementation closer to reality. In realistic settings, however, environmental dissipation is unavoidable, making dissipative charging a physically relevant operating regime. Here we investigate ergotropy in dissipatively charged quantum batteries, focusing on interaction-induced work extraction. For two coupled two-level systems (TLSs), we derive exact analytical expressions for the total, coherent, and incoherent ergotropy in both resonant and detuned configurations. We show that, in the resonant case, ergotropy is activated only above a critical coupling associated with an interaction-induced energy-level crossing, whereas detuning enables ergotropy already in the weak-coupling regime. Moreover, quantum coherence, although necessary for coherent work extraction, is not by itself sufficient to guarantee nonzero coherent ergotropy. In the strong-coupling regime, the resonant setup reaches the maximum ergotropy at a finite coupling strength, whereas the detuned setup approaches the same limit only asymptotically. Extending the analysis to a periodic XX spin chain of $N$ TLSs, we analytically derive the finite-temperature coupling threshold for ergotropy activation and show that it scales as $1/N$ in the large-$N$ limit. These results identify frequency detuning, interaction strength, and system size as key control parameters for ergotropy generation in open quantum batteries.",
+      "venue": "arXiv",
+      "doi": "10.1103/1l87-5hzr",
+      "arxiv_id": "2611.05010",
+      "pdf_url": "https://arxiv.org/pdf/2611.05010v1",
+      "categories": [
+       "quant-ph"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
