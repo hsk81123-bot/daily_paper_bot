@@ -172,6 +172,10 @@
    "date": "2026-11-02",
    "topic": "general"
   },
+  "doi:10.1021/acsenergylett.6c02456": {
+   "date": "2026-11-06",
+   "topic": "general"
+  },
   "doi:10.1021/acsenergylett.6c02555": {
    "date": "2026-10-21",
    "topic": "general"
@@ -224,6 +228,10 @@
    "date": "2026-10-31",
    "topic": "modeling"
   },
+  "doi:10.47577/technium.v31i.13874": {
+   "date": "2026-11-06",
+   "topic": "modeling"
+  },
   "t:acomprehensivereviewofsupercapacitormodellingandsocsohandrulestimationtechniquesforenergymanagementsystems": {
    "date": "2026-10-27",
    "topic": "modeling"
@@ -260,6 +268,10 @@
    "date": "2026-10-23",
    "topic": "general"
   },
+  "t:benchmarkingextendedandunscentedkalmanfiltersforlithiumionbatterystateofchargeestimationagainstaphysicsbasedvirtualcelle": {
+   "date": "2026-11-06",
+   "topic": "modeling"
+  },
   "t:compositiondependentelectrochemicalperformanceofpitchderivedcarbonenhancedsilicongraphitecompositeanodesforlithiumionbat": {
    "date": "2026-10-29",
    "topic": "general"
@@ -274,6 +286,10 @@
   },
   "t:coupleddesignofsiliconanodesandsolidstateelectrolytesforhighperformanceallsolidstatebatteries": {
    "date": "2026-10-25",
+   "topic": "general"
+  },
+  "t:covalentbondengineeringstabilizeslayeredoxidecathodesforsodiumionbatteries": {
+   "date": "2026-11-06",
    "topic": "general"
   },
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
@@ -2029,6 +2045,65 @@
       "categories": [
        "quant-ph"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-06": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Benchmarking Extended and Unscented Kalman Filters for Lithium-Ion Battery State-of-Charge Estimation against a Physics-Based Virtual Cell: Effects of OCV Flatness, Initial Covariance and Temperature",
+      "url": "https://doi.org/10.47577/technium.v31i.13874",
+      "published": "2026-11-03T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Zaid Ali",
+       "Ihab A. Satam"
+      ],
+      "abstract": "Kalman-filter state-of-charge (SoC) estimators are usually compared in simulations where the same equivalent circuit model (ECM) generates the data and runs inside the filter, and where errors are computed after the measurement update. Both practices flatter the estimators. This paper benchmarks Coulomb counting (CC), the extended Kalman filter (EKF) and the unscented Kalman filter (UKF) against a physics-based virtual cell: an experimentally parameterised Doyle–Fuller–Newman model of a 5 Ah LG M50 21700 cell with lumped thermal dynamics. A second-order RC ECM is identified from a simulated GITT/HPPC test (2.7 mV RMS fitting error) and then used, unchanged, by all estimators. The cell is driven by repeated UDDS and US06 cycles from 90 % to 10 % SoC at 10, 25 and 40 °C and in an aged state, with 10 mV voltage noise, 25 mA current noise and a 50 mA current offset. Errors are computed from the a priori estimate so that the initial error is always counted. With a correct initial SoC, both filters keep the RMSE between 0.39 % and 0.68 %, while CC drifts to 6.7 % over a 6.9 h UDDS test. A 300-run Monte Carlo study without SoC-limit effects shows that the two filters converge equally fast from under-estimated starts, but the EKF is markedly slower from over-estimated starts: with the recommended initial covariance its mean convergence time into a ±3 % band was 166 s (maximum 1110 s) against 1.2 s (maximum 2 s) for the UKF. All slow EKF runs started between 84 % and 93 % SoC, where the OCV slope of the cell falls to about 0.25 V per unit SoC; the EKF linearises at this flat point and applies too small a correction, whereas the UKF sigma points sample the steeper neighbouring regions. An initial covariance that is too small slows both filters by up to two orders of magnitude. At 10 °C, an ECM identified at 25 °C biases both filters by about −1 % to −2.5 %, which no filter tuning removes. The UKF costs about twice the computation of the EKF. The results show when the UKF is actually worth its cost and how the OCV shape of the specific cell should guide that choice.",
+      "venue": "Technium Romanian Journal of Applied Sciences and Technology",
+      "doi": "10.47577/technium.v31i.13874",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Covalent-Bond Engineering Stabilizes Layered Oxide Cathodes for Sodium-Ion Batteries",
+      "url": "https://doi.org/10.1021/acsenergylett.6c02456",
+      "published": "2026-11-04T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Dilxat Muhtar",
+       "Weixin Chen",
+       "Yuansheng Shi",
+       "Xiangjie Yang",
+       "Kaili Li",
+       "Duoduo Zhang",
+       "Zhiling Liu",
+       "Xueyi Lu",
+       "Xia Lu"
+      ],
+      "abstract": "Abstract Developing practicable layered oxide cathodes remains a critical challenge for sodium-ion batteries. Here, by systematically varying Cu contents to tune TM–O covalency in Nay[CuxFe3/9Mn(6/9–x)]O2, we show that an optimal degree of covalency simultaneously boosts energy density and structural resilience. The optimized Na7/9[Cu2/9Fe3/9Mn4/9]O2 delivers 131.6 mAh g–1 at 0.1 C and retains 80% capacity after 500 cycles at 0.5 C. Mechanistically, the enhanced Cu–O covalency converts trivalent Cu from a conventional d8 to a heavily mixed d9L configuration, delocalizing holes across the extended TM–O network, enlarging polaron size, and “flattening the ripple” of local lattice distortions. Side-by-side comparison with an ionic Ni analogue confirms the suppressed cation migration and polarization. Crucially, the covalency-driven stabilization is not unbounded–excessive covalency rigidifies the lattice, defining a covalency threshold for optimal performance. These findings establish covalency modulation within a defined threshold as a predictive design principle for durable layered oxide cathodes.",
+      "venue": "ACS Energy Letters",
+      "doi": "10.1021/acsenergylett.6c02456",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
