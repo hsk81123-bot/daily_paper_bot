@@ -88,6 +88,14 @@
    "date": "2026-11-05",
    "topic": "general"
   },
+  "arxiv:2611.06299": {
+   "date": "2026-11-07",
+   "topic": "modeling"
+  },
+  "arxiv:2611.07401": {
+   "date": "2026-11-07",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -356,6 +364,10 @@
    "date": "2026-11-03",
    "topic": "modeling"
   },
+  "t:higherordertopologicalquantumbattery": {
+   "date": "2026-11-07",
+   "topic": "general"
+  },
   "t:insitupolymerizedfluorinatedpolyurethanebasedgelpolymerelectrolyteforhighstabilitylithiummetalbatteries": {
    "date": "2026-10-14",
    "topic": "general"
@@ -443,6 +455,10 @@
   "t:stablechargedenergyandphasetransitionsinananisotropicdickequantumbatterywithkerrnonlinearity": {
    "date": "2026-10-22",
    "topic": "general"
+  },
+  "t:stekstructuralterrainenhancedkoopmaninspiredcrosschannelregularizationforretrospectivebatterymultitargetestimation": {
+   "date": "2026-11-07",
+   "topic": "modeling"
   },
   "t:systemidentificationfornonlinearstochasticstatespacemodelsusingensemblekalmaninversionwithapplicationtolithiumionbatteri": {
    "date": "2026-10-22",
@@ -2104,6 +2120,63 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-07": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "STEK: Structural-Terrain-Enhanced Koopman-Inspired Cross-Channel Regularization for Retrospective Battery Multi-Target Estimation",
+      "url": "https://arxiv.org/abs/2611.06299",
+      "published": "2026-11-04T10:33:19+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Jing Wang",
+       "Shiyuan Piao",
+       "Fugee Tsung"
+      ],
+      "abstract": "Retrospective battery characterization across heterogeneous cells is challenging because cycling records vary substantially with chemistry, protocol, cell format, capacity, and operating conditions. An endpoint charge--discharge curve captures the local condition of an evaluated cycle, while a cell-level lifecycle terrain summarizes structural evolution across the archived trajectory. We propose STEK, a structural-terrain-enhanced framework for retrospective battery multi-target estimation. STEK combines a cell-level lifecycle (dQ/dV) terrain with an endpoint-derived structural proxy through quality-proxy-conditioned gating. Bounded FiLM and a validity-gated residual head refine the endpoint-curve representation while preserving a curve-based prediction pathway. Battery-type and optional material-text representations further condition an identity-centered low-rank linear map, providing a Koopman-inspired cross-channel consistency objective without modeling temporal dynamics or performing rollout. Under the fixed seven-output MIX-battery protocol, the full retrospective setting improves aggregate performance over endpoint-only learned baselines across multiple temporal backbones; this comparison reflects both the additional archived context and the modeling design. Under matched auxiliary inputs, STEK outperforms direct concatenation and quality-unaware FiLM, while descriptor-removal tests show graceful fallback to the endpoint pathway. Deterministic rules remain preferable for directly recoverable capacity summaries. The method targets retrospective archive harmonization rather than online estimation from cycle t alone.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.06299",
+      "pdf_url": "https://arxiv.org/pdf/2611.06299v1",
+      "categories": [
+       "cs.AI"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Higher-order topological quantum battery",
+      "url": "https://arxiv.org/abs/2611.07401",
+      "published": "2026-11-05T03:53:03+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Motohiko Ezawa"
+      ],
+      "abstract": "A quantum battery is a next-generation energy-storage device that exploits genuinely quantum properties such as superposition and coherence. We propose a second-order topological quantum battery coupled to a photonic crystal described by the breathing-Kagome model, where optical loss is present on all lattice sites while nonlinear gains are introduced selectively at the output sites. Under these realistic non-Hermitian conditions, the system exhibits a clear topological phase transition manifested in both the ergotropy and the charging power. Remarkably, perfect work extraction is realized in the topological phase, where the maximum value of the ergotropy is quantized and acts as a good topological-phase indicator. The triangular geometry coherently distributes energy into two quantum batteries, where mirror-symmetry-protected phase synchronization gives rise to collective energy storage.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.07401",
+      "pdf_url": "https://arxiv.org/pdf/2611.07401v1",
+      "categories": [
+       "quant-ph",
+       "cond-mat.mes-hall"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
