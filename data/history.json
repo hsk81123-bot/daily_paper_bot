@@ -152,6 +152,10 @@
    "date": "2026-10-23",
    "topic": "modeling"
   },
+  "doi:10.1016/j.est.2026.125327": {
+   "date": "2026-11-08",
+   "topic": "modeling"
+  },
   "doi:10.1016/j.est.2026.125365": {
    "date": "2026-11-04",
    "topic": "general"
@@ -190,6 +194,10 @@
   },
   "doi:10.1021/acsnano.6c13032": {
    "date": "2026-10-25",
+   "topic": "general"
+  },
+  "doi:10.1038/s41467-026-78307-0": {
+   "date": "2026-11-08",
    "topic": "general"
   },
   "doi:10.1103/1l87-5hzr": {
@@ -364,6 +372,10 @@
    "date": "2026-11-03",
    "topic": "modeling"
   },
+  "t:fullsunlightdrivenphotocatalyticrecoveryofcriticalmetalsfromspentlithiumionbatteriesviaorganicacidleaching": {
+   "date": "2026-11-08",
+   "topic": "general"
+  },
   "t:higherordertopologicalquantumbattery": {
    "date": "2026-11-07",
    "topic": "general"
@@ -406,6 +418,10 @@
   },
   "t:operandoopticalmonitoringofchemomechanicaldegradationinsiliconcarbonanodebatteriesforstateofhealthestimation": {
    "date": "2026-10-21",
+   "topic": "modeling"
+  },
+  "t:physicsbasedmodelingofcyclicandcalendaragingofsilicongraphitecompositeanodes": {
+   "date": "2026-11-08",
    "topic": "modeling"
   },
   "t:physicsinformedlearningofhealthawareequivalentcircuitparameterevolutionforlithiumionbatteries": {
@@ -2177,6 +2193,71 @@
        "quant-ph",
        "cond-mat.mes-hall"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-08": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Physics-based modeling of cyclic and calendar aging of silicon-graphite composite anodes",
+      "url": "https://doi.org/10.1016/j.est.2026.125327",
+      "published": "2026-11-05T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Micha Philipp",
+       "Lukas Köbbing",
+       "Alexander Karger",
+       "Andreas Jossen",
+       "Arnulf Latz",
+       "Birger Horstmann"
+      ],
+      "abstract": "Higher energy density and longer lifetime are the requirements for next-generation lithium-ion batteries. A promising anode material is silicon, which offers high specific capacity, but its significant volume change during lithiation and delithiation enormously reduces battery lifetime. A physical understanding of the processes degrading the battery is key to mitigate this effect and advance in the field. We develop a physics-based model to describe degradation during battery cycling under various protocols and storage conditions (for C-rates ≤ 2 C, and temperatures T ≤ 35 °C), with varying check-up (CU) frequencies. The model can disentangle basic degradation mechanisms, such as the growth of the Solid-Electrolyte Interphase (SEI), from silicon mechanisms, such as particle cracking, SEI growth on cracks, and loss of active material (LAM). We investigate the impact of CUs on the observed storage degradation and the reason behind the increased degradation in batteries, including silicon in the anode. Additionally, we relate the observed degradation to operating conditions, enabling future optimization of battery use and design.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125327",
+      "arxiv_id": "",
+      "pdf_url": "https://www.sciencedirect.com/science/article/pii/S2352152X26049911/pdf",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Full-sunlight-driven photocatalytic recovery of critical metals from spent lithium-ion batteries via organic acid leaching",
+      "url": "https://doi.org/10.1038/s41467-026-78307-0",
+      "published": "2026-11-06T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Sunghyun Ko",
+       "Jinha Jang",
+       "강장훈",
+       "Wonyong Choi",
+       "Ung Lee",
+       "Da Hye Won",
+       "Jiheong Kang",
+       "Giyeong Son",
+       "Chang Hyun Kim",
+       "Chan Beum Park",
+       "Chang-Soo Kim"
+      ],
+      "abstract": "The rapidly increasing deployment of secondary batteries has intensified pressures on resource security and waste management, exposing fundamental limitations of current battery recycling technologies that require intensive use of energy and chemicals. To enable sustainable battery waste management, systems must improve economic and environmental feasibility at the process level while retaining versatility toward diverse cathode chemistries. Here, we report a sunlight-driven photocatalytic leaching framework that enables robust recovery of critical metals from diverse commercial cathode materials. The process couples mild organic acids with a reusable photocatalyst to orchestrate a twofold leaching mechanism driven by sunlight, in which hydrogen peroxide is generated in situ across the solar spectrum and further activated by UV components to enhance metal extraction without external oxidizing agents. Importantly, the system maintains consistent performance over multiple operation cycles, supporting process robustness and scalability. Beyond its technical performance, techno-economic and life cycle analyses demonstrate clear advantages over conventional recycling methods, including lower energy inputs and reduced greenhouse gas emissions. This work establishes a versatile, profitable, and environmentally benign approach to battery recycling, offering a scalable pathway toward a sustainable circular economy. Researchers developed a light-driven method using organic acids to recover critical metals from used lithium-ion batteries, offering a more sustainable route for battery recycling powered by natural sunlight.",
+      "venue": "Nature Communications",
+      "doi": "10.1038/s41467-026-78307-0",
+      "arxiv_id": "",
+      "pdf_url": "https://www.nature.com/articles/s41467-026-78307-0_reference.pdf",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
