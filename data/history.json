@@ -96,6 +96,14 @@
    "date": "2026-11-07",
    "topic": "general"
   },
+  "arxiv:2611.07699": {
+   "date": "2026-11-09",
+   "topic": "general"
+  },
+  "arxiv:2611.08470": {
+   "date": "2026-11-09",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -384,6 +392,10 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "t:jointelectricitypriceandloadforecastingfordatacenterbatterydispatchusingpolynomialdiffusionmodels": {
+   "date": "2026-11-09",
+   "topic": "modeling"
+  },
   "t:kineticelectrochemicalreactivetransportmodelingofcalciumleachingandporosityevolutioninmultiphaseconcrete": {
    "date": "2026-11-04",
    "topic": "modeling"
@@ -470,6 +482,10 @@
   },
   "t:stablechargedenergyandphasetransitionsinananisotropicdickequantumbatterywithkerrnonlinearity": {
    "date": "2026-10-22",
+   "topic": "general"
+  },
+  "t:stayrepositionorrechargebatteryawareoperationofrobotaxifleets": {
+   "date": "2026-11-09",
    "topic": "general"
   },
   "t:stekstructuralterrainenhancedkoopmaninspiredcrosschannelregularizationforretrospectivebatterymultitargetestimation": {
@@ -2258,6 +2274,66 @@
       "arxiv_id": "",
       "pdf_url": "https://www.nature.com/articles/s41467-026-78307-0_reference.pdf",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-09": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Joint Electricity Price and Load Forecasting for Data Center Battery Dispatch Using Polynomial Diffusion Models",
+      "url": "https://arxiv.org/abs/2611.08470",
+      "published": "2026-11-05T18:55:37+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Matthew Van Ham",
+       "Yiping Liu",
+       "Xiaozhe Wang"
+      ],
+      "abstract": "The rapid growth of large-scale data centers (DCs) is increasing electricity demand, market volatility, and operating costs. Battery energy storage systems (BESSs) can mitigate these challenges by shifting electricity purchases from high-price to low-price periods. This paper proposes a real-time BESS dispatch framework using polynomial diffusion models (PDMs) to forecast both electricity prices and DC loads. Leveraging the closed-form conditional expectations of PDMs, the forecasts are integrated into a dynamic programming (DP) framework to minimize electricity procurement costs. Across the evaluated BESS configurations, the proposed approach achieves 2.63 times the cost savings of a rule-based (RB) strategy.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.08470",
+      "pdf_url": "https://arxiv.org/pdf/2611.08470v1",
+      "categories": [
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Stay, Reposition, or Recharge: Battery-Aware Operation of Robotaxi Fleets",
+      "url": "https://arxiv.org/abs/2611.07699",
+      "published": "2026-11-05T09:23:07+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Philipp Afèche",
+       "Saif Benjaafar",
+       "Jiayu",
+       "Zhao"
+      ],
+      "abstract": "Electric robotaxis are rapidly expanding from pilots to scaled commercial deployment; unlike traditional human-driven ride-hailing vehicles, they require centralized fleet control and careful management of vehicle state of charge (SoC). We study how a fleet manager should jointly make service, empty repositioning, idling, and charging decisions in such systems. We develop a continuous-time fluid model in which vehicles evolve across location-charge states, and identify two forms of charge-aware control that are absent from classic repositioning models: early return-to-depot (RTD) and charge-aware repositioning. In particular, the optimal solution admits simple threshold structures. Each location has a battery threshold such that vehicles should return to the depot to recharge when their SoC is below it and should not do so when their SoC is above it. Vehicles should not reposition below the same threshold either; above it, the choice of destination depends on whether a vehicle's SoC matches the destination's battery sensitivity, a notion we introduce in the paper. We then quantify the value of charge awareness by comparing fully charge-aware policies with charge-oblivious policies that ignore SoC in RTD and repositioning decisions. We show that the performance gap can be unbounded, driven by a dilemma between under-utilizing high-charge vehicles and over-sending low-charge vehicles to locations from which charging is costly. A numerical case study calibrated using 2025 NYC Taxi and Limousine Commission trip records illustrates these thresholds and shows that charge-aware control can generate substantial gains in a realistic urban network. Importantly, simple threshold-based heuristics recover most of the value of the fully charge-aware solution.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.07699",
+      "pdf_url": "https://arxiv.org/pdf/2611.07699v1",
+      "categories": [
+       "stat.AP",
+       "econ.GN"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
