@@ -112,6 +112,10 @@
    "date": "2026-10-27",
    "topic": "general"
   },
+  "doi:10.1002/tee.70460": {
+   "date": "2026-11-10",
+   "topic": "modeling"
+  },
   "doi:10.1007/s41918-026-00285-0": {
    "date": "2026-10-14",
    "topic": "general"
@@ -206,6 +210,10 @@
   },
   "doi:10.1038/s41467-026-78307-0": {
    "date": "2026-11-08",
+   "topic": "general"
+  },
+  "doi:10.1038/s41467-026-79393-w": {
+   "date": "2026-11-10",
    "topic": "general"
   },
   "doi:10.1103/1l87-5hzr": {
@@ -312,6 +320,10 @@
    "date": "2026-10-25",
    "topic": "general"
   },
+  "t:couplingelectrolytemechanicalreinforcementandinterfacialstressrelaxationfornearambientsulfideallsolidstatelithiummetalba": {
+   "date": "2026-11-10",
+   "topic": "general"
+  },
   "t:covalentbondengineeringstabilizeslayeredoxidecathodesforsodiumionbatteries": {
    "date": "2026-11-06",
    "topic": "general"
@@ -338,6 +350,10 @@
   },
   "t:electrothermalmodelingandlongtermdegradationexposureanalysisofactivebtmsundertropicalheatsoakconditions": {
    "date": "2026-10-31",
+   "topic": "modeling"
+  },
+  "t:equivalentcircuitmodelforcalculationofgroundpotentialriseinwindturbinegroundingsystems": {
+   "date": "2026-11-10",
    "topic": "modeling"
   },
   "t:ergotropyactivationandcoherenceindissipativelychargedquantumbatteries": {
@@ -2334,6 +2350,67 @@
        "stat.AP",
        "econ.GN"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-10": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Equivalent Circuit Model for Calculation of Ground Potential Rise in Wind Turbine Grounding Systems",
+      "url": "https://doi.org/10.1002/tee.70460",
+      "published": "2026-11-08T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yongzheng Zhang"
+      ],
+      "abstract": "The ground potential rise caused by lightning is an important technical index for lightning protection design of wind turbines. A realistic approach is presented in this paper to calculate the ground potential rise in wind turbine grounding systems under lightning stroke. The electrical parameters of the grounding conductors are given by resistance, conductance, capacitance and inductance. The soil ionization due to dissipating lightning current can be taken into account by the effective radius estimated by the critical electric field intensity of soil ionization. According to the electrical parameters, the grounding conductors are replaced by π‐type circuit units and the circuit model is built for transient analysis of the single wind turbine grounding system and interconnecting configurations of multiple wind turbine grounding systems. The calculated results from the circuit model are compared with the measured ones to perform the model verification. Then, the circuit model is implemented into calculation of lightning transient responses in wind turbine grounding systems with attention to the ground potential rise. © 2026 Institute of Electrical Engineers of Japan and Wiley Periodicals LLC.",
+      "venue": "IEEJ Transactions on Electrical and Electronic Engineering",
+      "doi": "10.1002/tee.70460",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Coupling electrolyte mechanical reinforcement and interfacial stress relaxation for near-ambient sulfide all-solid-state lithium metal batteries",
+      "url": "https://doi.org/10.1038/s41467-026-79393-w",
+      "published": "2026-11-07T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hyeongseok Lee",
+       "Jihun Sung",
+       "Seongsoo Park",
+       "Dokyung Kim",
+       "Sangwon Lee",
+       "Jae-Hong Lim",
+       "Kyungmok Ko",
+       "Daiwei Wang",
+       "Donghai Wang",
+       "Young Joo Lee",
+       "Janghyuk Moon",
+       "Soojin Park"
+      ],
+      "abstract": "All-solid-state lithium metal batteries offer the promise of higher energy density and improved safety compared with conventional lithium-ion batteries; however, their practical operation at room temperature and low stack pressures ( ~ 0.1 MPa) remains challenging due to lithium dendrite formation and stress-induced interfacial degradation. Herein, we demonstrate near-ambient operation ( ≤ 0.3 MPa, room temperature) of all-solid-state lithium metal batteries through a combined electrolyte–current collector design. A self-polymerizable thioctic acid-modified composite solid electrolyte suppresses internal lithium metal creep with high stress tolerance, while a porous carbon matrix current collector provides localized stress relaxation and accommodates lithium deposition within internal voids. As a result, stable long-term cycling is achieved under near-ambient conditions even at a high areal loading of 2.4 mAh cm−2 using a LiNi0.8Co0.1Mn0.1O2 positive electrode operated at 0.1 C. These findings highlight the importance of controlling lithium deformation and stress relaxation for the development of practical all-solid-state lithium metal batteries. All-solid-state lithium metal batteries can suffer from dendrite growth and interfacial stress at low pressures. Here, authors couple a self-polymerizable composite sulfide electrolyte with a porous carbon current collector, enabling stable near-ambient condition cycling at high areal loading.",
+      "venue": "Nature Communications",
+      "doi": "10.1038/s41467-026-79393-w",
+      "arxiv_id": "",
+      "pdf_url": "https://www.nature.com/articles/s41467-026-79393-w_reference.pdf",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
