@@ -104,6 +104,14 @@
    "date": "2026-11-09",
    "topic": "modeling"
   },
+  "arxiv:2611.09434": {
+   "date": "2026-11-11",
+   "topic": "general"
+  },
+  "arxiv:2611.12555": {
+   "date": "2026-11-11",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -332,6 +340,10 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "t:degradationawareparticipationofbatterystorageinfrequencyregulationmarkets": {
+   "date": "2026-11-11",
+   "topic": "modeling"
+  },
   "t:degradationinformedstateofhealthestimationoflithiumionbatteriesusingatabularpriordatafittednetwork": {
    "date": "2026-10-23",
    "topic": "modeling"
@@ -447,6 +459,10 @@
   "t:operandoopticalmonitoringofchemomechanicaldegradationinsiliconcarbonanodebatteriesforstateofhealthestimation": {
    "date": "2026-10-21",
    "topic": "modeling"
+  },
+  "t:optimalperformanceofdrivendissipativemanybodyquantumbatteriesbeyondcompletenonreciprocity": {
+   "date": "2026-11-11",
+   "topic": "general"
   },
   "t:physicsbasedmodelingofcyclicandcalendaragingofsilicongraphitecompositeanodes": {
    "date": "2026-11-08",
@@ -2411,6 +2427,65 @@
       "arxiv_id": "",
       "pdf_url": "https://www.nature.com/articles/s41467-026-79393-w_reference.pdf",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-11": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Degradation-Aware Participation of Battery Storage in Frequency Regulation Markets",
+      "url": "https://arxiv.org/abs/2611.12555",
+      "published": "2026-11-09T15:23:18+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Anand Gokhale",
+       "Siddharth Bhela"
+      ],
+      "abstract": "As data centers make the load on the power grid fluctuate faster, frequency regulation grows more valuable. Battery energy storage systems (BESSs) are well suited to provide frequency regulation, but providing this service speeds up aging, especially during operation at extreme state of charge (SoC). In the PJM interconnection, the grid operator supplies a regulation signal that a participating BESS is expected to follow, within a capacity that it must bid before the signal is known. Accordingly, we decompose the degradation-aware frequency regulation problem into a bidding layer and an operations layer. For bidding, we propose an adaptive strategy, assuming perfect tracking in which the bid depends on the SoC expected at the start of the bid period by means of choosing basepoints. For operation, the BESS further protects its battery by deliberately giving up a perfect performance score, to keep its SoC away from the extremes. On the PJM regulation signal and prices of 2023, adaptive bids lengthen the battery life by $31\\%$ against bidding full capacity, for $2.2\\%$ of the revenue. Giving up a perfect score in operation lengthens the battery life of constant bids by $10\\%$ to $27\\%$, at a change in revenue of at most $0.2\\%$.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.12555",
+      "pdf_url": "https://arxiv.org/pdf/2611.12555v1",
+      "categories": [
+       "eess.SY",
+       "math.OC"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Optimal performance of driven-dissipative many-body quantum batteries beyond complete nonreciprocity",
+      "url": "https://arxiv.org/abs/2611.09434",
+      "published": "2026-11-06T13:05:43+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Vimal Sreekanth",
+       "Chandrima B. Pushpan",
+       "Amit Kumar Pal"
+      ],
+      "abstract": "Proposals for nonreciprocal quantum batteries identify the point of complete nonreciprocity, where coherent and reservoir-mediated couplings balance, as the operating point for enhanced charging. We show that, for batteries built from interacting qubits, this point is, in general, suboptimal. The optimal design is set by a more intricate interplay between the coherent coupling and the local and collective dissipation rates, of which complete nonreciprocity is only a special case. We consider a many-body battery charged by a driven many-body charger, with each qubit coupled to a local bath and the complete setup immersed in a shared engineered reservoir. For a weakly driven two-qubit setup, we prove the Dzyaloshinskii-Moriya interaction to be the optimal coupling, and show that the battery capacity is maximized at a coupling strength fixed by the local and collective dissipation rates, which coincides with complete nonreciprocity only for a specific balance between them. The shared reservoir enhances the capacity for couplings weaker or stronger than both local dissipation rates, and can increase the extractable work even where it reduces the capacity. At strong drive, with the Dzyaloshinskii-Moriya interaction between the charger and the battery, the capacity is bounded by $1/2$. For qubits arranged in a star network with a single central battery qubit, these results remain qualitatively unchanged, while the maximum capacity of a battery charged by $N_A$ weakly driven charger qubits saturates with $N_A$ in the presence of the shared reservoir, approaching its limit as $N_A^{-1}$. In contrast, the maximum capacity of $N_B$ qubit batteries charged by a single-qubit charger decays as $N_B^{-2}$.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.09434",
+      "pdf_url": "https://arxiv.org/pdf/2611.09434v1",
+      "categories": [
+       "quant-ph",
+       "cond-mat.str-el"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
