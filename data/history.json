@@ -244,6 +244,10 @@
    "date": "2026-10-29",
    "topic": "general"
   },
+  "doi:10.1149/1945-7111/aec04a": {
+   "date": "2026-11-12",
+   "topic": "modeling"
+  },
   "doi:10.3389/fbael.2026.1995764": {
    "date": "2026-10-31",
    "topic": "general"
@@ -271,6 +275,10 @@
   "doi:10.47577/technium.v31i.13874": {
    "date": "2026-11-06",
    "topic": "modeling"
+  },
+  "doi:10.54254/2755-2721/2027.md38851": {
+   "date": "2026-11-12",
+   "topic": "general"
   },
   "t:acomprehensivereviewofsupercapacitormodellingandsocsohandrulestimationtechniquesforenergymanagementsystems": {
    "date": "2026-10-27",
@@ -452,6 +460,10 @@
    "date": "2026-10-27",
    "topic": "general"
   },
+  "t:nanostructureengineeringofsiliconbasedanodesforhighenergylithiumionbatteriesstrategiesperformanceandpracticalchallenges": {
+   "date": "2026-11-12",
+   "topic": "general"
+  },
   "t:nocenetrepresentationlearningforbatteryoperationalcontextvianestedsequencemodelling": {
    "date": "2026-10-18",
    "topic": "modeling"
@@ -463,6 +475,10 @@
   "t:optimalperformanceofdrivendissipativemanybodyquantumbatteriesbeyondcompletenonreciprocity": {
    "date": "2026-11-11",
    "topic": "general"
+  },
+  "t:physicsbasedmodelingandvalidationofacommercialgraphitelithiummanganeseironphosphatecylindricalcellbasedonteardownderived": {
+   "date": "2026-11-12",
+   "topic": "modeling"
   },
   "t:physicsbasedmodelingofcyclicandcalendaragingofsilicongraphitecompositeanodes": {
    "date": "2026-11-08",
@@ -2486,6 +2502,61 @@
        "quant-ph",
        "cond-mat.str-el"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-12": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Physics-Based Modeling and Validation of a Commercial Graphite-Lithium Manganese Iron Phosphate Cylindrical Cell Based on Teardown Derived Parameters",
+      "url": "https://doi.org/10.1149/1945-7111/aec04a",
+      "published": "2026-11-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Palash Ravindranath Gaikwad",
+       "Tapio Juntunen",
+       "Masood Tamadondar",
+       "Johan Scheers",
+       "Yicun Huang",
+       "Daniel Brandell"
+      ],
+      "abstract": "Abstract Lithium manganese iron phosphate (LMFP) is an attractive cathode candidate for lithium-ion batteries in electric vehicles, but physics-based simulations demand cell-specific parameter sets, which are still largely unavailable for commercial LMFP cells. In this study, we disassemble a commercial cylindrical graphite–LMFP cell and establish a self-consistent parameter set for Doyle–Fuller–Newman (DFN) modeling. We determine cell geometry, composition, stoichiometry, and electrochemical properties using X-ray computed tomography, pseudo-open-circuit voltage measurements, the galvanostatic intermittent titration technique (GITT), and electrochemical impedance spectroscopy (EIS). The resulting DFN model is assessed through OCV reconstruction, reference performance tests, GITT pulse–rest experiments, multi-rate CCCV charging protocols, and full-cell EIS. The calibrated model reconstructs the full-cell OCV with 3–5 mV RMSE, reproduces the complete continuous 1C pulse–rest discharge sequence with an RMSE of 41.60 mV, and captures CCCV charging from C/5 to 1.5C with overlap voltage RMSEs of 32.52–38.80 mV. It also recovers the low-frequency impedance response using a single, consistently constrained parameter set. This work delivers a reproducible parameterization methodology and a practical DFN reference model for graphite–LMFP cells.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aec04a",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Nanostructure Engineering of Silicon-Based Anodes for High-Energy Lithium-Ion Batteries: Strategies, Performance, and Practical Challenges",
+      "url": "https://doi.org/10.54254/2755-2721/2027.md38851",
+      "published": "2026-11-10T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Tianhao Ji"
+      ],
+      "abstract": "Because its theoretical capacity is significantly higher than that of traditional graphite, silicon is a desirable anode material for high-energy lithium-ion batteries. However, severe volume change, particle fracture, repeated disruption of the solid-electrolyte interphase, low electrical conductivity, and significant irreversible lithium loss limit its practical application. This paper investigates how nanostructure engineering and associated interface strategies address these coupled mechanical and electrochemical constraints. Stress accommodation, transport behavior, interfacial stability, and electrode packing are compared between low-dimensional silicon, porous and hollow particles, and core-shell or yolk-shell architectures. The complementary methods of surface coatings, artificial interphases, silicon/carbon composites, binder and electrolyte design, and prelithiation are then evaluated. Although areal loading, tap density, volumetric energy density, manufacturing yield, and compatibility with current electrode-processing techniques also affect practical performance, representative studies show that nanoscale control can significantly improve cycling stability, Coulombic efficiency, and rate capability. The analysis suggests that a multiscale design incorporating controlled internal void space, stable interfaces, conductive carbon networks, and manufacturable secondary particles is more promising than relying on a single nanostructure. First-cycle lithium loss, electrode swelling, process complexity, and scale-up are the remaining issues.",
+      "venue": "Applied and Computational Engineering",
+      "doi": "10.54254/2755-2721/2027.md38851",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
