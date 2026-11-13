@@ -112,6 +112,14 @@
    "date": "2026-11-11",
    "topic": "modeling"
   },
+  "arxiv:2611.13202": {
+   "date": "2026-11-13",
+   "topic": "modeling"
+  },
+  "arxiv:2611.13611": {
+   "date": "2026-11-13",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -424,6 +432,10 @@
    "date": "2026-11-07",
    "topic": "general"
   },
+  "t:howanioncompositiongovernsstructuralframeworksandliiontransportinoxychloridesolidstateelectrolytes": {
+   "date": "2026-11-13",
+   "topic": "general"
+  },
   "t:insitupolymerizedfluorinatedpolyurethanebasedgelpolymerelectrolyteforhighstabilitylithiummetalbatteries": {
    "date": "2026-10-14",
    "topic": "general"
@@ -510,6 +522,10 @@
   },
   "t:robuststateofhealthestimationforlithiumionbatteriesunderstochasticloadingaphysicsinformedbayesiancontinuoustimeapproach": {
    "date": "2026-10-14",
+   "topic": "modeling"
+  },
+  "t:robuststateparameterestimationinsecondorderthveninbatteries": {
+   "date": "2026-11-13",
    "topic": "modeling"
   },
   "t:sequenceconditionedphysicsinformedneuralnetworkforlithiumionbatterystateofhealthestimationusingchargingsegmentsathighsta": {
@@ -2557,6 +2573,70 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-13": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Robust State-Parameter Estimation in Second-Order Thévenin Batteries",
+      "url": "https://arxiv.org/abs/2611.13202",
+      "published": "2026-11-09T20:26:07+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Wissam Khennoune",
+       "G. Q. Bao Tran",
+       "Thach Ngoc Dinh",
+       "Jérémy Van Gorp",
+       "Mathieu Moze"
+      ],
+      "abstract": "We propose a scheme for estimating the full states and parameters of a second-order Thévenin battery model, using distinct features of the measured current. An identification step, run during suitable rest intervals, identifies the resistances and capacitances of the two RC branches from the voltage relaxation by linear least squares, without knowledge of the open-circuit voltage (OCV) map. An online estimator then runs continuously: the polarization voltages are estimated by open-loop observers; the series resistance is updated at current jumps using least squares; the state of charge (SOC) is propagated by Coulomb counting using the current capacity estimate, and both estimates are updated periodically by a sliding-window regression. We show that the identification is exact under a mild rank condition, that the series resistance is recovered at the first current jump, and that the online state and capacity estimates converge exponentially under verifiable excitation conditions. We also establish robustness of the online estimator under bounded process disturbances and measurement noise.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.13202",
+      "pdf_url": "https://arxiv.org/pdf/2611.13202v1",
+      "categories": [
+       "eess.SY",
+       "math.OC"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "How anion composition governs structural frameworks and Li-ion transport in oxychloride solid-state electrolytes",
+      "url": "https://arxiv.org/abs/2611.13611",
+      "published": "2026-11-10T05:40:10+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Jiho Lee",
+       "Seungwoo Hwang",
+       "Seungwu Han",
+       "Jisu Jung",
+       "Youngho Kang",
+       "Sungwoo Kang"
+      ],
+      "abstract": "Mixed-anion lithium oxychlorides exhibit high Li conductivity, but the relationship between oxygen content, structural framework, and Li-ion transport remains unclear. Here, crystal structure prediction and molecular dynamics simulations with machine-learning interatomic potentials are used to examine $\\mathrm{Li}_yM\\mathrm{O}_x\\mathrm{Cl}_{6-2x}$ ($M$ = Nb and Ta [Group 5] and $M$ = Ti, Zr, and Hf [Group 4]). Increasing oxygen content changes isolated chloride-rich polyhedra into one-dimensional chains and subsequently more highly connected two- and three-dimensional frameworks. In the Group 5 series, fast Li diffusion occurs over $x \\approx 0.67$--1.5, where the Li sites form a three-dimensional percolating network. Potential of mean force maps and nudged elastic band calculations reveal that fast Li-ion transport requires a low-dimensional framework supporting long-range migration through undercoordinated Li sites with low barriers, together with similar energies across Li sites. Finally, we perform fine-grid compositional search, which identifies $\\mathrm{LiNbO}_{0.67}\\mathrm{Cl}_{4.67}$, $\\mathrm{LiTaO}_{0.75}\\mathrm{Cl}_{4.5}$, $\\mathrm{LiNbO}_{1.5}\\mathrm{Cl}_3$, and $\\mathrm{LiTaO}_{1.5}\\mathrm{Cl}_3$ as stable candidates with predicted room-temperature self-diffusivities of up to $\\sim 10^{-6}\\,\\mathrm{cm}^2/\\mathrm{s}$. These findings establish how oxygen content controls framework and Li-ion transport, guiding the design of lithium oxyhalide electrolytes.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.13611",
+      "pdf_url": "https://arxiv.org/pdf/2611.13611v1",
+      "categories": [
+       "cond-mat.mtrl-sci"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
