@@ -120,6 +120,14 @@
    "date": "2026-11-13",
    "topic": "general"
   },
+  "arxiv:2611.16926": {
+   "date": "2026-11-15",
+   "topic": "general"
+  },
+  "arxiv:2611.17098": {
+   "date": "2026-11-15",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -452,6 +460,10 @@
    "date": "2026-11-13",
    "topic": "general"
   },
+  "t:improvedsingleinputspacevectorfordcbiasedsinusoidalcurrentcontrolinbatterycyclers": {
+   "date": "2026-11-15",
+   "topic": "general"
+  },
   "t:insitupolymerizedfluorinatedpolyurethanebasedgelpolymerelectrolyteforhighstabilitylithiummetalbatteries": {
    "date": "2026-10-14",
    "topic": "general"
@@ -559,6 +571,10 @@
   "t:spacechargelayerandfacilehaliderearrangementenablefastlithiumiontransportathalidesolidelectrolyteinterfaces": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:speedtopowerdominatesenergycostsforaidatacenterstechnoeconomicanalysisofpoweringaiinthecontinentalunitedstates": {
+   "date": "2026-11-15",
+   "topic": "modeling"
   },
   "t:stablechargedenergyandphasetransitionsinananisotropicdickequantumbatterywithkerrnonlinearity": {
    "date": "2026-10-22",
@@ -2717,6 +2733,73 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-15": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Speed-to-Power Dominates Energy Costs for AI Data Centers: Technoeconomic Analysis of Powering AI in the Continental United States",
+      "url": "https://arxiv.org/abs/2611.17098",
+      "published": "2026-11-12T16:58:53+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Alex C. Newkirk",
+       "Daniel L. Gerber",
+       "Erica R. H. Fuchs",
+       "Alex Hubbard",
+       "M. Granger Morgan",
+       "Arman Shehabi",
+       "Sarah J. Smith",
+       "Constantine Samaras"
+      ],
+      "abstract": "The rapid growth of artificial intelligence is driving demand for new data centers at large scale and on short deployment timelines. To power them, firms connect to the commercial grid or contract generation directly, but interconnection and gas-turbine delays now incentivize on-site generation. We compare grid-connected and off-grid data center energy infrastructure (AC- and DC-coupled solar-plus-storage, islanded natural gas, and grid interconnection) across the continental U.S. Using an open-source technoeconomic framework built on empirically calibrated AI training loads, climate-driven cooling, stage-by-stage power conversion, and physics-based battery degradation, we model designs providing equivalent energy services. Our central contribution is a speed-adjusted cost of energy that values the compute unlocked by faster construction, making options with different deployment timelines directly comparable on one physically consistent basis. We find DC coupling reduces lifetime energy costs by 18% ($0.09/ kWh) on average versus AC counterparts by eliminating inverters and improving efficiency. Though rarely cheapest on unadjusted energy cost, DC-coupled microgrids' faster deployment makes them the lowest-cost modeled option in 85% of U.S. locations once foregone compute is valued, or 55% under accelerated natural gas timelines. For AI infrastructure, deployment speed rather than unit energy cost determines the economically preferred path to power.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.17098",
+      "pdf_url": "https://arxiv.org/pdf/2611.17098v1",
+      "categories": [
+       "cs.AI",
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Improved Single-Input Space Vector for DC-Biased Sinusoidal Current Control in Battery Cyclers",
+      "url": "https://arxiv.org/abs/2611.16926",
+      "published": "2026-11-12T15:15:00+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Manveer Aujla",
+       "Philip Lewoc",
+       "Harminderjit S. Toor",
+       "Ahmad Ali",
+       "Caniggia Viana",
+       "Narayan C. Kar"
+      ],
+      "abstract": "This paper presents improvements to the single-input space vector (SISV) concept for current control in a battery cycler based on a two-phase interleaved buck converter. The cycler is controlled to output a dc-biased sinusoidal current, enabling investigation of second-harmonic ripple effects on lithium-ion cell aging. A modified SISV generation scheme is introduced to track current references containing both dc and sinusoidal components, and an impedance-angle compensation method is proposed to decouple the d and q control axes without disturbing dc tracking. A dq phase-portrait visualization method is also introduced to evaluate transient performance for both SISV and proportional-integral-resonant (PIR) control methods. Simulation and experimental results validate dc-biased sinusoidal current tracking using PIR control and SISV control with different decoupling schemes. The phase-portrait framework allows for straightforward evaluation of transient performance for both SISV and PIR control methods and supports controller tuning to obtain desired trajectories. The results demonstrate the feasibility of SISV-based current control as an alternative to PIR control for battery-cycler applications. The proposed improvements support the development of battery cyclers capable of controlling both dc and sinusoidal current components.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.16926",
+      "pdf_url": "https://arxiv.org/pdf/2611.16926v1",
+      "categories": [
+       "eess.SY"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
