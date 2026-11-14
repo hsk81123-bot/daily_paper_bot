@@ -208,12 +208,20 @@
    "date": "2026-10-21",
    "topic": "modeling"
   },
+  "doi:10.1016/j.jpowsour.2026.241947": {
+   "date": "2026-11-14",
+   "topic": "modeling"
+  },
   "doi:10.1021/acsenergylett.6c02308": {
    "date": "2026-11-02",
    "topic": "general"
   },
   "doi:10.1021/acsenergylett.6c02456": {
    "date": "2026-11-06",
+   "topic": "general"
+  },
+  "doi:10.1021/acsenergylett.6c02511": {
+   "date": "2026-11-14",
    "topic": "general"
   },
   "doi:10.1021/acsenergylett.6c02555": {
@@ -300,6 +308,10 @@
    "date": "2026-10-17",
    "topic": "modeling"
   },
+  "t:agenticaiforintelligentbatterymanagementsystemsfromdiagnosistoautonomouscontrol": {
+   "date": "2026-11-14",
+   "topic": "modeling"
+  },
   "t:agingmodelingoflithiumioncellsbyintegratingactivemateriallosselectrolytedegradationsolidelectrolyteinterphasegrowthandli": {
    "date": "2026-10-15",
    "topic": "general"
@@ -379,6 +391,10 @@
   "t:electrothermalmodelingandlongtermdegradationexposureanalysisofactivebtmsundertropicalheatsoakconditions": {
    "date": "2026-10-31",
    "topic": "modeling"
+  },
+  "t:engineeringultrathintoughpolymernetworksforstablelithiummetalanodeinterphases": {
+   "date": "2026-11-14",
+   "topic": "general"
   },
   "t:equivalentcircuitmodelforcalculationofgroundpotentialriseinwindturbinegroundingsystems": {
    "date": "2026-11-10",
@@ -2637,6 +2653,70 @@
       "categories": [
        "cond-mat.mtrl-sci"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-14": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Agentic AI for intelligent battery management systems: From diagnosis to autonomous control",
+      "url": "https://doi.org/10.1016/j.jpowsour.2026.241947",
+      "published": "2026-11-11T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hamidreza Namazi",
+       "Neha Sharma",
+       "Michal Schmirler",
+       "Mohamad Fani Sulaima"
+      ],
+      "abstract": "Battery management systems (BMSs) are evolving from threshold-based supervisory units and isolated predictive modules toward intelligent, closed-loop decision architectures capable of diagnosis, prognosis, optimization, and autonomous control. This review examines how agentic artificial intelligence extends conventional AI-enabled BMS research by integrating state awareness, risk-informed reasoning, goal-driven planning, and safety-constrained action across cell-, pack-, and system-level operations. Rather than merely cataloguing prior studies, the review compares major groups of works spanning data-driven state estimation, degradation modeling, reinforcement learning-based control, hybrid physics-informed methods, digital twins, and emerging multi-agent strategies, highlighting their respective strengths, operational assumptions, scalability limits, interpretability, and deployment readiness. The analysis shows that prediction-oriented approaches remain dominant, while comparatively fewer studies achieve robust closed-loop autonomy under uncertainty, aging, thermal coupling, and heterogeneous usage conditions. To address this gap, the paper proposes the Agentic Battery Management Stack (A-BMS), a six-layer framework linking multimodal sensing, health inference, predictive risk assessment, decision intelligence, autonomous control execution, and human oversight. The review concludes by identifying key barriers and research priorities for trustworthy, adaptive, and certifiable autonomous battery management.",
+      "venue": "Journal of Power Sources",
+      "doi": "10.1016/j.jpowsour.2026.241947",
+      "arxiv_id": "",
+      "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0378775326026972/pdf",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Engineering Ultrathin, Tough Polymer Networks for Stable Lithium Metal Anode Interphases",
+      "url": "https://doi.org/10.1021/acsenergylett.6c02511",
+      "published": "2026-11-12T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hyoseok So",
+       "Changhoon Ahn",
+       "Keonwoo Choi",
+       "Hyunsub Song",
+       "Yoobin An",
+       "임지훈",
+       "Yujang Cho",
+       "Mingyu Sagong",
+       "Euichan Jeong",
+       "Gyuwon Lee",
+       "Il‐Doo Kim",
+       "Sung Gap Im"
+      ],
+      "abstract": "Abstract Interfacial degradation and dendritic lithium (Li) growth remain critical bottlenecks for practical Li metal batteries (LMBs). Herein, we introduce a tough, ion-conductive poly(2-(dimethylamino)ethyl methacrylate) (pDMAEMA) nanolayer on Li metal via photo-initiated chemical vapor deposition (piCVD). The photo-mediated, solvent-free piCVD enables nanometer-scale coatings with systematic control over photo-crosslinking and chain entanglement without compromising Li surface integrity. This systematic control yields an optimized polymer network balancing toughness (36.3 MJ m–3) and viscoelasticity (10.3% linear viscoelastic strain limit) to accommodate repeated Li volume changes. Furthermore, interactions between pDMAEMA and PF6– anions promote a mechanically durable LiF-rich solid electrolyte interphase, thereby supporting uniform Li deposition. Pouch-type bi-cells employing the optimized 100 nm polymer-coated Li anode achieve an energy density of 338 Wh kg–1 and 80% capacity retention after 90 cycles under practical conditions (N/P = 2, E/C = 3 g Ah–1). This ultrathin, tough polymer network offers a promising design principle for high-energy LMBs.",
+      "venue": "ACS Energy Letters",
+      "doi": "10.1021/acsenergylett.6c02511",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
