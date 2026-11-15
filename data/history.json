@@ -220,6 +220,10 @@
    "date": "2026-11-14",
    "topic": "modeling"
   },
+  "doi:10.1016/j.microrel.2026.116346": {
+   "date": "2026-11-16",
+   "topic": "modeling"
+  },
   "doi:10.1021/acsenergylett.6c02308": {
    "date": "2026-11-02",
    "topic": "general"
@@ -238,6 +242,10 @@
   },
   "doi:10.1021/acsnano.6c13032": {
    "date": "2026-10-25",
+   "topic": "general"
+  },
+  "doi:10.1021/acssuschemeng.6c06630": {
+   "date": "2026-11-16",
    "topic": "general"
   },
   "doi:10.1038/s41467-026-78307-0": {
@@ -303,6 +311,10 @@
   "doi:10.54254/2755-2721/2027.md38851": {
    "date": "2026-11-12",
    "topic": "general"
+  },
+  "t:accuratemodelingoftheelectrothermalstabilityboundaryinpowermosfetswithoutinternaldeviceparameters": {
+   "date": "2026-11-16",
+   "topic": "modeling"
   },
   "t:acomprehensivereviewofsupercapacitormodellingandsocsohandrulestimationtechniquesforenergymanagementsystems": {
    "date": "2026-10-27",
@@ -494,6 +506,10 @@
   },
   "t:mechanismsgoverningcalendaraginginthreeelectrodelithiumioncellswithlayeredoxidecathodeandmilledsiliconanode": {
    "date": "2026-10-31",
+   "topic": "general"
+  },
+  "t:microreactorassistedinsituladopedlatpcompositesolidelectrolytewithenhancedionicconductivityandinterfacialstabilityforqua": {
+   "date": "2026-11-16",
    "topic": "general"
   },
   "t:mineralparticlesuspensionsincarbonateelectrolyteenablelifrichinterphasesfordurablelithiummetalbatteries": {
@@ -2800,6 +2816,68 @@
       "categories": [
        "eess.SY"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-16": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Accurate modeling of the electrothermal stability boundary in Power MOSFETs without internal device parameters",
+      "url": "https://doi.org/10.1016/j.microrel.2026.116346",
+      "published": "2026-11-13T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "D. Westerhoff",
+       "W. Hamad",
+       "Michael Mensing",
+       "Holger Kapels",
+       "H. Jacobsen"
+      ],
+      "abstract": "In this work, an accurate method for predicting the electrothermal stability boundary of power MOSFETs under single-pulse linear-mode operation is derived and experimentally validated. The convolution integral describing the junction temperature rise is solved in closed form by locally approximating the thermal impedance as a root function and the dynamic power as a ramp, which yields a constant factor of 2/3 that is shown to be independent of unknown parameters. The main advantage of the resulting expression is that it requires no internal device parameters: only the drain current measured at two temperatures and the thermal impedance at the pulse length, both obtainable from the datasheet. The prediction is cross-checked against a SPICE-based equivalent-circuit (Foster/Cauer) simulation and against failure measurements on devices of the same voltage class from three manufacturers.",
+      "venue": "Microelectronics Reliability",
+      "doi": "10.1016/j.microrel.2026.116346",
+      "arxiv_id": "",
+      "pdf_url": "https://www.sciencedirect.com/science/article/pii/S0026271426003501/pdf",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Microreactor-Assisted In Situ La-Doped LATP Composite Solid Electrolyte with Enhanced Ionic Conductivity and Interfacial Stability for Quasi-Solid-State Lithium Metal Batteries",
+      "url": "https://doi.org/10.1021/acssuschemeng.6c06630",
+      "published": "2026-11-14T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Chenyang Long",
+       "Fei Liu",
+       "Yunsong Ran",
+       "Jun Zhao",
+       "Hao Wen",
+       "Dong Zou",
+       "Yuandong Zheng",
+       "Jiling Song",
+       "Shangyan Zhou"
+      ],
+      "abstract": "Abstract Li1+xAlxTi2–x(PO4)3 (LATP) is an oxide solid electrolyte that is widely recognized as a potential material for solid-state lithium metal batteries (SSLMBs) by virtue of its excellent tolerance to ambient atmosphere and inherent expense advantages. Nevertheless, its applicability is severely constrained by large interfacial impedance and insufficient interfacial stability against lithium metal anodes. In this work, a dual-synergistic strategy integrating microreactor-assisted in situ regulation with rare-earth La doping is developed to construct a high-ionic conductivity Li1+xAlxLayTi2–x–y(PO4)3 (LALTP) solid electrolyte for high-performance quasi-solid composite batteries. Enabled by the precise control of reaction kinetics within the microreactor, the as-synthesized LALTP exhibits a narrower particle size distribution and enhanced crystallinity. Rietveld refinement confirmed the successful substitution of La3+ at Ti sites. At a La doping level of 0.1 mol, appropriate LaPO4 segregated at the grain boundaries, synergistically lowering the interfacial impedance. Furthermore, incorporating LALTP into a PVDF polymer matrix markedly improves its mechanical robustness and flexibility. This composite architecture stabilizes the interface with the lithium anode, thereby accelerating Li+ transport kinetics and effectively suppressing lithium dendrite growth. Notably, at a La doping level of 0.1 mol, the electrolyte achieves a high lithium–ion transference number (tLi+ = 0.75) alongside an ionic conductivity of 1.38 mS cm–1, substantially surpassing conventional counterparts. The assembled half-cell delivers a high discharge capacity of 153 mAh g–1 at 1C and maintains 93% capacity retention after 2000 cycles, and delivers 142 mAh g–1 at a high LFP areal loading of 4 mg cm–2, retaining 96.65 % capacity after 200 cycles. Even at a high rate of 5C, the average capacity decay rate remains as low as 0.0071%. In addition, the symmetric cell demonstrates stable cycling over 1000 h at a current density of 0.2 mA cm–2. Furthermore, density functional theory (DFT) calculations further reveal that La doping enhances the interfacial adsorption energy between PVDF and LALTP (from –0.181 to –0.503 eV) and reduces the Li+ migration barrier from 1.54 to 1.10 eV. Overall, this work provides an effective and sustainable strategy for advancing high-performance SSLMBs.",
+      "venue": "ACS Sustainable Chemistry & Engineering",
+      "doi": "10.1021/acssuschemeng.6c06630",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
