@@ -128,6 +128,14 @@
    "date": "2026-11-15",
    "topic": "modeling"
   },
+  "arxiv:2611.18140": {
+   "date": "2026-11-17",
+   "topic": "general"
+  },
+  "arxiv:2611.18255": {
+   "date": "2026-11-17",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -486,6 +494,14 @@
   },
   "t:kineticelectrochemicalreactivetransportmodelingofcalciumleachingandporosityevolutioninmultiphaseconcrete": {
    "date": "2026-11-04",
+   "topic": "modeling"
+  },
+  "t:largelanguagemodelempoweredintelligentagentforadaptivefastchargingcontroloflithiumionbatteries": {
+   "date": "2026-11-17",
+   "topic": "general"
+  },
+  "t:linearmodelingofhybridshipboardpowersystemsunderpulsedpowerloadoperation": {
+   "date": "2026-11-17",
    "topic": "modeling"
   },
   "t:lithiummetalanodeinterfacesinlisbatteriesfromfailuremechanismstopracticalstabilization": {
@@ -2878,6 +2894,67 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-17": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Linear Modeling of Hybrid Shipboard Power Systems under Pulsed Power Load Operation",
+      "url": "https://arxiv.org/abs/2611.18255",
+      "published": "2026-11-13T14:52:00+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Daniele Roncagliolo",
+       "Pietro Cepollini",
+       "Fabio D'Agostino",
+       "Marco Gallo",
+       "Federico Silvestro"
+      ],
+      "abstract": "A model-based approach is a valuable tool in the power system design process, enabling the integration of component models and the evaluation of dynamic interactions. Simplified models support rapid preliminary assessments by allowing parameters and configurations to be adjusted. This paper investigates the effects of high-bandwidth loads in hybrid AC--DC shipboard power systems. The problem is addressed by developing a linear model aimed at capturing the relevant dynamics over the time scale of interest with reduced computational effort. A LVDC subsystem has been developed with a battery energy storage system that supports the grid during pulsed power load operation. A control strategy has been proposed to satisfy transient requirements. The proposed approach is validated under different pulsed power load conditions using a high-fidelity model developed in DIgSILENT PowerFactory, which preserves nonlinearities and includes converter switching effects and digital control implementation. The validation shows that the model captures the relevant transient behavior with significantly reduced simulation time, while maintaining acceptable accuracy, making it suitable for rapid preliminary design studies.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.18255",
+      "pdf_url": "https://arxiv.org/pdf/2611.18255v1",
+      "categories": [
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2611.18140",
+      "published": "2026-11-13T13:11:04+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Joey Chan",
+       "Haoyu Pan",
+       "Zhen Chen",
+       "ErShun Pan"
+      ],
+      "abstract": "Fast charging of lithium-ion batteries is a multi-objective control problem that requires reducing charging time and sustaining high energy throughput while suppressing accelerated degradation and safety-critical electrochemical reactions. Conventional protocols are easy to implement but have limited ability to adapt to variations in battery chemistry, operating conditions, and aging state. Model-based optimization and conventional data-driven control often require accurate models, costly iterative search, or task-specific policies. We develop a large language model (LLM)-empowered intelligent agent for adaptive battery fast-charging control. In this closed-loop framework, the agent interprets structured battery states, generates executable charging actions, observes the resulting battery response, and continuously adjusts subsequent decisions. We construct a large-scale simulation corpus with PyBaMM across five battery chemistries and 11 parameter sets and convert the resulting state-action-response trajectories into structured process data for agent training. Our two-stage strategy combines supervised fine-tuning (SFT) and Group Relative Policy Optimization (GRPO). SFT establishes battery-control semantics and feasible decision priors from simulation-derived demonstrations. GRPO aligns the agent with a multi-objective control objective covering energy throughput, degradation mitigation, and operational constraints. Closed-loop simulations show that, under matched energy-throughput requirements, the agent achieves longer cycling life than conventional charging baselines and optimization-based strategies across heterogeneous battery configurations. This study provides a simulation-grounded proof of concept for using LLM agents as sequential decision makers in battery management and takes a step toward language-model-enabled control of physical energy systems.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.18140",
+      "pdf_url": "https://arxiv.org/pdf/2611.18140v1",
+      "categories": [
+       "cs.AI"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
