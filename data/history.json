@@ -204,6 +204,14 @@
    "date": "2026-11-04",
    "topic": "general"
   },
+  "doi:10.1016/j.est.2026.125523": {
+   "date": "2026-11-18",
+   "topic": "modeling"
+  },
+  "doi:10.1016/j.est.2026.125532": {
+   "date": "2026-11-18",
+   "topic": "general"
+  },
   "doi:10.1016/j.ijoes.2026.101527": {
    "date": "2026-10-19",
    "topic": "modeling"
@@ -395,6 +403,10 @@
   "t:crossdatasetassessmentofcathodethermaldescriptorsforwholecellselfheatingkineticsinlithiumionbatteriesonsetreactionmagnit": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:datadrivenpredictivecontrolofbatteryenergystoragewithphysicsinformedsequencemodeling": {
+   "date": "2026-11-18",
+   "topic": "modeling"
   },
   "t:degradationawareparticipationofbatterystorageinfrequencyregulationmarkets": {
    "date": "2026-11-11",
@@ -630,6 +642,10 @@
   },
   "t:ultralowdepositionpotentialandantisiteboosteddiffusivityofli3ga2anodeforallsolidstatebatteries": {
    "date": "2026-11-02",
+   "topic": "general"
+  },
+  "t:unveilingsolidelectrolyteinterphasenanostructuraldoping": {
+   "date": "2026-11-18",
    "topic": "general"
   }
  },
@@ -2955,6 +2971,66 @@
       "categories": [
        "cs.AI"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-18": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Data-driven predictive control of battery energy storage with physics-informed sequence modeling",
+      "url": "https://doi.org/10.1016/j.est.2026.125523",
+      "published": "2026-11-16T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Pablo Donate",
+       "Vicente Torres‐Sanz",
+       "Francisco J. Martínez",
+       "Piedad Garrido",
+       "Ricardo Jorge Bessa",
+       "Julio A. Sanguesa"
+      ],
+      "abstract": "Integrating battery energy storage systems (BESS) into industrial sites with photovoltaic generation and time-varying tariffs requires controllers that combine economic performance, low real-time computational cost, and robustness to forecast errors. Model predictive control (MPC) achieves near-optimal cost but solves a mixed-integer optimization at every step using a linearized battery model, since nonlinear formulations are intractable for real-time deployment. Learning-based controllers remove this online optimization, but they are typically trained without any knowledge of the equipment they operate on; they are tuned site by site, and they provide no structural guarantee that operational constraints will be met. Closing this gap is the motivation of this work. This paper proposes PI-DT, a data-driven predictive controller based on a transformer sequence model conditioned on the return-to-go, trained offline on linear MILP expert actions executed on a nonlinear Thévenin two-branch RC battery simulator, and informed by per-battery physics, so that a single network operates batteries of different capacity, rated power, and efficiency without per-site retraining. An asymmetric minimum terminal state of charge (SOC) constraint, closer to industrial practice than a fixed target, is enforced consistently across expert, MPC, and the proposed controller, and enforced at inference through a horizon-aware projection on the action. The evaluation uses the public EMSx dataset (60 industrial sites, 37,442 site-days, Spanish PVPC tariff) and compares against the Rolling MPC, behavior cloning (BC), and Implicit Q-Learning (IQL), all assessed under the same nonlinear battery dynamics. On 5577 test site-days, the proposed controller reaches an aggregate cost gap of 1.39% versus the MILP, below 1.54% (BC), 1.61% (MPC), and 1.96% (IQL). The learning baselines fall below the minimum terminal SOC by up to 8.4 and 29 percentage points, respectively; the projection makes the reserve feasible by construction under the linear SOC model on which it is computed, and on the nonlinear plant the worst-case residual deficit of the proposed controller is 0.14 pp, within the 1 pp operational tolerance. A 3-fold cross-validation on held-out sites shows it transfers to unseen batteries with negligible degradation. The proposed controller therefore attains MPC-level economics without an online solver and with a structurally enforced end-of-day reserve, which makes it a candidate for embedded deployment in industrial energy management systems, subject to hardware-in-the-loop validation.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125523",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Unveiling solid electrolyte interphase nano-structural doping",
+      "url": "https://doi.org/10.1016/j.est.2026.125532",
+      "published": "2026-11-16T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Roy Marrache",
+       "Yuri Shakhman",
+       "David Stark",
+       "Lina Faktorovich-Simon",
+       "Michal Leskes",
+       "Emanuel Peled"
+      ],
+      "abstract": "Energy storage systems are essential for large-scale renewable energy utilization and electrification, with cycle life, safety, and energy density remaining central technological priorities. The solid electrolyte interphase (SEI) critically dictates battery stability and failure mechanisms, yet its inherent ionic resistivity often limits performance and drives degradation. In this work, we investigate the nano-structural doping of the SEI in lithium-ion (LIB), lithium-metal (LMB), and anode-free lithium-metal batteries (AFLMB) to fundamentally increase lithium-ion conductivity. By evaluating the integration of inert metal-oxide nanoparticles (MONPs), metal-fluoride nanoparticles (MFNPs), and non‑lithium salt additives into standard carbonate and ether-based electrolytes, we identify distinct doping strategies that substantially improve electrochemical metrics across these diverse chemistries. In LMBs, doping with ZnO nanoparticles doubled the cycle life of Li|NCA cells by more than 50%. Isotope exchange NMR measurements directly confirmed that this ZnO incorporation enhanced interfacial lithium-ion transport while reducing the formation of electrically isolated “dead” lithium. Furthermore, integrating AlF 3 nanoparticles effectively suppressed dendrite-induced short circuits, extending Li|NMC cell life and maintaining 85% capacity retention after over 300 cycles. In AFLMBs, the addition of CuO or Ag2O nanoparticles to a Cu|NCA system yielded a more than three-fold improvement in cycle life, while significantly lowering the SEI ionic resistance. This approach offers a safe and cost-effective method to suppress dendrite growth and mitigate dead‑lithium generation in metallic batteries, enabling the viable, long-term use of standard carbonate electrolytes in next-generation high-energy-density battery systems.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125532",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
