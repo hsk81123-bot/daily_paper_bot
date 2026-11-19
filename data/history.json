@@ -136,6 +136,14 @@
    "date": "2026-11-17",
    "topic": "modeling"
   },
+  "arxiv:2611.21357": {
+   "date": "2026-11-19",
+   "topic": "general"
+  },
+  "arxiv:2611.22455": {
+   "date": "2026-11-19",
+   "topic": "modeling"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -276,6 +284,10 @@
    "date": "2026-11-05",
    "topic": "general"
   },
+  "doi:10.1109/tte.2026.3734031": {
+   "date": "2026-11-19",
+   "topic": "modeling"
+  },
   "doi:10.1149/1945-7111/aeb4ee": {
    "date": "2026-10-17",
    "topic": "modeling"
@@ -326,6 +338,10 @@
   },
   "doi:10.54254/2755-2721/2027.md38851": {
    "date": "2026-11-12",
+   "topic": "general"
+  },
+  "t:accessingelectrodeedgesuprightmountingforsitespecificcryogenicatomprobetomographyoflithiumionbatteries": {
+   "date": "2026-11-19",
    "topic": "general"
   },
   "t:accuratemodelingoftheelectrothermalstabilityboundaryinpowermosfetswithoutinternaldeviceparameters": {
@@ -526,6 +542,10 @@
   },
   "t:maplesecmobilityawarepartitionedlanguagemodelengineforroamingiotsecurity": {
    "date": "2026-10-30",
+   "topic": "modeling"
+  },
+  "t:marsfeatureguidedphysicsinformeddeeplearningforrealtimebatteryhealthandlifetimeprediction": {
+   "date": "2026-11-19",
    "topic": "modeling"
   },
   "t:mechanismguidedalkalineleachingofalsialloyenableshighpurityporoussiliconanodesforfastcharginglithiumionbatteries": {
@@ -3031,6 +3051,72 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-19": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "MARS: Feature-guided physics-informed deep learning for real-time battery health and lifetime prediction",
+      "url": "https://arxiv.org/abs/2611.22455",
+      "published": "2026-11-17T09:19:43+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Innocent Izabayo",
+       "Haiquan Zhao"
+      ],
+      "abstract": "Accurate and robust estimation of battery state-of-health (SOH) and remaining useful life (RUL) is essential for safe and cost-effective operation of electrified transportation systems, yet it remains challenging under operating variability, non-stationary aging, and non-Gaussian measurement disturbances. This paper proposes Multi-scale Adaptive Robust State Estimation (MARS), a multi-scale adaptive robust state-estimation framework that couples a dual-branch temporal encoder with an equivalent-circuit-model-constrained differentiable generalized-correntropy adaptive Kalman filter. The encoder disentangles fast intra-cycle voltage-current-temperature dynamics from slow inter-cycle degradation, and the fused degradation context adaptively parameterizes the cycle-level process covariance, measurement covariance, and correntropy bandwidth. Through the unrolled robust filtering recursion, MARS performs physics-consistent state propagation and generalized-correntropy-based innovation correction, while uncertainty decomposition and Monte Carlo dropout provide calibrated prediction intervals for SOH estimation and conditional RUL prediction. Experiments on the NASA and CALCE benchmarks demonstrate improved SOH accuracy, achieving mean absolute error/root mean square error values of 0.72%/0.92% and 0.63%/0.80%, respectively, together with competitive conditional RUL performance against representative data-driven and hybrid baselines. The resulting conditional-RUL prediction intervals achieve coverage probabilities of 100.00% and 99.24% on NASA and CALCE, respectively. Ablation, disturbance-sensitivity, near-end-of-life, and runtime analyses further verify the contribution of each module and the practical inference cost for online battery management.",
+      "venue": "arXiv",
+      "doi": "10.1109/tte.2026.3734031",
+      "arxiv_id": "2611.22455",
+      "pdf_url": "https://arxiv.org/pdf/2611.22455v1",
+      "categories": [
+       "eess.SY"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Accessing Electrode Edges: Upright Mounting for Site-Specific Cryogenic Atom Probe Tomography of Lithium-Ion Batteries",
+      "url": "https://arxiv.org/abs/2611.21357",
+      "published": "2026-11-16T16:30:57+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Syeda Ramin Jannat",
+       "James O. Douglas",
+       "Neil Mulcahy",
+       "Lukas Worch",
+       "Aigerim Omirkhan",
+       "Zhenyu Guo",
+       "Yuanzhu Zhao",
+       "Maria-Magdalena Titirici",
+       "Ifan E. L. Stephens",
+       "Mary P. Ryan",
+       "Baptiste Gault",
+       "Michele Shelly Conroy"
+      ],
+      "abstract": "Cryogenic atom probe tomography (cryo-APT) is increasingly being used to map the three-dimensional distribution of highly reactive species in heterogeneous materials, including those found in battery systems. However, site-specific preparation of localised features and liquid-solid interfaces remains challenging, particularly when regions of interest (ROIs) are concentrated along electrode edges that are difficult to access using conventional mounting geometries. Here, we present a cryo-APT workflow incorporating an upright-mounting procedure that enables targeted specimen preparation of localised regions using plasma focused ion beam (PFIB) microscopy and milling under cryogenic conditions. We first demonstrate the approach using an electrolyte-wetted graphite electrode, successfully preparing and analysing a specimen containing both an edge-localised electrolyte deposit and the underlying graphite and Cu current collector. We then apply the workflow to a cycled graphite electrode, targeting Li dendrites concentrated around the electrode perimeter and successfully preparing and analysing the targeted Li-rich region. Beyond battery systems, this approach offers potential for site-specific cryo-APT of edge-localised features across a broader range of material systems, where conventional specimen preparation geometries may limit access to ROIs.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.21357",
+      "pdf_url": "https://arxiv.org/pdf/2611.21357v1",
+      "categories": [
+       "cond-mat.mtrl-sci"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
