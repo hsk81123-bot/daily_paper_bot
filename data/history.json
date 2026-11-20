@@ -320,8 +320,16 @@
    "date": "2026-10-14",
    "topic": "general"
   },
+  "doi:10.3390/cleantechnol8060194": {
+   "date": "2026-11-20",
+   "topic": "general"
+  },
   "doi:10.3390/eng7100554": {
    "date": "2026-10-15",
+   "topic": "modeling"
+  },
+  "doi:10.3390/fi18110636": {
+   "date": "2026-11-20",
    "topic": "modeling"
   },
   "doi:10.3390/mi17111266": {
@@ -355,6 +363,10 @@
   "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
    "date": "2026-10-14",
    "topic": "general"
+  },
+  "t:afivetierdigitaltwinframeworkwithphysicsinformedneuralnetworksforpredictivebatterymanagementin5guserequipmentjointranawa": {
+   "date": "2026-11-20",
+   "topic": "modeling"
   },
   "t:afusionstateofchargeestimationframeworkforlithiumionbatteriesofelectricvehiclesusingenhancedsingleparticlemodelandcnnbil": {
    "date": "2026-10-17",
@@ -651,6 +663,10 @@
   "t:stekstructuralterrainenhancedkoopmaninspiredcrosschannelregularizationforretrospectivebatterymultitargetestimation": {
    "date": "2026-11-07",
    "topic": "modeling"
+  },
+  "t:structureevolutionandelectrochemicalperformanceoflayeredmetaloxidecathodematerialsforsodiumionandsolidstatebatteriesarev": {
+   "date": "2026-11-20",
+   "topic": "general"
   },
   "t:systemidentificationfornonlinearstochasticstatespacemodelsusingensemblekalmaninversionwithapplicationtolithiumionbatteri": {
    "date": "2026-10-22",
@@ -3117,6 +3133,63 @@
       "categories": [
        "cond-mat.mtrl-sci"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-20": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A Five-Tier Digital Twin Framework with Physics-Informed Neural Networks for Predictive Battery Management in 5G User Equipment: Joint RAN-Aware Degradation Modeling and Autonomous Power Saving",
+      "url": "https://doi.org/10.3390/fi18110636",
+      "published": "2026-11-18T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hammad Lazrek",
+       "Sarra Zekaki",
+       "Mohammed Zouiten"
+      ],
+      "abstract": "The deployment of 5G New Radio (NR) introduces millimeter-wave communications, massive MIMO, and carrier aggregation, which significantly increase the power consumption of user equipment (UE) modems and accelerate lithium-ion battery degradation. Existing Battery Management Systems (BMS) optimize charge/discharge cycles without awareness of radio access network (RAN) traffic patterns, while the RAN configures Discontinuous Reception (DRX) and Bandwidth Part (BWP) parameters without knowledge of the battery’s State of Health (SoH). This paper proposes DT-5GBat, a five-tier Digital Twin framework that closes this gap by integrating a physics-informed neural network (PINN) with a 5G network simulator for predictive, cross-layer battery management. Tier 1 provides a reduced-order Single Particle Model (SPM) of the Li-ion cell. Tier 2 fuses real-time BMS sensor data with RAN metrics (RSRP, CQI, RRC state, DRX duty cycle). Tier 3 employs a PINN-LSTM architecture to predict SoH trajectory and Remaining Useful Life (RUL). Tier 4 solves a multi-objective optimization problem trading off energy consumption, latency, and battery aging. Tier 5 executes the optimized policy in a closed control loop via UE middleware or O-RAN RIC. It is validated by co-simulation between NS-3/5G-LENA and the Rakhmatov non-linear battery model using NASA Ames, Oxford, and CALCE datasets augmented with synthetic 5G load traces. DT-5GBat extends UE autonomy by 21.3% and reduces capacity fade by 19.8% over 500 equivalent cycles, with a RUL prediction MAPE of 3.42% and a computational overhead below 1.8% of the total UE energy budget.",
+      "venue": "Future Internet",
+      "doi": "10.3390/fi18110636",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Structure Evolution and Electrochemical Performance of Layered Metal Oxide Cathode Materials for Sodium-Ion and Solid-State Batteries (A Review)",
+      "url": "https://doi.org/10.3390/cleantechnol8060194",
+      "published": "2026-11-18T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Aqsa Irshad",
+       "Farhan Talib",
+       "Sadia Nasreen",
+       "Imtiaz Afzal Khan",
+       "Sidra Iftekhar",
+       "Kang Hoon Lee"
+      ],
+      "abstract": "Due to improved safety and stability over traditional liquid-electrolyte systems, solid-state batteries (SSBs) hold promises as next-generation energy-storage devices. By contrast, solid electrolytes are non-volatile and have much wider electrochemical stability windows than flammable liquid electrolytes. Solid electrolytes also appear to be one of the best candidates for effectively suppressing dendrite formation, and thus seem to be particularly well suited to sustainable energy applications. Sodium-ion batteries (SIBs), owing to the global abundance, low cost, and wide availability of sodium compared to lithium to date, have brought much attention to sodium-ion SSBs in industry. However, in the meantime, some problems leading to a slow development of phase stability, inconsequential cyclic performance, and electrochemical resistance have yet to be resolved. Current research focuses on why layered transition-metal oxides (LTMO) are a potentially good cathode material for solid-state sodium-ion batteries, based upon high theoretical capacities and tunable structure, as well as its viable costs. P2 and O3-layered transition metal oxides with their distorted types show distinct sodium (Na)-ion transport characteristics depending on composition and crystal structure. Furthermore, in terms of performance retention, the doping solutions also contribute to stability, productivity, and excellent efficiency and rate performance. Despite these challenges, including loss of oxygen, interfacial reactivity, and moisture sensitivity, they can be managed efficiently with appropriate technological advancements based on solid-electrolyte engineering, surface coating, interfacial stability, and structural design. Thus, future development should be investigated into composite engineering, sodium dendrites formation, full-cell interconnections, and high entropy designs that enable safe, affordable, and long-lasting sodium solid-state sodium-ion batteries that can scale up for practical energy storage applications.",
+      "venue": "Clean Technologies",
+      "doi": "10.3390/cleantechnol8060194",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
