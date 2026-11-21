@@ -144,6 +144,14 @@
    "date": "2026-11-19",
    "topic": "modeling"
   },
+  "arxiv:2611.23771": {
+   "date": "2026-11-21",
+   "topic": "modeling"
+  },
+  "arxiv:2611.26176": {
+   "date": "2026-11-21",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -448,6 +456,10 @@
    "date": "2026-11-01",
    "topic": "general"
   },
+  "t:dualactionofelectrolyteadditivesinhighvoltageliioncells": {
+   "date": "2026-11-21",
+   "topic": "general"
+  },
   "t:ecmpareasystematicframeworkforcomparingparameterestimationmethodsinlithiumionbatteryequivalentcircuitmodels": {
    "date": "2026-10-19",
    "topic": "modeling"
@@ -575,6 +587,10 @@
   "t:mineralparticlesuspensionsincarbonateelectrolyteenablelifrichinterphasesfordurablelithiummetalbatteries": {
    "date": "2026-10-27",
    "topic": "general"
+  },
+  "t:mitigatingthegridimpactofgigawattscaleaidatacentersviahighfidelitymodelflexibility": {
+   "date": "2026-11-21",
+   "topic": "modeling"
   },
   "t:nanostructureengineeringofsiliconbasedanodesforhighenergylithiumionbatteriesstrategiesperformanceandpracticalchallenges": {
    "date": "2026-11-12",
@@ -3190,6 +3206,67 @@
       "arxiv_id": "",
       "pdf_url": "",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-21": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Mitigating the Grid Impact of Gigawatt-Scale AI Data Centers via High-Fidelity Model Flexibility",
+      "url": "https://arxiv.org/abs/2611.23771",
+      "published": "2026-11-18T03:26:34+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Eihab E. E. Ahmed",
+       "Saeed Manshadi"
+      ],
+      "abstract": "Gigawatt-scale artificial intelligence data centers (AIDCs) are being connected at a single point of interconnection (POI) faster than transmission can be reinforced, yet studies of their flexibility rely on DC power flow and simplified load envelopes that omit voltage, cooling dynamics, and workload deadlines. This paper addresses this gap by embedding a high-fidelity AIDC model, with separate inference and training pools, hall thermal mass, PV, a battery energy storage system (BESS) with reactive capability, and a STATCOM, in a five-minute multi-period AC optimal power flow. Simulations on the RTS-GMLC test system show that active-power flexibility mitigates local price spikes and relieves congestion, whereas reactive support from the BESS inverter or a STATCOM is needed to keep the POI voltage away from sagging around its 0.95~pu limit. Sensitivity analyses show that cost-driven charging of large batteries can induce new morning congestion and that storage largely substitutes for wider workload deferral.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.23771",
+      "pdf_url": "https://arxiv.org/pdf/2611.23771v1",
+      "categories": [
+       "eess.SY",
+       "math.OC"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Dual Action of Electrolyte Additives in High-Voltage Li-Ion Cells",
+      "url": "https://arxiv.org/abs/2611.26176",
+      "published": "2026-11-19T14:27:35+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Aidin I. OBrien",
+       "Bingning Wang",
+       "Stephen E. Trask",
+       "Adam Tornheim",
+       "Chen Liao",
+       "Marco-Tulio F. Rodrigues"
+      ],
+      "abstract": "Electrolyte additives have outsized effects on cell performance, but determining their mechanism of action can be difficult. Here, we evaluate whether simple electrochemical tests can reveal which electrode (cathode, anode or both) is targeted by specific additives. Our experiments quantified the rates of reductive and oxidative side-reactions in NMC532 vs. graphite cells containing 12 different electrolyte formulations. We found that gains in interphasial stability were highly correlated, with successful additives decreasing both types of side-reactions by similar magnitude. This dual action could be indicative of the role of crosstalk on cell degradation, as soluble species formed on one electrode can decompose at the other end of the cell. Although electrochemical tests are insufficient for understanding mechanisms of improvement, they can reveal interesting effects that complement other characterization tools.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.26176",
+      "pdf_url": "https://arxiv.org/pdf/2611.26176v1",
+      "categories": [
+       "physics.chem-ph"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
