@@ -160,6 +160,10 @@
    "date": "2026-10-27",
    "topic": "general"
   },
+  "doi:10.1002/est2.70583": {
+   "date": "2026-11-22",
+   "topic": "modeling"
+  },
   "doi:10.1002/tee.70460": {
    "date": "2026-11-10",
    "topic": "modeling"
@@ -316,6 +320,10 @@
    "date": "2026-11-12",
    "topic": "modeling"
   },
+  "doi:10.32628/ijsrst13132642": {
+   "date": "2026-11-22",
+   "topic": "general"
+  },
   "doi:10.3389/fbael.2026.1995764": {
    "date": "2026-10-31",
    "topic": "general"
@@ -446,6 +454,10 @@
   },
   "t:degradationawareparticipationofbatterystorageinfrequencyregulationmarkets": {
    "date": "2026-11-11",
+   "topic": "modeling"
+  },
+  "t:degradationconsistentgraphneuraltransformerdcgntforlithiumionbatterystateofhealthandremainingusefullifepredictionsimulat": {
+   "date": "2026-11-22",
    "topic": "modeling"
   },
   "t:degradationinformedstateofhealthestimationoflithiumionbatteriesusingatabularpriordatafittednetwork": {
@@ -670,6 +682,10 @@
   },
   "t:stablechargedenergyandphasetransitionsinananisotropicdickequantumbatterywithkerrnonlinearity": {
    "date": "2026-10-22",
+   "topic": "general"
+  },
+  "t:stateoftheartreviewonrechargeablelithiumionbatteriescathodearchitecturesanodeinterfacessolidstateelectrolytesandscalabil": {
+   "date": "2026-11-22",
    "topic": "general"
   },
   "t:stayrepositionorrechargebatteryawareoperationofrobotaxifleets": {
@@ -3267,6 +3283,58 @@
       "categories": [
        "physics.chem-ph"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-22": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Degradation‐Consistent Graph Neural Transformer ( DC ‐ GNT ) for Lithium‐Ion Battery State‐of‐Health and Remaining Useful Life Prediction: Simulation‐Based Development and Real‐Cell Validation",
+      "url": "https://doi.org/10.1002/est2.70583",
+      "published": "2026-11-19T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yıldırım ÖZÜPAK"
+      ],
+      "abstract": "Accurate estimation of lithium‐ion battery state of health (SoH) and remaining useful life (RUL) is essential for safe operation, maintenance planning, and reliable decision‐making in battery management systems. This study proposes a Degradation‐Consistent Graph Neural Transformer (DC‐GNT) framework that integrates graph‐based feature‐interaction learning, Transformer‐based temporal modeling, multi‐task prediction, and degradation‐consistency regularization. Unlike conventional hybrid architectures, the proposed framework combines leakage‐free historical feature construction, strict cell‐independent validation, degradation‐consistent multi‐task learning, prospective EOL/RUL forecasting, and separately calibrated predictive uncertainty within a unified prognostic protocol. The framework was initially developed using a synthetic electric‐vehicle battery degradation dataset containing 10 000 vehicle‐level observations and was subsequently validated using experimentally measured cell‐level aging data from the CALCE CS2 battery dataset. The real‐cell evaluation included CS2_35, CS2_36, CS2_37, and CS2_38 lithium‐ion cells tested under comparable 1C discharge conditions. A strict leave‐one‐cell‐out protocol was adopted to prevent cell‐level leakage, such that the complete degradation trajectory of each test cell remained unseen during model fitting, feature normalization, hyperparameter selection, and uncertainty calibration. SoH was defined using measured discharge capacity relative to the initial reference capacity, whereas RUL was defined relative to the first cycle at which the cell reached the 80% SoH end‐of‐life threshold. Importantly, contemporaneous discharge capacity and normalized capacity were excluded from the CALCE model inputs to prevent direct or indirect reconstruction of the SoH target. On the synthetic test data, the final model achieved a normalized SoH RMSE of 0.0552 and an RUL RMSE of 89.21 cycles. In the real‐cell validation stage, the framework reproduced measured capacity‐degradation trajectories and provided consistent EOL and RUL estimates across independently tested CALCE cells. The mean cell‐wise SoH RMSE was 0.0152, the mean capacity RMSE was 0.0168 Ah, the mean absolute EOL‐cycle error was 17.0 cycles, and the mean RUL MAE was 21.1 cycles. Real‐data ablation experiments demonstrated that the graph module, Transformer encoder, degradation‐consistency regularization, and multi‐task formulation each contributed to improved prediction performance. Calibrated 95% prediction intervals achieved PICP values of 0.947 for SoH and 0.941 for RUL, indicating substantially improved reliability compared with uncalibrated Monte Carlo Dropout intervals.",
+      "venue": "Energy Storage",
+      "doi": "10.1002/est2.70583",
+      "arxiv_id": "",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/est2.70583",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "State-of-the-Art Review on Rechargeable Lithium-Ion Batteries: Cathode Architectures, Anode Interfaces, Solid-State Electrolytes, and Scalability Roadmaps",
+      "url": "https://doi.org/10.32628/ijsrst13132642",
+      "published": "2026-11-20T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Susheela Gedela",
+       "G. Srinu",
+       "Ch. Bapanayya"
+      ],
+      "abstract": "Rechargeable Lithium-ion batteries (LIBs) represent the dominant energy storage technology for electric transportation and portable electronics, driven by their superior gravimetric energy density (>250 Wh/kg) and extended cycle durability (>2000 cycles).However, meeting the stringent requirements of next-generation electric mobilityspecifically, energy densities approaching 400 Wh/kg, 10-minute fast charging capability, and robust safety margins -demands fundamental breakthroughs across electrode materials and electrolyte interfaces.This State-of-the-Art review presents a comprehensive, data-driven synthesis of recent advances in rechargeable Lithium-ion battery components.We critically evaluate: (i) High-energy cathode architectures, focusing on Nirich layered oxides (Li[Ni_0.8Co_0.1 Mn_0.1]O_2), high-voltage NCA, phospho-olivine LiFePO_4, and anion-redox active Li-rich layered oxides; (ii) Anode interphase engineering, spanning graphitic intercalation, silicon-carbon (Si-C) yolk-shell nanocomposites buffering 300% volume strain, zero-strain spinel Li_4 Ti_5 O_12, and dendrite-free metallic lithium hosts; (iii) Liquid electrolyte solvation sheath dynamics and solidstate ion conductors (Li_10 GeP_2 S_12, garnet Li_7 La_3 Zr_2 O_12, argyrodite Li_6 PS_5 Cl); and (iv) Industrial scalability, fast-charging thermal management, and direct cathode recycling.Supported by empirical data extracted from primary literature, this review provides a quantitative electrochemistry roadmap for future energy storage development.",
+      "venue": "International Journal of Scientific Research in Science and Technology",
+      "doi": "10.32628/ijsrst13132642",
+      "arxiv_id": "",
+      "pdf_url": "https://ijsrst.com/paper/14741.pdf",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
