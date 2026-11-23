@@ -148,9 +148,17 @@
    "date": "2026-11-21",
    "topic": "modeling"
   },
+  "arxiv:2611.23789": {
+   "date": "2026-11-23",
+   "topic": "general"
+  },
   "arxiv:2611.26176": {
    "date": "2026-11-21",
    "topic": "general"
+  },
+  "arxiv:2611.26412": {
+   "date": "2026-11-23",
+   "topic": "modeling"
   },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
@@ -318,6 +326,10 @@
   },
   "doi:10.1149/1945-7111/aec04a": {
    "date": "2026-11-12",
+   "topic": "modeling"
+  },
+  "doi:10.13140/rg.2.2.13155.41763": {
+   "date": "2026-11-23",
    "topic": "modeling"
   },
   "doi:10.32628/ijsrst13132642": {
@@ -544,6 +556,10 @@
    "date": "2026-11-13",
    "topic": "general"
   },
+  "t:howtoeffectivelymanagetheenergyinresidentialsystemsdevelopmentandcomparisonofmethods": {
+   "date": "2026-11-23",
+   "topic": "modeling"
+  },
   "t:improvedsingleinputspacevectorfordcbiasedsinusoidalcurrentcontrolinbatterycyclers": {
    "date": "2026-11-15",
    "topic": "general"
@@ -674,6 +690,10 @@
   },
   "t:spacechargelayerandfacilehaliderearrangementenablefastlithiumiontransportathalidesolidelectrolyteinterfaces": {
    "date": "2026-10-14",
+   "topic": "general"
+  },
+  "t:spectralengineeringofchargelocalizationandworkreliabilityincollectivequantumbatteries": {
+   "date": "2026-11-23",
    "topic": "general"
   },
   "t:speedtopowerdominatesenergycostsforaidatacenterstechnoeconomicanalysisofpoweringaiinthecontinentalunitedstates": {
@@ -3335,6 +3355,63 @@
       "arxiv_id": "",
       "pdf_url": "https://ijsrst.com/paper/14741.pdf",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-23": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "How to Effectively Manage the Energy in Residential Systems: Development and Comparison of Methods",
+      "url": "https://arxiv.org/abs/2611.26412",
+      "published": "2026-11-19T16:59:58+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Julian Ruddick"
+      ],
+      "abstract": "The transition from fossil fuels presents significant challenges in energy management. To ensure a sustainable energy future, it is crucial to reduce energy consumption when possible and to synchronize electricity consumption and storage with the production from sources with low greenhouse gas emissions. This thesis explores a variety of energy management methods used to manage batteries, heat pumps, and other energy-related systems. The thesis presents three simulation cases alongside one real-world experiment to compare energy management done through simple rules, optimization, and machine learning methods. Furthermore, this thesis introduces TreeC, a novel machine learning-based method that learns understandable yet efficient energy management strategies, applicable to many cases. The three key contributions of this thesis can be summarized as follows: 1) The developed TreeC method demonstrates competitive performance compared to a variety of energy management approaches, such as model predictive control and reinforcement learning, across a diverse set of energy management problems. The understandability of TreeC's energy management strategies greatly improves the transparency and trustworthiness of machine learning-based energy management. 2) The real-world experiment highlights the need to validate energy management methods on actual hardware and not solely on simulations. Both TreeC and model predictive control performed worse than in simulations, due to, respectively, insufficiently representative training data and the real-time input data not being reliable enough. 3) Energy management algorithms reduce costs in electrified Belgian dwellings, particularly in poorly insulated dwellings, electric vehicle chargers, and photovoltaic installations. However, on average, these cost savings do not yet outweigh the current costs and effort required to implement such algorithms.",
+      "venue": "arXiv",
+      "doi": "10.13140/rg.2.2.13155.41763",
+      "arxiv_id": "2611.26412",
+      "pdf_url": "https://arxiv.org/pdf/2611.26412v1",
+      "categories": [
+       "eess.SY",
+       "cs.LG",
+       "cs.NE"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Spectral Engineering of Charge Localization and Work Reliability in Collective Quantum Batteries",
+      "url": "https://arxiv.org/abs/2611.23789",
+      "published": "2026-11-18T03:57:19+00:00",
+      "source": "arXiv",
+      "authors": [
+       "He-Guang Xu",
+       "G. D. de Moraes Neto"
+      ],
+      "abstract": "The performance of a quantum battery depends not only on how much energy it stores, but also on how rapidly useful charge can be restored after work extraction. We show how engineering the reservoir spectrum connects these properties in an interacting collective-spin battery. Interactions separate the Dicke transition frequencies, allowing frequency-selective pumping and loss to control where excitation accumulates and how populations move along the ladder. Analytical results relate the pump-to-loss ratio to charge localization, fluctuations, and extractable work. Two reservoirs producing the same mean charge can nevertheless exhibit markedly different localization and charging times. Under repeated extraction, finite-time recharging also generates correlations between successive work outputs. At matched mean work, these correlations can reverse the ordering of single-cycle and long-time fluctuations: a protocol with larger fluctuations in individual strokes can deliver more reliable accumulated work. An exact counting relation connects these statistics to net charging-energy transfer, while relaxation modes distinguish recovery of the stationary state from recovery of useful work. Finally, local dephasing redistributes population among collective-spin sectors, leading to an exact stationary symmetry-dilution law and a finite operating window for work extraction under a collective transverse controller.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.23789",
+      "pdf_url": "https://arxiv.org/pdf/2611.23789v1",
+      "categories": [
+       "quant-ph"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
