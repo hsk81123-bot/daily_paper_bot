@@ -188,6 +188,10 @@
    "date": "2026-10-14",
    "topic": "modeling"
   },
+  "doi:10.1016/j.apenergy.2026.129294": {
+   "date": "2026-11-24",
+   "topic": "general"
+  },
   "doi:10.1016/j.egyr.2026.109765": {
    "date": "2026-10-27",
    "topic": "modeling"
@@ -239,6 +243,10 @@
   "doi:10.1016/j.est.2026.125532": {
    "date": "2026-11-18",
    "topic": "general"
+  },
+  "doi:10.1016/j.est.2026.125768": {
+   "date": "2026-11-24",
+   "topic": "modeling"
   },
   "doi:10.1016/j.ijoes.2026.101527": {
    "date": "2026-10-19",
@@ -415,6 +423,10 @@
   "t:anovelmethodformechanicalbatteryabusetestingplanetarymillcalorimetricevaluationofallsolidstatebatterymaterialsandtheirsa": {
    "date": "2026-11-04",
    "topic": "general"
+  },
+  "t:aphysicsbasedreducedordermodelforbatteryvoltageandstateofchargeprediction": {
+   "date": "2026-11-24",
+   "topic": "modeling"
   },
   "t:apracticalroutetoamorphoussolidstateelectrolytestructuresbyhybridreversemontecarlowithfoundationpotentials": {
    "date": "2026-10-18",
@@ -619,6 +631,10 @@
   "t:mitigatingthegridimpactofgigawattscaleaidatacentersviahighfidelitymodelflexibility": {
    "date": "2026-11-21",
    "topic": "modeling"
+  },
+  "t:modelbasedpredictionoftemperatureevolutioninsolidstatebatterieswithminimalexperimentaldataacasestudyoncompositecathodesu": {
+   "date": "2026-11-24",
+   "topic": "general"
   },
   "t:nanostructureengineeringofsiliconbasedanodesforhighenergylithiumionbatteriesstrategiesperformanceandpracticalchallenges": {
    "date": "2026-11-12",
@@ -3412,6 +3428,64 @@
       "categories": [
        "quant-ph"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-24": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A physics-based reduced-order model for battery voltage and state of charge prediction",
+      "url": "https://doi.org/10.1016/j.est.2026.125768",
+      "published": "2026-11-21T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Matteas Jelovic",
+       "Emiliano Vitaliani",
+       "Bernhard Pöllabauer",
+       "Chao Chen",
+       "Martin Kozek",
+       "Stefan Jakubek",
+       "Christoph Hametner"
+      ],
+      "abstract": "When a high-fidelity electrochemical model of a specific cell is available, a reduced-order formulation can retain its predictive accuracy at a fraction of the computational cost. This work presents a physics-based reduced-order model for battery voltage and state of charge prediction, built on the single-particle model with electrolyte dynamics (SPMe). The reduced-order model is derived from a high-fidelity Doyle–Fuller–Newman (DFN) reference that is parameterised for a large-format NMC pouch cell (57.2 Ah). A quartic polynomial profile approximates the solid-phase diffusion, and a surrogate model represents the electrolyte concentration dynamics through two modes with distinct time scales. The electrolyte surrogate is first fitted to DFN-predicted concentration profiles to establish physically grounded parameter values. These values then serve as regularisation anchors in a joint refinement of the electrolyte and anode solid-diffusion parameters against the terminal voltage. This preserves the identified time-scale structure while improving voltage accuracy. The model is tested against the DFN reference across constant-current and pulse operation, and further compared with experimental measurements on concatenated WLTC and NEDC driving cycles. Under the isothermal conditions studied ( T = 25 ° C ), the reduced-order model achieves voltage and state of charge predictions in close agreement with the DFN reference and experimental data while executing more than three orders of magnitude faster than real time.",
+      "venue": "Journal of Energy Storage",
+      "doi": "10.1016/j.est.2026.125768",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Model-based prediction of temperature evolution in solid-state batteries with minimal experimental data: A case study on composite cathodes under thermal ramp",
+      "url": "https://doi.org/10.1016/j.apenergy.2026.129294",
+      "published": "2026-11-21T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Mahya Nezhadfard",
+       "Erlendur Jónsson",
+       "Daniel Schröder"
+      ],
+      "abstract": "While solid-state batteries (SSBs) are presumed to be safer than conventional LIBs, recent studies suggest that they can undergo a quicker and more severe thermal runaway than LIB cells. We have developed a modelling framework to investigate safety of SSBs by linking material-scale measurements to electrode- or cell-scale thermal behaviour. The proposed framework directly incorporates differential scanning calorimetry (DSC) heat flow measurements obtained at a single heating rate as a time-dependent heat source to simulate the temperature evolution of electrodes and cells under prescribed thermal ramp conditions. With minimum experimental data and computational fitting efforts, our model allows for consistent thermal-safety comparisons across cell formats and rapid screening of SSB materials. We implemented our model for cathode composites of SSBs, consisting of LiNi 0.8 Co 0.1 Mn 0.1 O 2 and eight different oxide- and sulphide-based solid electrolytes, exposed to a thermal ramp and simulated their temperature evolution. The simulations were run in three representative formats for SSBs: coin, single-layer pouch, and multilayer-pouch cells. The results show that the temperature increase in sulphide-based cathode composites is significantly higher than that of oxide-based composites. Among the different formats, the temperature increases considerably higher in cathode composites with multilayer-pouch format, compared to others. The model was also applied to two 24 Ah LIB cells under a 150 °C oven test, whose temperature evolution results has been reported in the literature. The simulated temperature evolution showed good agreement with the experimental measurements and the corresponding kinetic-based model under the investigated thermal conditions, demonstrating the capability of the simplified approach to translate calorimetric heat generation data into full-cell thermal behaviour and its potential applicability to battery systems with different chemistries.",
+      "venue": "Applied Energy",
+      "doi": "10.1016/j.apenergy.2026.129294",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
