@@ -1,5 +1,9 @@
 {
  "sent": {
+  "arxiv:2408.16604": {
+   "date": "2026-11-25",
+   "topic": "general"
+  },
   "arxiv:2609.40092": {
    "date": "2026-10-14",
    "topic": "modeling"
@@ -158,6 +162,10 @@
   },
   "arxiv:2611.26412": {
    "date": "2026-11-23",
+   "topic": "modeling"
+  },
+  "arxiv:2611.31802": {
+   "date": "2026-11-25",
    "topic": "modeling"
   },
   "doi:10.1002/aenm.71710": {
@@ -608,6 +616,10 @@
    "date": "2026-10-30",
    "topic": "modeling"
   },
+  "t:mappingsafetyzonesaslithiumionbatteriesdegradetoimprovesafety": {
+   "date": "2026-11-25",
+   "topic": "general"
+  },
   "t:marsfeatureguidedphysicsinformeddeeplearningforrealtimebatteryhealthandlifetimeprediction": {
    "date": "2026-11-19",
    "topic": "modeling"
@@ -635,6 +647,10 @@
   "t:modelbasedpredictionoftemperatureevolutioninsolidstatebatterieswithminimalexperimentaldataacasestudyoncompositecathodesu": {
    "date": "2026-11-24",
    "topic": "general"
+  },
+  "t:modelinglunarpowerharvestingandbatteryrecharginginthepresenceofrandompointingerror": {
+   "date": "2026-11-25",
+   "topic": "modeling"
   },
   "t:nanostructureengineeringofsiliconbasedanodesforhighenergylithiumionbatteriesstrategiesperformanceandpracticalchallenges": {
    "date": "2026-11-12",
@@ -3485,6 +3501,69 @@
       "doi": "10.1016/j.apenergy.2026.129294",
       "arxiv_id": "",
       "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-25": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Modeling Lunar Power Harvesting and Battery Recharging In The Presence of Random Pointing Error",
+      "url": "https://arxiv.org/abs/2611.31802",
+      "published": "2026-11-24T01:53:40+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Barış Dönmez",
+       "Yanni Jiwan-Mercier",
+       "Julien Magné",
+       "Guillaume Blanchette",
+       "Paolo Pino",
+       "Sébastien Loranger",
+       "Güneş Karabulut Kurt"
+      ],
+      "abstract": "In our work, we establish a lunar power beaming environment between a low-lunar orbiter and a circular solar panel mounted on top of a lunar vehicle located at the Lunar South Pole. Due to the random nature of the pointing errors, various upper bounds reflecting the severity of these errors are considered. Although harvested power is modelled stochastically in the literature, we extend this randomness to battery-storage analysis by deriving PDFs of state of charge, accumulated battery capacity and energy, and end-to-end efficiency for both battery charging modes. Then, our derivations are verified with extensive Monte Carlo simulations. Hence, our derivations provide a mathematical model that enables prediction and helps us understand the randomness of the corresponding variables. For the given pointing error levels, we quantify the differences between charging modes in these battery metrics. Our work explains the stochastic nature of these battery metrics in a realistic lunar environment. Regarding the end-to-end efficiency metric, which is the ratio of the stored electrical energy to the transmitted electrical energy, we observed that slow-charging efficiency is immune to pointing errors, and this mode can utilize only one-sixth of what the link can deliver under a mild pointing error.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.31802",
+      "pdf_url": "https://arxiv.org/pdf/2611.31802v1",
+      "categories": [
+       "eess.SP"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Mapping safety zones as lithium-ion batteries degrade to improve safety",
+      "url": "https://arxiv.org/abs/2408.16604",
+      "published": "2026-11-23T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Xinlei Gao",
+       "Ruihe Li",
+       "Hamish Thomas Reid",
+       "James B. Robinson",
+       "Gregory James Offer",
+       "Huizhi Wang"
+      ],
+      "abstract": "Battery safety is crucial for reliable system operation, yet current safety assessments remain largely based on fixed thresholds that do not evolve with battery degradation, leading to suboptimal operational decisions. Here we show that safety performance evolves as batteries degrade, requiring safety management to adapt throughout battery life. We introduce a physics-based framework that characterizes safety performance through evolving safety zones and boundaries linked to the initiation and severity of thermal runaway. Using a comprehensive model that integrates multiple degradation and failure mechanisms, we demonstrate how the safety landscape of a commercial 21700 cell shifts under different degradation conditions, potentially resulting in false negatives under existing management strategies. We further show that degradation pathways strongly affect safety characteristics, causing different safety outcomes despite similar capacity fade and exposing the limitations of capacity-based health assessments. Finally, we map possible degradation-to-failure pathways and highlight diagnostics and modeling needs for lifelong safety management.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2408.16604",
+      "pdf_url": "https://arxiv.org/pdf/2408.16604",
       "categories": [],
       "title_ko": "",
       "summary": "",
