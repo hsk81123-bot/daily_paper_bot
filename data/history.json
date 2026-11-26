@@ -300,6 +300,10 @@
    "date": "2026-10-21",
    "topic": "general"
   },
+  "doi:10.1021/acsenergylett.6c03131": {
+   "date": "2026-11-26",
+   "topic": "general"
+  },
   "doi:10.1021/acsnano.6c13032": {
    "date": "2026-10-25",
    "topic": "general"
@@ -342,6 +346,10 @@
   },
   "doi:10.1149/1945-7111/aec04a": {
    "date": "2026-11-12",
+   "topic": "modeling"
+  },
+  "doi:10.1149/1945-7111/aec598": {
+   "date": "2026-11-26",
    "topic": "modeling"
   },
   "doi:10.13140/rg.2.2.13155.41763": {
@@ -530,6 +538,10 @@
   },
   "t:fastchargingofquantumbatteriesassistedbynonlinearcouplings": {
    "date": "2026-10-16",
+   "topic": "general"
+  },
+  "t:fastchargingsodiumsolidstatebatteriesenabledbyclosohydridoborateanodeinterlayersforsulfideelectrolytes": {
+   "date": "2026-11-26",
    "topic": "general"
   },
   "t:feederawareserviceconditionedflexibilityofgridinteractivebuildings": {
@@ -763,6 +775,10 @@
   "t:ultralowdepositionpotentialandantisiteboosteddiffusivityofli3ga2anodeforallsolidstatebatteries": {
    "date": "2026-11-02",
    "topic": "general"
+  },
+  "t:unveilingghostfeaturesinbatterysafetyaigeneralizationauditingforsimtorealthermalrunawayprediction": {
+   "date": "2026-11-26",
+   "topic": "modeling"
   },
   "t:unveilingsolidelectrolyteinterphasenanostructuraldoping": {
    "date": "2026-11-18",
@@ -3564,6 +3580,66 @@
       "doi": "",
       "arxiv_id": "2408.16604",
       "pdf_url": "https://arxiv.org/pdf/2408.16604",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-26": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Unveiling Ghost Features in Battery Safety AI: Generalization Auditing for Sim-to-Real Thermal Runaway Prediction",
+      "url": "https://doi.org/10.1149/1945-7111/aec598",
+      "published": "2026-11-23T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Yuanjin Zhang",
+       "huawei wu"
+      ],
+      "abstract": "Reliable early warning of lithium-ion battery thermal runaway (TR) requires predictive models that remain robust under abuse-condition variations and simulation-to-reality (Sim-to-Real) domain shifts. This study proposes a Generalization Audit Framework (GAF) that converts cross-domain disparities into feature-resolved diagnostics. GAF integrates Feature Fingerprint Distance (FFD) to quantify shifts in model attribution topology and a Ghost Feature Vulnerability Index (GFVI) to rank feature-level coupling distortions between synthetic and real-world domains. Validation using Doyle-Fuller-Newman (DFN)-based synthetic scenarios and experimental overcharge data from NCM622 18650 cells shows that thermal-domain features dominate model attribution (55.3%–76.3%), while voltage- and current-dependent descriptors exhibit concentrated cross-domain instability. A Type-I/Type-II taxonomy further distinguishes refinable kinetic mismatches from structural discrepancies associated with unmodeled discrete device states. Guided by these diagnostics, pruning the four highest-GFVI features together with binary risk reformulation improves Patch-Transformer zero-shot cross-abuse Macro-F1 from 0.821 ± 0.012 to 0.888 ± 0.009. With 10% target-domain data for adaptation, the lightweight model (110,820 parameters) achieves F1 = 0.951. GAF therefore provides a diagnosis-to-mitigation workflow for identifying and reducing cross-domain vulnerabilities in battery safety prediction.",
+      "venue": "Journal of The Electrochemical Society",
+      "doi": "10.1149/1945-7111/aec598",
+      "arxiv_id": "",
+      "pdf_url": "https://iopscience.iop.org/article/10.1149/1945-7111/aec598/pdf",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Fast-Charging Sodium Solid-State Batteries Enabled by closo -Hydridoborate Anode Interlayers for Sulfide Electrolytes",
+      "url": "https://doi.org/10.1021/acsenergylett.6c03131",
+      "published": "2026-11-24T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Felix Schnaubelt",
+       "Maya Ziegler",
+       "Alexander Weiß",
+       "Daniel Wagner",
+       "Jona-Matteo Werner",
+       "Joachim Sann",
+       "Marcus Rohnke",
+       "Anja Bielefeld",
+       "Janis Kevin Eckhardt",
+       "Jürgen Janek"
+      ],
+      "abstract": "Sodium solid-state batteries may offer high-power operation through highly conductive sulfide solid electrolytes but remain limited by unstable electrode|electrolyte interfaces. Bilayer separators can decouple interfacial requirements if electrochemical compatibility, contact quality, and charge transfer are ensured. Here, the closo-hydridoborate Na4(B10H10)(B12H12) is identified as an effective interlayer material for sulfide electrolytes. Time-dependent impedance measurements reveal that Na3PS4 bilayer cells still suffer from severe instability, while Na3SbS4 and Na2.9P0.9W0.1S4 bilayers are stabilized by the hydridoborate interlayer. For the latter cells, the interface resistance is easily dominated by poor mechanical contact but can be eliminated under moderate stack pressure. Incorporating Na4(B10H10)(B12H12) enables stable cycling of Na2.9P0.9W0.1S4-based cells with a TiS2-based cathode and Na15Sn4/Na3Sn anode, delivering >90% capacity retention over 250 cycles and capacitor-like charging from 0–50% SOC in 30 s (82 mA cm–2) at 80 °C. The results identify closo-hydridoborate interlayers as key enablers for high-power sodium sulfide solid-state batteries.",
+      "venue": "ACS Energy Letters",
+      "doi": "10.1021/acsenergylett.6c03131",
+      "arxiv_id": "",
+      "pdf_url": "https://pubs.acs.org/aelccp/article-pdf/doi/10.1021/acsenergylett.6c03131/69277748/nz-2026-03131p.pdf",
       "categories": [],
       "title_ko": "",
       "summary": "",
