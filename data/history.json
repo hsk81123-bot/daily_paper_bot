@@ -168,6 +168,14 @@
    "date": "2026-11-25",
    "topic": "modeling"
   },
+  "arxiv:2611.34415": {
+   "date": "2026-11-27",
+   "topic": "modeling"
+  },
+  "arxiv:2611.34779": {
+   "date": "2026-11-27",
+   "topic": "general"
+  },
   "doi:10.1002/aenm.71710": {
    "date": "2026-10-23",
    "topic": "general"
@@ -412,6 +420,10 @@
    "date": "2026-10-27",
    "topic": "modeling"
   },
+  "t:adaptivereliabilityreservesforresidentialbatteryfleets": {
+   "date": "2026-11-27",
+   "topic": "general"
+  },
   "t:advancingsulfideelectrolytesiliconbasedanodesystemsinallsolidstatebatteriesinterfacestabilitydesignandperspectives": {
    "date": "2026-10-14",
    "topic": "general"
@@ -455,6 +467,10 @@
   "t:atailoredmultifunctionallithiumorganosilicatesaltconstructingrobustinterphasesforhighvoltagelithiummetalbatteries": {
    "date": "2026-10-23",
    "topic": "general"
+  },
+  "t:athermodynamicallyconsistentmodelofarechargeablesaltinpolyelectrolytebattery": {
+   "date": "2026-11-27",
+   "topic": "modeling"
   },
   "t:benchmarkingextendedandunscentedkalmanfiltersforlithiumionbatterystateofchargeestimationagainstaphysicsbasedvirtualcelle": {
    "date": "2026-11-06",
@@ -3641,6 +3657,64 @@
       "arxiv_id": "",
       "pdf_url": "https://pubs.acs.org/aelccp/article-pdf/doi/10.1021/acsenergylett.6c03131/69277748/nz-2026-03131p.pdf",
       "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-27": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "A Thermodynamically Consistent Model of a Rechargeable Salt-in-Polyelectrolyte Battery",
+      "url": "https://arxiv.org/abs/2611.34415",
+      "published": "2026-11-25T14:08:35+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Charlotte Beckford",
+       "Rajeev Kumar",
+       "Steven M. Wise"
+      ],
+      "abstract": "We present an isothermal, thermodynamically consistent model of a salt-in-polyelectrolyte battery with intercalation and deintercalation reactions of cations occurring at the electrode-electrolyte interfaces under galvanostatic conditions. For the electrolyte, we consider polyelectrolytes, which are polyanions, with neutralizing cations (i.e., counterions) such as lithium, along with a monovalent salt containing the same cations. Models of batteries containing either a dual-ion-conductor (DIC) electrolyte (i.e., uncharged polymers with added salt) or a single-ion-conductor (SIC) electrolyte (i.e., charged polymers without added salt) emerge as limiting cases of this thermodynamically consistent model. Once the model is presented in its most general context, we make specific choices so that it captures well-known mechanisms. In particular, the governing diffusion equations recover Fick's law of diffusion, and the cation-transfer reaction rate is described by the Butler--Volmer equation. The DIC and SIC limiting cases provide a framework for comparing the corresponding batteries. One-dimensional DIC and SIC charge--discharge simulations at matched current and duration illustrate concentration redistribution, polarization, and electrode utilization. Numerical accuracy checks quantify sensitivity to discretization; distinct initial inventories qualify the comparison.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.34415",
+      "pdf_url": "https://arxiv.org/pdf/2611.34415v1",
+      "categories": [
+       "cond-mat.soft"
+      ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Adaptive Reliability Reserves for Residential Battery Fleets",
+      "url": "https://arxiv.org/abs/2611.34779",
+      "published": "2026-11-25T17:39:17+00:00",
+      "source": "arXiv",
+      "authors": [
+       "Maruthi Vemula",
+       "Neeraj Praneeth Gajula"
+      ],
+      "abstract": "In a Houston 2024 replay, replacing a fixed 20 percent battery reserve with a county-risk threshold raises observed five-hour backup coverage from 75.0 percent to 86.5 percent and adds USD 10.2 in modeled annualized margin per home (paired 95 percent interval: USD +1.7 to USD +21.7). The paired coverage-gain interval includes zero. This is a conditional simulation result, not measured company reliability. Residential batteries face this tradeoff because market discharge consumes energy also needed for household outages. We release HomeFleet-ERCOT, combining observed prices and county outages with identified simulated homes and causal controller inputs. We compare independent-home optimization with 21 proximal policy optimization (PPO) training runs; ten promise-cost candidates span 31.1 percent-96.3 percent backup coverage. Of these, 10 have lower modeled margin than fixed 20 percent, and 3 also have lower coverage. Chronological, geographic, fleet, and storm tests examine transfer. An alert charging override has a conditional energy-and-power sufficiency guarantee, but only 19.5 percent of 41 county mass-outage episodes provide enough continuous warning for every battery preset. Synthetic tests include short, missed, and false warnings, load uplift, capacity loss, and dropout. A static AC audit retains existing feeder violations; aging comparisons expose model sensitivity. The released benchmark, controllers, and checkpoints provide a reproducible basis for comparing these tradeoffs. This work supports the design of residential battery programs that assess market value and household backup service together.",
+      "venue": "arXiv",
+      "doi": "",
+      "arxiv_id": "2611.34779",
+      "pdf_url": "https://arxiv.org/pdf/2611.34779v1",
+      "categories": [
+       "cs.LG",
+       "eess.SY"
+      ],
       "title_ko": "",
       "summary": "",
       "points": [],
