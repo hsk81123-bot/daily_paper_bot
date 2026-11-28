@@ -184,6 +184,10 @@
    "date": "2026-10-27",
    "topic": "general"
   },
+  "doi:10.1002/aenm.71856": {
+   "date": "2026-11-28",
+   "topic": "general"
+  },
   "doi:10.1002/est2.70583": {
    "date": "2026-11-22",
    "topic": "modeling"
@@ -398,6 +402,10 @@
   },
   "doi:10.3390/wevj17110566": {
    "date": "2026-10-31",
+   "topic": "modeling"
+  },
+  "doi:10.3390/wevj17120618": {
+   "date": "2026-11-28",
    "topic": "modeling"
   },
   "doi:10.47577/technium.v31i.13874": {
@@ -680,6 +688,10 @@
    "date": "2026-11-25",
    "topic": "modeling"
   },
+  "t:multiobjectivestatefeedbackcontrolofelectrothermaldegradationdynamicsinlithiumionbatterymanagementsystems": {
+   "date": "2026-11-28",
+   "topic": "modeling"
+  },
   "t:nanostructureengineeringofsiliconbasedanodesforhighenergylithiumionbatteriesstrategiesperformanceandpracticalchallenges": {
    "date": "2026-11-12",
    "topic": "general"
@@ -735,6 +747,10 @@
   "t:robuststateparameterestimationinsecondorderthveninbatteries": {
    "date": "2026-11-13",
    "topic": "modeling"
+  },
+  "t:seievolutiononsiloxeneanodesinsolidandliquidelectrolytesviaanionsievingelectronconductinginterfaciallayer": {
+   "date": "2026-11-28",
+   "topic": "general"
   },
   "t:sequenceconditionedphysicsinformedneuralnetworkforlithiumionbatterystateofhealthestimationusingchargingsegmentsathighsta": {
    "date": "2026-10-14",
@@ -3715,6 +3731,70 @@
        "cs.LG",
        "eess.SY"
       ],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   }
+  },
+  "2026-11-28": {
+   "modeling": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "Multi-Objective State-Feedback Control of Electro-Thermal-Degradation Dynamics in Lithium-Ion Battery Management Systems",
+      "url": "https://doi.org/10.3390/wevj17120618",
+      "published": "2026-11-25T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Hassan Amine Osseily"
+      ],
+      "abstract": "This study presents an integrated state-space control framework based on a Linear Quadratic Regulator (LQR) for regulating lithium-ion battery operation. A first-order Thevenin Equivalent Circuit Model is coupled with state-of-charge (SoC), polarization-voltage, thermal, and state-of-health (SoH) dynamics to capture the battery’s electrical, thermal, and degradation behavior. The LQR controller minimizes a quadratic performance criterion that simultaneously accounts for SoC regulation, temperature variation, and control effort. Ambient temperature is treated as an external disturbance, while battery current is constrained within practical operating limits (±30 A). SoH is represented as a slowly varying state with monotonic degradation, preventing unrealistic health recovery or excessive degradation during short-duration simulations. The proposed framework is implemented in MATLAB/Simulink R2026a and evaluated under four conditions: nominal (25 °C), elevated (40 °C), reduced (5 °C), and dynamically varying ambient temperatures. Performance is assessed through SoC, SoH, internal temperature, battery current, and terminal voltage, with an anti-windup proportional–integral (PI) controller considered as a benchmark.",
+      "venue": "World Electric Vehicle Journal",
+      "doi": "10.3390/wevj17120618",
+      "arxiv_id": "",
+      "pdf_url": "",
+      "categories": [],
+      "title_ko": "",
+      "summary": "",
+      "points": [],
+      "why": ""
+     }
+    ]
+   },
+   "general": {
+    "digest": "",
+    "papers": [
+     {
+      "title": "SEI Evolution on Siloxene Anodes in Solid and Liquid Electrolytes via an Ion‐Sieving/Electron‐Conducting Interfacial Layer",
+      "url": "https://doi.org/10.1002/aenm.71856",
+      "published": "2026-11-26T00:00:00+00:00",
+      "source": "OpenAlex",
+      "authors": [
+       "Sisi Hu",
+       "Nuttapon Yodsin",
+       "Renju Lin",
+       "Zhongting Wang",
+       "Phornphimon Maitarad",
+       "Kexin Liu",
+       "Mengjia Yu",
+       "Wenpei Gao",
+       "Yang Yang",
+       "Pinit Kidkhunthod",
+       "Liyi Shi",
+       "Shuai Yuan",
+       "Yumei Wang",
+       "Li Lü",
+       "Yingying Lv"
+      ],
+      "abstract": "Silicon anodes suffer from severe volume expansion and unstable solid electrolyte interphase (SEI), which limit their use in both liquid and solid‐state batteries. Here, a two‐dimensional siloxene‐based LP@SONS, is constructed by anchoring polypyrrole nanoparticles and lithiated‐Nafion onto siloxene nanosheets. This architecture combines electron‐conducting pathways with a Li + ‐selective ion‐sieving layer, homogenizing Li + flux, restricting anion/solvent penetration, and buffering strain. The stable and compositionally identical platform enables direct comparison of SEI evolution in liquid and solid electrolytes. In liquid cells, the SEI grows in a bulk‐permeated (3D) manner, whereas solid electrolytes confine growth to a planar solid–solid contact, yielding a LiF‐rich, planar‐confined (2D) SEI that passivates rapidly. Remarkably, LP@SONS promotes thinner, more uniform, LiF‐rich interphases in both systems. As a result, it delivers high reversible capacity, excellent rate capability, and long‐term cycling in liquid and solid‐state batteries, with only ∼5% thickness expansion after 100 cycles. This work clarifies how electrolyte contact geometry governs SEI dimensionality and offers an interfacial engineering strategy for high‐capacity anodes.",
+      "venue": "Advanced Energy Materials",
+      "doi": "10.1002/aenm.71856",
+      "arxiv_id": "",
+      "pdf_url": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.71856",
+      "categories": [],
       "title_ko": "",
       "summary": "",
       "points": [],
